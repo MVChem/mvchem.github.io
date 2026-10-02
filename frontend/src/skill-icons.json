@@ -1,0 +1,155 @@
+{
+  "Unity": {
+    "className": "fa-brands fa-unity"
+  },
+  "Unreal Engine": {
+    "mask": "/reference/skills/unreal-engine.svg",
+    "size": 26
+  },
+  "Godot": {
+    "mask": "/reference/skills/godot.svg",
+    "size": 24
+  },
+  "Python": {
+    "className": "fa-brands fa-python"
+  },
+  "Java": {
+    "className": "fa-brands fa-java"
+  },
+  "C#": {
+    "mask": "/reference/skills/c.svg",
+    "size": 22
+  },
+  "SQL": {
+    "className": "fa-solid fa-database"
+  },
+  "C++": {
+    "mask": "/reference/skills/c.svg",
+    "size": 22
+  },
+  "Kotlin": {
+    "mask": "/reference/skills/kotlin.svg",
+    "size": 18
+  },
+  "TypeScript": {
+    "mask": "/reference/skills/typescript.svg",
+    "size": 22
+  },
+  "Vue": {
+    "className": "fa-brands fa-vuejs"
+  },
+  "Astro": {
+    "mask": "/reference/skills/astro.svg",
+    "size": 24
+  },
+  "HTML": {
+    "className": "fa-brands fa-html5"
+  },
+  "CSS": {
+    "className": "fa-brands fa-css3-alt"
+  },
+  "JavaScript": {
+    "className": "fa-brands fa-js"
+  },
+  "Express": {
+    "className": "fa-solid fa-server"
+  },
+  "Springboot": {
+    "className": "fa-solid fa-leaf"
+  },
+  "Android": {
+    "className": "fa-brands fa-android"
+  },
+  "WordPress": {
+    "className": "fa-brands fa-wordpress"
+  },
+  "React": {
+    "className": "fa-brands fa-react"
+  },
+  "Node.js": {
+    "className": "fa-brands fa-node-js"
+  },
+  "Oracle SQL": {
+    "className": "fa-solid fa-database"
+  },
+  "Raspberry Pi": {
+    "className": "fa-brands fa-raspberry-pi"
+  },
+  "MATLAB": {
+    "mask": "/reference/skills/matlab.svg",
+    "size": 20
+  },
+  "游戏开发": {
+    "className": "fa-solid fa-gamepad"
+  },
+  "机器学习": {
+    "className": "fa-solid fa-brain"
+  },
+  "数据科学": {
+    "className": "fa-solid fa-chart-line"
+  },
+  "计算机图形学": {
+    "className": "fa-solid fa-cubes"
+  },
+  "软件工程": {
+    "className": "fa-solid fa-laptop-code"
+  },
+  "Web 开发": {
+    "className": "fa-solid fa-globe"
+  },
+  "信号处理": {
+    "className": "fa-solid fa-wave-square"
+  },
+  "计算机视觉": {
+    "className": "fa-solid fa-eye"
+  },
+  "移动端开发": {
+    "className": "fa-solid fa-mobile-screen-button"
+  },
+  "数据库管理": {
+    "className": "fa-solid fa-database"
+  },
+  "战斗设计": {
+    "className": "fa-solid fa-hand-fist"
+  },
+  "系统设计": {
+    "className": "fa-solid fa-cogs"
+  },
+  "UI/UX 设计": {
+    "className": "fa-solid fa-object-group"
+  },
+  "关卡设计": {
+    "className": "fa-solid fa-map"
+  },
+  "Blender": {
+    "mask": "/reference/skills/blender.svg",
+    "size": 20
+  },
+  "Figma": {
+    "className": "fa-brands fa-figma"
+  },
+  "Photoshop": {
+    "mask": "/reference/skills/photoshop.svg",
+    "size": 20
+  },
+  "AE": {
+    "mask": "/reference/skills/ae.svg",
+    "size": 20
+  },
+  "PR": {
+    "mask": "/reference/skills/pr.svg",
+    "size": 20
+  },
+  "Aseprite": {
+    "mask": "/reference/skills/aseprite.svg",
+    "size": 20
+  },
+  "Nuke": {
+    "mask": "/reference/skills/nuke.svg",
+    "size": 20
+  },
+  "Houdini": {
+    "mask": "/reference/skills/houdini.svg",
+    "size": 20
+  }
+}

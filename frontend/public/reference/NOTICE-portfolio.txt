@@ -1,0 +1,9 @@
+Portfolio decorative illustrations from https://huxx.me/zh/portfolio/
+Retrieved 2026-10-02 for the requested visual reproduction of the reference UI.
+These illustrations are reference-site assets, not original MVChem artwork.
+No license grant or transfer of ownership is implied by this notice.
+
+portfolio-design.svg: https://huxx.me/_astro/game-design.DaWMZR7L.svg
+portfolio-development.svg: https://huxx.me/_astro/game-dev.CZfHX8Ds.svg
+portfolio-ai.svg: https://huxx.me/_astro/ai-app.CHrM6NeG.svg
+portfolio-art.svg: https://huxx.me/_astro/tech-art.CCxdoN-z.svg

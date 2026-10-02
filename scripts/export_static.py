@@ -29,10 +29,13 @@ def export_static(dist_dir: Path) -> Path:
     endpoint_file = dist_dir / "api" / "site.json"
     endpoint_file.parent.mkdir(parents=True, exist_ok=True)
     endpoint_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    for locale in ("zh", "en"):
-        locale_dir = dist_dir / locale
-        locale_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(index, locale_dir / "index.html")
+    for locale in ("zh", "en", "ja", "ko"):
+        routes = [locale, f"{locale}/portfolio", f"{locale}/aboutme"]
+        routes.extend(f"{locale}/projects/{project['id']}" for project in payload["projects"])
+        for route in routes:
+            route_dir = dist_dir / route
+            route_dir.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(index, route_dir / "index.html")
     shutil.copyfile(index, dist_dir / "404.html")
     (dist_dir / ".nojekyll").touch()
     return endpoint_file

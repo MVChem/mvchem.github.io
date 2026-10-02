@@ -29,7 +29,13 @@ def create_app(dist_dir: Path | None = None) -> FastAPI:
             raise HTTPException(status_code=404, detail="Not found")
         if candidate.is_file():
             return FileResponse(candidate)
-        if path.rstrip("/") in {"", "zh", "en"}:
+        route = path.strip("/").split("/")
+        locale_route = route[0] in {"zh", "en", "ja", "ko"} and (
+            len(route) == 1
+            or (len(route) == 2 and route[1] in {"portfolio", "aboutme"})
+            or (len(route) == 3 and route[1] == "projects" and route[2] in {project.id for project in SITE.projects})
+        )
+        if path == "" or locale_route:
             index = frontend / "index.html"
             if index.is_file():
                 return FileResponse(index)

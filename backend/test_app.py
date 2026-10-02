@@ -11,7 +11,7 @@ from scripts.export_static import export_static
 
 
 class PortfolioTests(unittest.TestCase):
-    def test_bilingual_api_contract(self):
+    def test_multilingual_api_contract(self):
         with TestClient(app) as client:
             self.assertEqual(client.get("/api/health").json(), {"status": "ok"})
             response = client.get("/api/site.json")
@@ -35,7 +35,11 @@ class PortfolioTests(unittest.TestCase):
             endpoint = export_static(dist)
             with TestClient(create_app(dist)) as client:
                 self.assertEqual(json.loads(endpoint.read_text(encoding="utf-8")), client.get("/api/site.json").json())
-                for route in ("/", "/zh/", "/en/", "/zh", "/en"):
+                routes = ["/"]
+                for locale in ("zh", "en", "ja", "ko"):
+                    routes += [f"/{locale}/", f"/{locale}/portfolio/", f"/{locale}/aboutme/"]
+                    routes += [f"/{locale}/projects/{project.id}/" for project in Site.model_validate(client.get("/api/site.json").json()).projects]
+                for route in routes:
                     response = client.get(route)
                     self.assertEqual(response.status_code, 200, route)
                     self.assertEqual(response.text, index)
@@ -48,7 +52,7 @@ class PortfolioTests(unittest.TestCase):
             self.assertTrue((dist / ".nojekyll").is_file())
             self.assertEqual(
                 {path.relative_to(dist).as_posix() for path in dist.rglob("*") if path.is_file()},
-                {"index.html", "zh/index.html", "en/index.html", "404.html", ".nojekyll", "api/site.json"},
+                {"index.html", "404.html", ".nojekyll", "api/site.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"},
             )
 
     def test_missing_build_fails_before_export(self):
