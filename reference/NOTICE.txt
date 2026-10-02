@@ -1,0 +1,11 @@
+Visual reference: https://huxx.me/zh/
+
+For the portfolio category illustrations, also see NOTICE-portfolio.txt in this directory.
+
+avatar.svg and selected skill logo SVGs are reference assets retrieved from the public page for the user's requested visual reconstruction. Their artwork and trademarks belong to their respective owners. They are not represented as original MVChem artwork or relicensed by this project.
+
+Skill icons that embed Font Awesome notices retain their original notices. Font Awesome Free assets distributed by the npm dependency use the upstream free licenses; see ../licenses/Font-Awesome.txt.
+
+The site's React implementation, placeholder biography and project content are independent. No claims about the reference author's education, employment or accomplishments are made as MVChem's own.
+
+About page decorative artwork: about-play.svg, about-read.svg, and about-build.svg were extracted from the inline hobby illustrations on https://huxx.me/zh/aboutme/ for the requested visual reconstruction. The original page presents these as gaming, animation, and running decorations respectively. Artwork belongs to the reference creator and/or its respective rights holders; it is not original MVChem artwork and is not relicensed here. SVG geometry is retained; paint variables were renamed to preserve the paired hover colors. No personal photographs from the reference page are included. The framed placeholder illustrations and MVChem text remain independent.

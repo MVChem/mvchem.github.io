@@ -4,42 +4,200 @@
     "github": "https://github.com/MVChem",
     "tagline": {
       "zh": "保持好奇，把想法变成作品。",
-      "en": "Stay curious. Make ideas real."
+      "en": "Stay curious. Make ideas real.",
+      "ja": "好奇心を、作品に。",
+      "ko": "호기심을 작품으로."
     },
     "intro": {
       "zh": [
-        "欢迎来到我的数字小天地。这里用来记录探索、分享作品，也为下一个有趣的想法留一点空间。",
-        "这是一版正在生长的个人主页。下方展示的是示例探索方向与演示项目，真实经历和作品会在这里慢慢补全。"
+        "这里记录关于代码、创意和交互的一些想法。我想从日常遇到的小问题出发，把模糊的念头变成可以打开、可以体验、也可以继续改进的作品。",
+        "在这个小站里，探索 AI、构建工具和设计互动体验是三个暂时的方向。比起先决定一个宏大的题目，我更愿意从具体的场景开始，观察问题，尝试不同的办法，再记录每一次选择的理由。",
+        "我也希望作品能把过程讲清楚。一个结果背后有哪些假设，原型是怎样变化的，哪些地方没有达到预期，以及下一步还值得尝试什么，这些细节都应该有自己的位置。它们会让一次探索成为可以继续积累的经验。",
+        "目前，这个主页展示的是原创示例内容：几个待实现的项目构想，一份可以调整的工具清单，以及用于体验页面交互的小游戏。它们还不是个人履历中的实际成果，之后会逐步替换为真实经历、作品链接与开发记录。",
+        "如果你也喜欢从一个小想法开始动手，可以通过 GitHub 找到我。希望这里会慢慢变成一个值得偶尔回来看看的地方：有新的尝试，有清楚的记录，也保留一点单纯的玩心。"
       ],
       "en": [
-        "Welcome to my little corner of the internet: a place for experiments, things to share, and whatever comes next.",
-        "This site is a work in progress. The directions and projects below are examples, ready to be replaced with real experiences and work."
+        "This is a place for ideas about code, creativity, and interaction. An everyday question can become a small project: something to open, try, and gradually improve.",
+        "AI experiments, small tools, and interactive experiences are three starting points for this site. Begin with a specific situation, observe a problem, try a few approaches, and record why each choice was made.",
+        "A project can also explain its process: the assumptions behind it, how a prototype changed, what did not work as expected, and what could come next. Those details make an experiment useful beyond its final result.",
+        "For now, the site contains original sample content: project concepts, an editable toolbox, and small games. They are examples rather than a résumé, ready to be replaced with real work, links, and development notes.",
+        "If you enjoy starting with a small idea and making something, find me on GitHub. I hope this becomes a place worth revisiting, with experiments, clear notes, and a little room to play."
+      ],
+      "ja": [
+        "コード、創造性、インタラクションについての考えを記録する場所です。日常の小さな疑問から、開いて試し、少しずつ改良できる作品を考えています。",
+        "AI、小さなツール、インタラクティブな体験が、このサイトの出発点です。具体的な場面を観察し、方法を試して、選択の理由を残していきたいと思います。",
+        "作品と一緒に制作の過程も伝えたいです。前提は何か、試作はどう変わったか、期待どおりにいかなかったことは何か。その記録が次の探究につながります。",
+        "現在はオリジナルのサンプル内容を掲載しています。企画案、ツール一覧、ゲームは経歴や実績を示すものではなく、今後本当の作品や開発記録に置き換えるための例です。",
+        "小さなアイデアから何かを作るのが好きなら、GitHub でつながりましょう。新しい実験や記録、遊び心のある場所に少しずつ育てていきたいです。"
+      ],
+      "ko": [
+        "코드, 창의성, 인터랙션에 관한 생각을 기록하는 공간입니다. 일상의 작은 질문을 직접 경험하며 조금씩 개선할 수 있는 작품으로 발전시키고 싶습니다.",
+        "AI 실험, 작은 도구, 상호작용 경험은 이 사이트의 출발점입니다. 구체적인 상황을 살펴보고 여러 방법을 시도하며 선택의 이유를 기록하고 싶습니다.",
+        "작품과 함께 과정도 설명하고 싶습니다. 어떤 가정에서 시작했는지, 시제품은 어떻게 변했는지, 기대와 달랐던 점과 다음에 시도할 내용을 기록하면 결과 이상의 경험이 남습니다.",
+        "현재는 독창적인 예시 콘텐츠를 담고 있습니다. 프로젝트 구상, 도구 목록, 작은 게임은 실제 경력이나 성과가 아니라 앞으로 실제 작품과 개발 기록으로 교체할 예시입니다.",
+        "작은 아이디어로 무언가 만드는 일을 좋아한다면 GitHub에서 만나요. 새로운 실험과 기록, 그리고 약간의 즐거움이 있어 가끔 다시 찾고 싶은 공간으로 만들고 싶습니다."
       ]
-    }
+    },
+    "heroLines": {
+      "zh": [
+        "用好奇心",
+        "与代码构建",
+        "有趣的互动体验"
+      ],
+      "en": [
+        "With curiosity",
+        "and code, build",
+        "playful experiences"
+      ],
+      "ja": [
+        "好奇心と",
+        "コードでつくる",
+        "楽しい体験"
+      ],
+      "ko": [
+        "호기심과",
+        "코드로 만드는",
+        "즐거운 경험"
+      ]
+    },
+    "heroTags": {
+      "zh": [
+        "交互设计",
+        "工具开发",
+        "AI 探索"
+      ],
+      "en": [
+        "Interaction design",
+        "Tool development",
+        "AI exploration"
+      ],
+      "ja": [
+        "体験デザイン",
+        "ツール開発",
+        "AI の探究"
+      ],
+      "ko": [
+        "인터랙션 디자인",
+        "도구 개발",
+        "AI 탐구"
+      ]
+    },
+    "subheading": {
+      "zh": "欢迎来到我的个人主页！",
+      "en": "Welcome to my personal website!",
+      "ja": "私のウェブサイトへようこそ！",
+      "ko": "제 개인 홈페이지에 오신 것을 환영합니다!"
+    },
+    "stats": [
+      {
+        "value": {
+          "zh": "3",
+          "en": "3",
+          "ja": "3",
+          "ko": "3"
+        },
+        "label": {
+          "zh": "示例项目",
+          "en": "Demo projects",
+          "ja": "サンプル作品",
+          "ko": "예시 프로젝트"
+        },
+        "icon": "projects"
+      },
+      {
+        "value": {
+          "zh": "2",
+          "en": "2",
+          "ja": "2",
+          "ko": "2"
+        },
+        "label": {
+          "zh": "可玩小游戏",
+          "en": "Mini games",
+          "ja": "ミニゲーム",
+          "ko": "미니 게임"
+        },
+        "icon": "games"
+      },
+      {
+        "value": {
+          "zh": "—",
+          "en": "—",
+          "ja": "—",
+          "ko": "—"
+        },
+        "label": {
+          "zh": "荣誉与奖项",
+          "en": "Honors & awards",
+          "ja": "受賞歴",
+          "ko": "수상 경력"
+        },
+        "icon": "awards"
+      },
+      {
+        "value": {
+          "zh": "待补充",
+          "en": "To be added",
+          "ja": "準備中",
+          "ko": "추가 예정"
+        },
+        "label": {
+          "zh": "教育背景",
+          "en": "Education",
+          "ja": "学歴",
+          "ko": "학력"
+        },
+        "icon": "education"
+      }
+    ]
   },
   "experiences": [
     {
       "id": "exploring-ai",
       "role": {
         "zh": "探索 AI",
-        "en": "Exploring AI"
+        "en": "Exploring AI",
+        "ja": "AI を探究",
+        "ko": "AI 탐구"
       },
       "organization": {
-        "zh": "从一个好问题开始",
-        "en": "Start with a good question"
+        "zh": "AI 实验室",
+        "en": "AI Lab",
+        "ja": "AI ラボ",
+        "ko": "AI 연구실"
+      },
+      "subtitle": {
+        "zh": "示例探索方向",
+        "en": "Example direction",
+        "ja": "探究テーマの例",
+        "ko": "탐구 방향 예시"
       },
       "period": {
-        "zh": "示例方向 · 01",
-        "en": "Example direction · 01"
+        "zh": "示例方向",
+        "en": "Example direction",
+        "ja": "テーマの例",
+        "ko": "방향 예시"
       },
       "description": {
         "zh": [
-          "尝试把模型能力放进具体的小场景：整理信息、协助思考，或让重复工作变得简单。",
-          "此处为示例探索方向，可替换为真实的研究或实践经历。"
+          "从信息整理和重复操作等具体场景出发，设想能够协助完成小任务的智能体原型，并明确它们应该解决的问题与使用边界。",
+          "为一次任务设计清晰的输入、过程和输出，让每一步操作可以被查看和理解，同时保留人工检查与修改结果的空间。",
+          "此处先展示探索方向和计划内容，后续会用真实的实验记录、结果对比与代码链接，补充已经完成的工作和仍然存在的问题。"
         ],
         "en": [
-          "Explore small, practical uses for models: organizing information, supporting ideas, and simplifying repetitive tasks.",
-          "This is an example direction, ready for a real research or practice entry."
+          "Start with information and repetitive tasks, imagining small agents with a clear purpose and scope.",
+          "Make inputs, steps, and outputs visible, leaving room to inspect and revise the result.",
+          "This example will later be replaced with actual experiments, comparisons, and code links."
+        ],
+        "ja": [
+          "情報整理や反復作業から、小さなエージェントの目的と範囲を考えます。",
+          "入力、過程、出力を見える形にし、結果を確認・修正できる余地を残します。",
+          "この例は今後、実際の実験記録、比較結果、コードに置き換えます。"
+        ],
+        "ko": [
+          "정보 정리와 반복 작업에서 출발해 목적과 범위가 명확한 작은 에이전트를 구상합니다.",
+          "입력, 과정, 출력을 드러내 결과를 확인하고 수정할 수 있도록 합니다.",
+          "이 예시는 실제 실험 기록, 비교 결과, 코드 링크로 교체할 예정입니다."
         ]
       },
       "tags": [
@@ -55,24 +213,48 @@
       "id": "building-tools",
       "role": {
         "zh": "构建工具",
-        "en": "Building tools"
+        "en": "Building tools",
+        "ja": "ツール制作",
+        "ko": "도구 만들기"
       },
       "organization": {
-        "zh": "让日常多一点顺手",
-        "en": "Make everyday work easier"
+        "zh": "小工具工坊",
+        "en": "Tool Studio",
+        "ja": "ツール工房",
+        "ko": "도구 공방"
+      },
+      "subtitle": {
+        "zh": "示例探索方向",
+        "en": "Example direction",
+        "ja": "探究テーマの例",
+        "ko": "탐구 방향 예시"
       },
       "period": {
-        "zh": "示例方向 · 02",
-        "en": "Example direction · 02"
+        "zh": "示例方向",
+        "en": "Example direction",
+        "ja": "テーマの例",
+        "ko": "방향 예시"
       },
       "description": {
         "zh": [
-          "从自己的需求出发，设想轻量、直接、容易使用的小工具。",
-          "此处为示例探索方向，可补充实际工具、代码仓库和使用反馈。"
+          "从日常操作中寻找值得简化的步骤，尝试把整理文件、转换格式或查看信息等需求，拆解成容易理解和验证的小功能。",
+          "优先考虑使用时的顺畅程度，让页面上的入口、反馈和结果保持一致，也让第一次打开工具的人知道下一步可以做什么。",
+          "这里的工具方向仍是示例规划，未来可以补充实际仓库、运行截图和使用反馈，逐步说明一个小工具怎样被打磨成型。"
         ],
         "en": [
-          "Start with an everyday need and imagine a small tool that feels straightforward to use.",
-          "This is an example direction; add real tools, repositories, and user feedback here."
+          "Find steps worth simplifying and turn everyday file, format, and information tasks into small features.",
+          "Keep entry points, feedback, and results consistent so first-time visitors can find their next step.",
+          "This example is ready for real repositories, screenshots, and feedback about a tool taking shape."
+        ],
+        "ja": [
+          "ファイル整理や形式変換などの日常作業を、小さく検証しやすい機能に分けます。",
+          "入口、フィードバック、結果を揃え、初めて使う人にも次の操作を伝えます。",
+          "実際のリポジトリ、画面、利用者の声を加えるためのサンプルです。"
+        ],
+        "ko": [
+          "파일 정리와 형식 변환 같은 일상 작업을 작고 검증 가능한 기능으로 나눕니다.",
+          "진입점과 피드백, 결과를 일관되게 구성해 처음 사용하는 사람도 다음 행동을 알 수 있게 합니다.",
+          "실제 저장소와 화면, 사용 후기를 추가하기 위한 예시입니다."
         ]
       },
       "tags": [
@@ -88,24 +270,48 @@
       "id": "interaction-experiments",
       "role": {
         "zh": "交互实验",
-        "en": "Interaction experiments"
+        "en": "Interaction experiments",
+        "ja": "体験の実験",
+        "ko": "인터랙션 실험"
       },
       "organization": {
-        "zh": "给想法一个看得见的形状",
-        "en": "Give an idea a visible shape"
+        "zh": "交互游乐场",
+        "en": "Play Studio",
+        "ja": "遊びの工房",
+        "ko": "인터랙션 공방"
+      },
+      "subtitle": {
+        "zh": "示例探索方向",
+        "en": "Example direction",
+        "ja": "探究テーマの例",
+        "ko": "탐구 방향 예시"
       },
       "period": {
-        "zh": "示例方向 · 03",
-        "en": "Example direction · 03"
+        "zh": "示例方向",
+        "en": "Example direction",
+        "ja": "テーマの例",
+        "ko": "방향 예시"
       },
       "description": {
         "zh": [
-          "通过页面、动效和可视化，探索信息怎样呈现得更清楚，也更有趣。",
-          "此处为示例探索方向，后续可放入真实的设计与交互作品。"
+          "通过小型网页实验观察操作与反馈的关系，让按钮、图形和动效对输入作出直接回应，并尝试不同的节奏与表现方式。",
+          "把规则保持在容易理解的范围内，先验证一种交互是否有趣，再逐步补充细节，同时照顾鼠标、键盘与触屏的使用方式。",
+          "这些内容目前是可替换的探索方向，真实作品准备好之后，可以在这里展示交互演示、设计过程和关键选择背后的考虑。"
         ],
         "en": [
-          "Explore pages, motion, and visualization to make information clearer and a little more playful.",
-          "This is an example direction, with room for real design and interaction projects."
+          "Explore the relation between input and feedback through small web experiments and playful motion.",
+          "Begin with a simple rule, test whether it feels good, then consider mouse, keyboard, and touch.",
+          "These are example directions for future demos, design notes, and the reasoning behind key choices."
+        ],
+        "ja": [
+          "小さなウェブ実験を通じて、入力と反応、動きのリズムを探ります。",
+          "シンプルなルールから始め、マウス、キーボード、タッチでの感触を確かめます。",
+          "今後のデモ、デザイン記録、重要な選択の理由を掲載するための例です。"
+        ],
+        "ko": [
+          "작은 웹 실험과 움직임을 통해 입력과 반응의 관계를 탐구합니다.",
+          "단순한 규칙에서 시작해 마우스, 키보드, 터치의 조작감을 확인합니다.",
+          "향후 데모와 디자인 기록, 중요한 선택의 이유를 담기 위한 예시입니다."
         ]
       },
       "tags": [
@@ -121,24 +327,48 @@
       "id": "keep-learning",
       "role": {
         "zh": "持续学习",
-        "en": "Always learning"
+        "en": "Keep learning",
+        "ja": "学び続ける",
+        "ko": "계속 배우기"
       },
       "organization": {
-        "zh": "记录过程，也分享发现",
-        "en": "Keep notes. Share discoveries."
+        "zh": "日常笔记本",
+        "en": "Field Notes",
+        "ja": "日々のノート",
+        "ko": "일상 노트"
+      },
+      "subtitle": {
+        "zh": "示例探索方向",
+        "en": "Example direction",
+        "ja": "探究テーマの例",
+        "ko": "탐구 방향 예시"
       },
       "period": {
-        "zh": "示例方向 · 04",
-        "en": "Example direction · 04"
+        "zh": "示例方向",
+        "en": "Example direction",
+        "ja": "テーマの例",
+        "ko": "방향 예시"
       },
       "description": {
         "zh": [
-          "把零散的阅读、尝试和思考整理成笔记，让下一次探索有迹可循。",
-          "此处为示例探索方向，适合补充学习记录或公开分享。"
+          "把阅读、实践和失败的尝试整理成短小的笔记，记录问题出现的背景、当时采用的方法，以及后来发现的更清楚的解释。",
+          "在不同的主题之间寻找可以连接的地方，用简单的示意和例子重新说明一个概念，让下一次回看时能够更快找到思路。",
+          "这里暂时保留示例方向，之后会添加真实的公开笔记、阅读记录和学习项目，让过程本身也成为这个主页的一部分。"
         ],
         "en": [
-          "Turn scattered reading, experiments, and thoughts into notes to revisit and build on.",
-          "This is an example direction for learning notes or public writing."
+          "Keep short notes about reading and experiments, including the context, approach, and later insights.",
+          "Connect ideas across topics and use small examples to make concepts easier to revisit.",
+          "Actual public notes, reading records, and learning projects can replace this example over time."
+        ],
+        "ja": [
+          "読書や実験の背景、方法、その後の気づきを短いノートにまとめます。",
+          "異なるテーマを結び、小さな例で考えを振り返りやすくします。",
+          "実際の公開ノート、読書記録、学習プロジェクトに順次置き換えます。"
+        ],
+        "ko": [
+          "독서와 실험의 배경, 접근 방법, 나중에 얻은 통찰을 짧은 메모로 남깁니다.",
+          "서로 다른 주제를 연결하고 작은 예시로 개념을 다시 살펴보기 쉽게 만듭니다.",
+          "실제 공개 노트와 독서 기록, 학습 프로젝트로 차차 교체할 예정입니다."
         ]
       },
       "tags": [
@@ -156,15 +386,21 @@
       "id": "orbit",
       "title": {
         "zh": "Orbit",
-        "en": "Orbit"
+        "en": "Orbit",
+        "ja": "Orbit",
+        "ko": "Orbit"
       },
       "subtitle": {
         "zh": "智能体实验室",
-        "en": "An agent laboratory"
+        "en": "An agent laboratory",
+        "ja": "エージェント実験室",
+        "ko": "에이전트 실험실"
       },
       "description": {
         "zh": "一个探索智能体协作的演示方案。用轨道与节点呈现任务之间的联系，为后续真实项目预留位置。",
-        "en": "A demo concept for exploring agent collaboration. Orbits and nodes visualize connected tasks, ready for a real project to take their place."
+        "en": "A demo concept for exploring agent collaboration. Orbits and nodes visualize connected tasks, ready for a real project to take their place.",
+        "ja": "エージェントの協働を考えるサンプル企画。軌道とノードでタスクのつながりを表します。",
+        "ko": "에이전트 협업을 탐구하는 예시 구상입니다. 궤도와 노드로 작업 사이의 연결을 표현합니다."
       },
       "tags": [
         "AI",
@@ -173,21 +409,110 @@
       ],
       "kind": "orbit",
       "color": "#eeeaf8",
-      "ink": "#726098"
+      "ink": "#726098",
+      "categoryIds": [
+        "ai",
+        "development"
+      ],
+      "year": "2026",
+      "role": {
+        "zh": "示例项目",
+        "en": "Demo project",
+        "ja": "サンプル作品",
+        "ko": "예시 프로젝트"
+      },
+      "details": [
+        {
+          "heading": {
+            "zh": "项目概念",
+            "en": "The concept",
+            "ja": "コンセプト",
+            "ko": "프로젝트 구상"
+          },
+          "paragraphs": {
+            "zh": [
+              "一个探索智能体协作的演示方案。用轨道与节点呈现任务之间的联系，为后续真实项目预留位置。",
+              "这是一份原创项目构想，用于展示页面布局与内容组织；目前尚未作为真实项目完成，也不代表已经发布的产品。"
+            ],
+            "en": [
+              "A demo concept for exploring agent collaboration. Orbits and nodes visualize connected tasks, ready for a real project to take their place.",
+              "This original concept demonstrates the layout and content structure. It is not a completed project or a released product."
+            ],
+            "ja": [
+              "エージェントの協働を考えるサンプル企画。軌道とノードでタスクのつながりを表します。",
+              "このオリジナル企画はレイアウトと情報構造の例です。完成したプロジェクトや公開済み製品ではありません。"
+            ],
+            "ko": [
+              "에이전트 협업을 탐구하는 예시 구상입니다. 궤도와 노드로 작업 사이의 연결을 표현합니다.",
+              "이 독창적인 구상은 페이지 구성과 정보 구조의 예시이며, 완성되거나 출시된 제품이 아닙니다."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "探索过程",
+            "en": "The exploration",
+            "ja": "探究の過程",
+            "ko": "탐구 과정"
+          },
+          "paragraphs": {
+            "zh": [
+              "先从一个简单的使用场景出发，列出需要回答的问题，再用小规模原型验证信息呈现与操作反馈。后续可以在这里补充真实的草图、实现过程和测试记录。"
+            ],
+            "en": [
+              "Begin with a simple situation and a few questions. A small prototype can test information and feedback. Real sketches, implementation notes, and test records can follow here."
+            ],
+            "ja": [
+              "単純な利用場面と問いから始め、小さな試作で情報と操作の関係を確かめます。今後、実際のスケッチや実装、検証記録を加えられます。"
+            ],
+            "ko": [
+              "간단한 사용 상황과 질문에서 시작해 작은 시제품으로 정보와 반응을 검증합니다. 이후 실제 스케치와 구현 과정, 테스트 기록을 추가할 수 있습니다."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "下一步",
+            "en": "What's next",
+            "ja": "これから",
+            "ko": "다음 단계"
+          },
+          "paragraphs": {
+            "zh": [
+              "将示例内容替换为真实的项目目标、截图与代码链接，并记录哪些设想经过了验证，哪些问题仍需要继续探索。"
+            ],
+            "en": [
+              "Replace this example with real goals, images, and code links, documenting what has been tested and what remains open."
+            ],
+            "ja": [
+              "この例を実際の目標、画像、コードに置き換え、検証した内容と残る課題を記録します。"
+            ],
+            "ko": [
+              "이 예시를 실제 목표, 이미지, 코드 링크로 교체하고 검증된 내용과 남은 질문을 기록합니다."
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "field-notes",
       "title": {
         "zh": "Field Notes",
-        "en": "Field Notes"
+        "en": "Field Notes",
+        "ja": "Field Notes",
+        "ko": "Field Notes"
       },
       "subtitle": {
         "zh": "灵感收集站",
-        "en": "A home for small discoveries"
+        "en": "A home for small discoveries",
+        "ja": "ひらめきの記録",
+        "ko": "영감 수집소"
       },
       "description": {
         "zh": "一个收集灵感与日常笔记的演示方案。以生长的几何形状表达想法积累，内容待替换为真实作品。",
-        "en": "A demo concept for collecting ideas and everyday notes. Growing geometric forms suggest ideas accumulating; real work can replace this entry."
+        "en": "A demo concept for collecting ideas and everyday notes. Growing geometric forms suggest ideas accumulating; real work can replace this entry.",
+        "ja": "アイデアや日々のメモを集めるサンプル企画。成長する幾何学の形で、考えの積み重ねを表します。",
+        "ko": "아이디어와 일상 메모를 모으는 예시 구상입니다. 자라나는 기하학 형태로 생각이 쌓이는 모습을 표현합니다."
       },
       "tags": [
         "Notes",
@@ -196,21 +521,110 @@
       ],
       "kind": "garden",
       "color": "#e7f0e9",
-      "ink": "#537d5d"
+      "ink": "#537d5d",
+      "categoryIds": [
+        "design",
+        "development"
+      ],
+      "year": "2026",
+      "role": {
+        "zh": "示例项目",
+        "en": "Demo project",
+        "ja": "サンプル作品",
+        "ko": "예시 프로젝트"
+      },
+      "details": [
+        {
+          "heading": {
+            "zh": "项目概念",
+            "en": "The concept",
+            "ja": "コンセプト",
+            "ko": "프로젝트 구상"
+          },
+          "paragraphs": {
+            "zh": [
+              "一个收集灵感与日常笔记的演示方案。以生长的几何形状表达想法积累，内容待替换为真实作品。",
+              "这是一份原创项目构想，用于展示页面布局与内容组织；目前尚未作为真实项目完成，也不代表已经发布的产品。"
+            ],
+            "en": [
+              "A demo concept for collecting ideas and everyday notes. Growing geometric forms suggest ideas accumulating; real work can replace this entry.",
+              "This original concept demonstrates the layout and content structure. It is not a completed project or a released product."
+            ],
+            "ja": [
+              "アイデアや日々のメモを集めるサンプル企画。成長する幾何学の形で、考えの積み重ねを表します。",
+              "このオリジナル企画はレイアウトと情報構造の例です。完成したプロジェクトや公開済み製品ではありません。"
+            ],
+            "ko": [
+              "아이디어와 일상 메모를 모으는 예시 구상입니다. 자라나는 기하학 형태로 생각이 쌓이는 모습을 표현합니다.",
+              "이 독창적인 구상은 페이지 구성과 정보 구조의 예시이며, 완성되거나 출시된 제품이 아닙니다."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "探索过程",
+            "en": "The exploration",
+            "ja": "探究の過程",
+            "ko": "탐구 과정"
+          },
+          "paragraphs": {
+            "zh": [
+              "先从一个简单的使用场景出发，列出需要回答的问题，再用小规模原型验证信息呈现与操作反馈。后续可以在这里补充真实的草图、实现过程和测试记录。"
+            ],
+            "en": [
+              "Begin with a simple situation and a few questions. A small prototype can test information and feedback. Real sketches, implementation notes, and test records can follow here."
+            ],
+            "ja": [
+              "単純な利用場面と問いから始め、小さな試作で情報と操作の関係を確かめます。今後、実際のスケッチや実装、検証記録を加えられます。"
+            ],
+            "ko": [
+              "간단한 사용 상황과 질문에서 시작해 작은 시제품으로 정보와 반응을 검증합니다. 이후 실제 스케치와 구현 과정, 테스트 기록을 추가할 수 있습니다."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "下一步",
+            "en": "What's next",
+            "ja": "これから",
+            "ko": "다음 단계"
+          },
+          "paragraphs": {
+            "zh": [
+              "将示例内容替换为真实的项目目标、截图与代码链接，并记录哪些设想经过了验证，哪些问题仍需要继续探索。"
+            ],
+            "en": [
+              "Replace this example with real goals, images, and code links, documenting what has been tested and what remains open."
+            ],
+            "ja": [
+              "この例を実際の目標、画像、コードに置き換え、検証した内容と残る課題を記録します。"
+            ],
+            "ko": [
+              "이 예시를 실제 목표, 이미지, 코드 링크로 교체하고 검증된 내용과 남은 질문을 기록합니다."
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "tiny-playground",
       "title": {
         "zh": "Tiny Playground",
-        "en": "Tiny Playground"
+        "en": "Tiny Playground",
+        "ja": "Tiny Playground",
+        "ko": "Tiny Playground"
       },
       "subtitle": {
         "zh": "交互游乐场",
-        "en": "A little room to play"
+        "en": "A little room to play",
+        "ja": "小さな遊び場",
+        "ko": "작은 놀이터"
       },
       "description": {
         "zh": "一个关于微交互和视觉实验的演示方案。让简单形状产生轻快的变化，后续可放入可体验的真实项目。",
-        "en": "A demo concept for microinteractions and visual experiments. Simple shapes invite playful changes, with room for a real interactive project later."
+        "en": "A demo concept for microinteractions and visual experiments. Simple shapes invite playful changes, with room for a real interactive project later.",
+        "ja": "シンプルな形の軽やかな変化で、インタラクションを探るサンプル企画です。",
+        "ko": "단순한 도형의 경쾌한 변화로 마이크로 인터랙션을 탐구하는 예시 구상입니다."
       },
       "tags": [
         "Creative Coding",
@@ -219,49 +633,483 @@
       ],
       "kind": "play",
       "color": "#f9eddf",
-      "ink": "#b17c45"
+      "ink": "#b17c45",
+      "categoryIds": [
+        "design",
+        "art"
+      ],
+      "year": "2026",
+      "role": {
+        "zh": "示例项目",
+        "en": "Demo project",
+        "ja": "サンプル作品",
+        "ko": "예시 프로젝트"
+      },
+      "details": [
+        {
+          "heading": {
+            "zh": "项目概念",
+            "en": "The concept",
+            "ja": "コンセプト",
+            "ko": "프로젝트 구상"
+          },
+          "paragraphs": {
+            "zh": [
+              "一个关于微交互和视觉实验的演示方案。让简单形状产生轻快的变化，后续可放入可体验的真实项目。",
+              "这是一份原创项目构想，用于展示页面布局与内容组织；目前尚未作为真实项目完成，也不代表已经发布的产品。"
+            ],
+            "en": [
+              "A demo concept for microinteractions and visual experiments. Simple shapes invite playful changes, with room for a real interactive project later.",
+              "This original concept demonstrates the layout and content structure. It is not a completed project or a released product."
+            ],
+            "ja": [
+              "シンプルな形の軽やかな変化で、インタラクションを探るサンプル企画です。",
+              "このオリジナル企画はレイアウトと情報構造の例です。完成したプロジェクトや公開済み製品ではありません。"
+            ],
+            "ko": [
+              "단순한 도형의 경쾌한 변화로 마이크로 인터랙션을 탐구하는 예시 구상입니다.",
+              "이 독창적인 구상은 페이지 구성과 정보 구조의 예시이며, 완성되거나 출시된 제품이 아닙니다."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "探索过程",
+            "en": "The exploration",
+            "ja": "探究の過程",
+            "ko": "탐구 과정"
+          },
+          "paragraphs": {
+            "zh": [
+              "先从一个简单的使用场景出发，列出需要回答的问题，再用小规模原型验证信息呈现与操作反馈。后续可以在这里补充真实的草图、实现过程和测试记录。"
+            ],
+            "en": [
+              "Begin with a simple situation and a few questions. A small prototype can test information and feedback. Real sketches, implementation notes, and test records can follow here."
+            ],
+            "ja": [
+              "単純な利用場面と問いから始め、小さな試作で情報と操作の関係を確かめます。今後、実際のスケッチや実装、検証記録を加えられます。"
+            ],
+            "ko": [
+              "간단한 사용 상황과 질문에서 시작해 작은 시제품으로 정보와 반응을 검증합니다. 이후 실제 스케치와 구현 과정, 테스트 기록을 추가할 수 있습니다."
+            ]
+          }
+        },
+        {
+          "heading": {
+            "zh": "下一步",
+            "en": "What's next",
+            "ja": "これから",
+            "ko": "다음 단계"
+          },
+          "paragraphs": {
+            "zh": [
+              "将示例内容替换为真实的项目目标、截图与代码链接，并记录哪些设想经过了验证，哪些问题仍需要继续探索。"
+            ],
+            "en": [
+              "Replace this example with real goals, images, and code links, documenting what has been tested and what remains open."
+            ],
+            "ja": [
+              "この例を実際の目標、画像、コードに置き換え、検証した内容と残る課題を記録します。"
+            ],
+            "ko": [
+              "이 예시를 실제 목표, 이미지, 코드 링크로 교체하고 검증된 내용과 남은 질문을 기록합니다."
+            ]
+          }
+        }
+      ]
     }
   ],
   "skills": [
     {
+      "category": "development",
       "label": {
-        "zh": "构建与实验",
-        "en": "Build & experiment"
+        "zh": "游戏引擎",
+        "en": "Game engines",
+        "ja": "ゲームエンジン",
+        "ko": "게임 엔진"
+      },
+      "items": [
+        "Unity",
+        "Unreal Engine",
+        "Godot"
+      ],
+      "proficient": [
+        "Unity",
+        "Unreal Engine",
+        "Godot"
+      ]
+    },
+    {
+      "category": "development",
+      "label": {
+        "zh": "编程语言",
+        "en": "Languages",
+        "ja": "プログラミング言語",
+        "ko": "프로그래밍 언어"
       },
       "items": [
         "Python",
+        "Java",
+        "C#",
+        "SQL",
+        "C++",
+        "Kotlin",
         "TypeScript",
+        "HLSL"
+      ],
+      "proficient": [
+        "Python",
+        "Java",
+        "C#",
+        "SQL"
+      ]
+    },
+    {
+      "category": "development",
+      "label": {
+        "zh": "全栈",
+        "en": "Full stack",
+        "ja": "フルスタック",
+        "ko": "풀스택"
+      },
+      "items": [
+        "Vue",
+        "Astro",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Three.js",
+        "Express",
+        "Springboot",
+        "Android",
+        "WordPress",
         "React",
-        "FastAPI"
+        "Node.js",
+        "Oracle SQL",
+        "Raspberry Pi",
+        "MATLAB",
+        "Processing"
+      ],
+      "proficient": [
+        "Vue",
+        "Astro",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Three.js",
+        "Express",
+        "Springboot",
+        "Android"
       ]
     },
     {
+      "category": "development",
       "label": {
-        "zh": "探索与表达",
-        "en": "Explore & express"
+        "zh": "领域",
+        "en": "Domains",
+        "ja": "分野",
+        "ko": "분야"
       },
       "items": [
-        "AI",
-        "Creative Coding",
-        "Visualization",
-        "Writing"
+        "游戏开发",
+        "机器学习",
+        "数据科学",
+        "计算机图形学",
+        "软件工程",
+        "Web 开发",
+        "信号处理",
+        "计算机视觉",
+        "移动端开发",
+        "数据库管理"
+      ],
+      "proficient": [
+        "游戏开发",
+        "机器学习",
+        "数据科学",
+        "计算机图形学",
+        "软件工程",
+        "Web 开发"
       ]
     },
     {
+      "category": "design",
       "label": {
-        "zh": "工具与协作",
-        "en": "Tools & collaboration"
+        "zh": "游戏设计",
+        "en": "Game design",
+        "ja": "ゲームデザイン",
+        "ko": "게임 디자인"
       },
       "items": [
-        "Git",
-        "GitHub",
-        "Open Source",
-        "Markdown"
+        "战斗设计",
+        "系统设计",
+        "UI/UX 设计",
+        "关卡设计"
+      ],
+      "proficient": [
+        "战斗设计",
+        "系统设计",
+        "UI/UX 设计"
+      ]
+    },
+    {
+      "category": "design",
+      "label": {
+        "zh": "美术",
+        "en": "Art",
+        "ja": "アート",
+        "ko": "아트"
+      },
+      "items": [
+        "Blender",
+        "Figma",
+        "Photoshop",
+        "AE",
+        "PR",
+        "Aseprite",
+        "Nuke",
+        "Houdini",
+        "WorldCreator"
+      ],
+      "proficient": [
+        "Blender",
+        "Figma",
+        "Photoshop",
+        "AE",
+        "PR",
+        "Aseprite"
       ]
     }
   ],
   "about": {
-    "zh": "这个小站还在慢慢搭建。探索方向、项目与技能标签均为首版示例，期待用真实的经历、作品和故事逐一填满。",
-    "en": "This little site is still taking shape. Directions, projects, and skill tags are starter examples, waiting for real experiences, work, and stories."
+    "zh": "保持好奇，享受把一个小小的念头变成作品的过程。这里记录探索，也给新的想法留一点空间。",
+    "en": "Stay curious and enjoy turning a small idea into something real. A place to record experiments and leave room for what's next.",
+    "ja": "小さなアイデアを形にする過程を楽しむ。探究を記録し、新しい発想のための余白を残す場所です。",
+    "ko": "호기심을 지니고 작은 아이디어를 작품으로 만드는 과정을 즐깁니다. 탐구를 기록하고 새로운 생각을 위한 여백을 남기는 공간입니다."
+  },
+  "portfolio": {
+    "intro": {
+      "zh": [
+        "这里是一组围绕交互设计、工具开发、AI 应用与创意编程的原创项目构想。内容暂时以示例呈现，等待真实的作品、截图和开发记录逐步加入。",
+        "一个想法值得动手试一试。先找到具体的问题，再把它变成能被体验的小原型；在操作、观察和修改之间，慢慢找到更合适的表达。"
+      ],
+      "en": [
+        "Original concepts across interaction design, tools, AI, and creative coding. These examples leave room for real projects, images, and development notes.",
+        "An idea is worth trying. Start with a concrete question and a small prototype; interaction, observation, and revision can guide it toward a clearer form."
+      ],
+      "ja": [
+        "体験デザイン、ツール、AI、クリエイティブコーディングのオリジナル企画集です。実際の作品や記録を加えるための例を掲載しています。",
+        "アイデアは試す価値があります。具体的な問いと小さな試作から、操作、観察、修正を通じて形を見つけます。"
+      ],
+      "ko": [
+        "인터랙션 디자인, 도구, AI, 크리에이티브 코딩에 관한 독창적인 구상 모음입니다. 현재 예시를 담고 있으며 실제 작품과 개발 기록을 추가할 예정입니다.",
+        "아이디어는 직접 시도할 가치가 있습니다. 구체적인 질문과 작은 시제품에서 시작해 조작과 관찰, 수정을 거쳐 알맞은 형태를 찾아갑니다."
+      ]
+    },
+    "categories": [
+      {
+        "id": "design",
+        "title": {
+          "zh": "交互设计",
+          "en": "Interaction design",
+          "ja": "体験デザイン",
+          "ko": "인터랙션 디자인"
+        },
+        "description": {
+          "zh": "从体验出发，思考信息怎样被看见，操作怎样得到回应。这里收集与交互规则、界面结构和视觉节奏有关的示例。",
+          "en": "Explore how information is seen and actions receive feedback through rules, interfaces, and visual rhythm.",
+          "ja": "情報の見え方や操作への反応を、ルール、画面構造、視覚的なリズムから考えます。",
+          "ko": "정보가 보이는 방식과 조작에 대한 반응을 규칙, 화면 구조, 시각적 리듬으로 살펴봅니다."
+        },
+        "color": "#f66b16",
+        "projectIds": [
+          "field-notes",
+          "tiny-playground"
+        ]
+      },
+      {
+        "id": "development",
+        "title": {
+          "zh": "工具开发",
+          "en": "Tool development",
+          "ja": "ツール開発",
+          "ko": "도구 개발"
+        },
+        "description": {
+          "zh": "用代码把零散步骤组织成清晰的流程，关注可读性、反馈和反复使用时的体验，尝试从小需求构建有用的工具。",
+          "en": "Organize scattered steps into useful tools, with attention to clarity, feedback, and everyday use.",
+          "ja": "小さなニーズから、読みやすさとフィードバックを大切にしたツールを考えます。",
+          "ko": "작은 요구에서 출발해 명확성과 피드백, 일상적인 사용 경험을 고려한 도구를 구상합니다."
+        },
+        "color": "#005cc5",
+        "projectIds": [
+          "orbit",
+          "field-notes"
+        ]
+      },
+      {
+        "id": "ai",
+        "title": {
+          "zh": "AI 应用探索",
+          "en": "AI applications",
+          "ja": "AI アプリケーション",
+          "ko": "AI 응용 탐구"
+        },
+        "description": {
+          "zh": "围绕具体任务探索模型与智能体的使用方式，让输入、过程和结果之间的联系更清楚，也为验证和修正保留空间。",
+          "en": "Explore models and agents through specific tasks, keeping input, process, and result connected.",
+          "ja": "具体的なタスクを通して、入力、過程、結果のつながりが見える AI を考えます。",
+          "ko": "구체적인 작업을 통해 입력과 과정, 결과의 연결이 드러나는 AI 활용을 탐구합니다."
+        },
+        "color": "#8521a1",
+        "projectIds": [
+          "orbit"
+        ]
+      },
+      {
+        "id": "art",
+        "title": {
+          "zh": "创意编程",
+          "en": "Creative coding",
+          "ja": "クリエイティブコーディング",
+          "ko": "크리에이티브 코딩"
+        },
+        "description": {
+          "zh": "从几何形状、颜色和运动开始，为简单规则寻找有趣的表达方式，用可以亲手尝试的小实验记录视觉上的发现。",
+          "en": "Start with shapes, color, and motion, finding playful expressions for simple rules.",
+          "ja": "形、色、動きから始め、シンプルなルールの面白い表現を試します。",
+          "ko": "도형과 색, 움직임에서 시작해 단순한 규칙을 재미있게 표현하는 방법을 실험합니다."
+        },
+        "color": "#f2a100",
+        "projectIds": [
+          "tiny-playground"
+        ]
+      }
+    ]
+  },
+  "aboutPage": {
+    "greeting": {
+      "zh": "你好，我是 MVChem",
+      "en": "Hello, I'm MVChem",
+      "ja": "こんにちは、MVChem です",
+      "ko": "안녕하세요, MVChem입니다"
+    },
+    "sections": [
+      {
+        "id": "play",
+        "title": {
+          "zh": "对交互保持好奇",
+          "en": "Curious about interaction",
+          "ja": "体験への好奇心",
+          "ko": "인터랙션에 대한 호기심"
+        },
+        "tags": {
+          "zh": [
+            "小规则，大变化",
+            "从体验开始"
+          ],
+          "en": [
+            "Small rules, big changes",
+            "Start with experience"
+          ],
+          "ja": [
+            "小さなルール、大きな変化",
+            "体験から始める"
+          ],
+          "ko": [
+            "작은 규칙, 큰 변화",
+            "경험에서 시작하기"
+          ]
+        },
+        "description": {
+          "zh": "一次点击、一次移动，都可以成为一个小实验的起点。",
+          "en": "A click or a movement can begin a small experiment.",
+          "ja": "クリックや動きが、小さな実験の始まりになります。",
+          "ko": "클릭이나 움직임은 작은 실험의 시작이 될 수 있습니다."
+        },
+        "kind": "play"
+      },
+      {
+        "id": "read",
+        "title": {
+          "zh": "给灵感留个位置",
+          "en": "A place for ideas",
+          "ja": "ひらめきの居場所",
+          "ko": "아이디어를 위한 자리"
+        },
+        "tags": {
+          "zh": [
+            "读一点，记一点",
+            "连接零散的发现"
+          ],
+          "en": [
+            "Read a little, write a little",
+            "Connect small discoveries"
+          ],
+          "ja": [
+            "少し読み、少し書く",
+            "発見をつなぐ"
+          ],
+          "ko": [
+            "조금 읽고 조금 쓰기",
+            "작은 발견 연결하기"
+          ]
+        },
+        "description": {
+          "zh": "把一闪而过的念头写下来，等下一次想法与它相遇。",
+          "en": "Keep a fleeting thought until another idea comes along to meet it.",
+          "ja": "一瞬の思いつきを残し、次のアイデアとの出会いを待ちます。",
+          "ko": "스쳐 가는 생각을 적어 두고 다음 아이디어와 만나기를 기다립니다."
+        },
+        "kind": "read"
+      },
+      {
+        "id": "build",
+        "title": {
+          "zh": "享受动手的过程",
+          "en": "Enjoy making things",
+          "ja": "つくる過程を楽しむ",
+          "ko": "만드는 과정 즐기기"
+        },
+        "tags": {
+          "zh": [
+            "从小问题开始",
+            "边做边学"
+          ],
+          "en": [
+            "Start with a small question",
+            "Learn by making"
+          ],
+          "ja": [
+            "小さな問いから",
+            "つくりながら学ぶ"
+          ],
+          "ko": [
+            "작은 질문에서 시작하기",
+            "만들면서 배우기"
+          ]
+        },
+        "description": {
+          "zh": "把一个想法拆成可以完成的小步骤，让下一次尝试更加具体。",
+          "en": "Break an idea into small steps to make the next experiment tangible.",
+          "ja": "アイデアを小さなステップに分け、次の試みを具体的にします。",
+          "ko": "아이디어를 작은 단계로 나누어 다음 시도를 구체적으로 만듭니다."
+        },
+        "kind": "build"
+      }
+    ],
+    "intro": {
+      "zh": [
+        "这里先放一些兴趣和探索方向的示例，后续再补充真实的个人记录。"
+      ],
+      "en": [
+        "A few examples of interests and things to explore, with room for real personal stories to come."
+      ],
+      "ja": [
+        "興味や探究テーマの例を並べています。これから実際の個人の記録を加えていきます。"
+      ],
+      "ko": [
+        "관심사와 탐구 방향의 예시를 담았습니다. 앞으로 실제 개인 기록을 더해 갈 예정입니다."
+      ]
+    }
   }
 }
