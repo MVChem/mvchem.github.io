@@ -1,5 +1,7 @@
 # MVChem 的个人主页
 
+访问地址：[chuhongkang.com](https://chuhongkang.com/)。GitHub Pages 使用 `gh-pages` 分支，绑定域名 `chuhongkang.com`；`www.chuhongkang.com` 解析到 `mvchem.github.io` 并跳转到主域名。`frontend/public/CNAME` 会随 Vite 构建复制到发布目录，后续发布时保留域名绑定。
+
 按照 [huxx.me/zh](https://huxx.me/zh/) 的页面结构、尺寸、配色和交互重建，使用 MVChem 身份。经历、项目、兴趣和技能为可替换示例，没有将参考作者的个人履历作为 MVChem 的履历。
 
 - `frontend/`：React + TypeScript + Vite，中文、英文、日文和韩文界面。
