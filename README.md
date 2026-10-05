@@ -1,74 +1,80 @@
-# MVChem 的个人主页
+# Chen Fang 首页完整复刻
 
-访问地址：[chuhongkang.com](https://chuhongkang.com/)。GitHub Pages 使用 `gh-pages` 分支，绑定域名 `chuhongkang.com`；`www.chuhongkang.com` 解析到 `mvchem.github.io` 并跳转到主域名。`frontend/public/CNAME` 会随 Vite 构建复制到发布目录，后续发布时保留域名绑定。
+按 [chenfangcs.com](https://www.chenfangcs.com/) 的布局、字体、配色、照片、文字和交互制作的参考版本。用户明确要求这一版先完整复刻，个人资料暂时保留参考作者内容。
 
-按照 [huxx.me/zh](https://huxx.me/zh/) 的页面结构、尺寸、配色和交互重建，使用 MVChem 身份。经历、项目、兴趣和技能为可替换示例，没有将参考作者的个人履历作为 MVChem 的履历。
+项目保存位置：`/home/data2/chk/workspace/2026/10/01/chenfang-homepage`。
 
-- `frontend/`：React + TypeScript + Vite，中文、英文、日文和韩文界面。
-- `backend/`：FastAPI 和 Pydantic，`/api/site.json` 提供完整四语言数据。
-- `backend/data.py`：编辑个人介绍、探索方向、项目与技能。
-- `scripts/export_static.py`：从真实 API 导出静态数据和语言入口。
-- `scripts/publish.py`：将 `frontend/dist/` 发布到本仓库的 `gh-pages` 分支。
+## 页面和交互
 
-首页包含可调整高度的 Pong、个人介绍、可展开经历、技能区和打砖块；游戏关卡会增加每秒经验并切换首页颜色。经验、游戏关卡和主题保存在浏览器中，后台标签页不增长经验。作品集有分类锚点、搜索和独立项目页；关于页支持旅程切换、卡片大小调整和多标签筛选。导航支持四语言切换、手机全屏菜单和返回作品集时恢复滚动位置。
+- About：个人介绍、首页扫描动画、可滚动的新闻、荣誉和精选论文。
+- Research：八项研究及原始链接、配图和文档。
+- Publications：五篇论文与状态标签。
+- Teaching：课程和助教经历。
+- Projects：应用介绍、功能列表与项目图。
+- CV：CV / Resume 切换、键盘操作、PDF 预览、打开与下载。
+- Personal：个人兴趣、品牌、旅行地图与滑雪照片。
 
-参考头像、装饰人物和技能品牌图标的来源说明见 [`frontend/public/reference/NOTICE.txt`](frontend/public/reference/NOTICE.txt)。字体和 Font Awesome 许可证见 [`frontend/public/licenses/`](frontend/public/licenses/)。项目封面和照片框内的占位插图由代码绘制，使用示例内容。
+桌面保留固定资料栏，手机首页显示紧凑资料区，其他手机页面聚焦正文。导航支持手机菜单、Escape 关闭、历史返回和研究段落锚点。页面使用 React + TypeScript + Vite；FastAPI 的 `/api/reference.json` 提供经过 Pydantic 验证的内容数据。
 
 ## 本地运行
 
-首次安装 Python 依赖，在仓库根目录执行：
+首次安装依赖：
 
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -r backend/requirements.txt
+npm --prefix frontend ci --include=dev
 ```
 
-启动后端：
+在项目目录启动后端：
 
 ```bash
-.venv/bin/python -m uvicorn backend.app:app --host 127.0.0.1 --port 8026
+.venv/bin/python -m uvicorn backend.app:app --host 127.0.0.1 --port 8038
 ```
 
-在另一个终端启动前端，使用 Vite 输出的本地地址访问：
+另一个终端启动前端：
 
 ```bash
-cd frontend
-npm ci --include=dev
-npm run dev
+npm --prefix frontend run dev
 ```
 
-前端开发服务会将 `/api` 请求代理到 FastAPI。完成构建后，也可直接通过 FastAPI 的 `http://127.0.0.1:8026/zh/` 访问页面，语言前缀也支持 `en`、`ja` 和 `ko`。
+访问 [http://localhost:5178](http://localhost:5178)。Vite 会将 `/api` 请求转给 FastAPI。
 
-## 构建与发布
-
-在仓库根目录构建并导出数据：
+## 构建和静态发布
 
 ```bash
 npm --prefix frontend run build
 .venv/bin/python scripts/export_static.py
 ```
 
-GitHub Pages 只能托管静态文件，不能运行 Python。线上页面读取 `frontend/dist/api/site.json` 快照；每次修改 `backend/data.py` 后需要重新导出和发布。导出同时生成四语言首页、`portfolio/`、`aboutme/` 和 `projects/<项目ID>/` 的直接访问入口，以及 `404.html` 和 `.nojekyll`。
+构建后可通过 [http://localhost:8038](http://localhost:8038) 直接访问 FastAPI 提供的页面。
 
-先提交源码，再执行发布命令：
+静态导出包含所有栏目入口、API 数据快照、`404.html` 和 `.nojekyll`，可放到 GitHub Pages。`frontend/public/CNAME` 保留域名 `chuhongkang.com`。GitHub Pages 在线上读取静态数据快照，FastAPI 用于本地开发和导出。
+
+本项目的发布脚本仅接受 `MVChem/mvchem.github.io` 仓库，保留 `gh-pages` 历史和现有域名配置。发布前先检查构建内容：
 
 ```bash
 .venv/bin/python scripts/publish.py
 ```
 
-发布脚本要求当前仓库已配置 `git user.name`、`git user.email`，并可通过 Git 访问 GitHub。它只接受 `MVChem/mvchem.github.io` 作为 `origin`，保留 `gh-pages` 历史，只上传 `frontend/dist/`；无内容变化时不创建提交。脚本不会修改 GitHub Pages 设置，Pages 应使用 `gh-pages` 分支的根目录。
+## 内容和文件
+
+- `frontend/src/App.tsx`：导航、路由、手机菜单、CV 切换。
+- `frontend/src/components/ReferenceDocument.tsx`：正文、新闻滚动、首页扫描动画。
+- `frontend/src/styles.css`：参考网站样式。
+- `backend/content/reference.json`：这一版的资料与页面内容。
+- `frontend/public/`：本地照片、论文配图、PDF、缩略图和字体。
+- `SOURCE_NOTICE.md`：参考内容和素材来源。
+
+本次改动位于 `feat/chenfang-homepage` 分支，并同步到主分支发布。原主页保留在 Git 历史中，修改前的源码提交为 `d987257`。
 
 ## 检查
 
 ```bash
+npm --prefix frontend run build
 .venv/bin/python -m unittest backend.test_app -v
-npm --prefix frontend run typecheck
+.venv/bin/python -m pip install -r backend/requirements-dev.txt
+.venv/bin/python scripts/verify_replica.py http://127.0.0.1:5178
 ```
 
-浏览器检查需要安装 `playwright`，并有 Google Chrome（默认 `/usr/bin/google-chrome`，可通过 `CHROME_PATH` 指定）。启动开发服务后运行：
-
-```bash
-.venv/bin/python scripts/check_browser.py http://127.0.0.1:5173
-```
-
-检查覆盖桌面与手机布局、四语言导航、小游戏启动/暂停、球场高度调整和经验进度保存。截图输出到被 Git 忽略的 `artifacts/`。
+浏览器检查使用已安装的 `/usr/bin/google-chrome`，覆盖七个栏目、360/390/768/960/1440 像素宽度、新闻滚动、CV 切换、PDF、手机菜单与历史返回。截图和结果输出到 `artifacts/`。

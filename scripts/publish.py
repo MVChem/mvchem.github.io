@@ -40,9 +40,11 @@ def checked_origin() -> str:
 
 
 def validate_build() -> None:
-    for required in ("index.html", ".nojekyll", "api/site.json"):
+    for required in ("index.html", ".nojekyll", "api/site.json", "api/reference.json", "CNAME"):
         if not (DIST / required).is_file():
             raise PublishError(f"Build is missing {required}. Build the frontend and run export_static.py first.")
+    if (DIST / 'CNAME').read_text().strip() != 'chuhongkang.com':
+        raise PublishError('Build must retain the chuhongkang.com custom domain.')
     for item in DIST.rglob("*"):
         if item.is_symlink() or ".git" in item.relative_to(DIST).parts:
             raise PublishError("Build must not contain symbolic links or Git metadata.")
