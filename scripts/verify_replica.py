@@ -36,7 +36,7 @@ with sync_playwright() as p:
     page.get_by_role('tab', name='Resume', exact=True).click()
     expect(page).to_have_url(BASE + '/cv?doc=resume')
     expect(page.get_by_role('tab', name='Resume', exact=True)).to_have_attribute('aria-selected', 'true')
-    assert page.locator('.doc-page').count() == 2
+    assert page.locator('.doc-page').count() == 1
     assert page.locator('.doc-action').first.get_attribute('href') == '/resume.pdf'
     page.reload(wait_until='networkidle')
     expect(page.get_by_role('tab', name='Resume', exact=True)).to_have_attribute('aria-selected', 'true')

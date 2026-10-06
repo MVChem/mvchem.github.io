@@ -12,7 +12,6 @@ sys.path.insert(0, str(ROOT))
 from fastapi.testclient import TestClient  # noqa: E402
 
 from backend.app import app  # noqa: E402
-from backend.models import Site  # noqa: E402
 from backend.reference import ReferenceSite  # noqa: E402
 
 
@@ -25,7 +24,7 @@ def export_static(dist_dir: Path) -> Path:
     with TestClient(app) as client:
         response = client.get("/api/site.json")
         response.raise_for_status()
-        payload = Site.model_validate(response.json()).model_dump(mode="json")
+        payload = ReferenceSite.model_validate(response.json()).model_dump(mode="json")
         reference_response = client.get('/api/reference.json')
         reference_response.raise_for_status()
         reference = ReferenceSite.model_validate(reference_response.json()).model_dump(mode='json')
@@ -40,13 +39,6 @@ def export_static(dist_dir: Path) -> Path:
         route_dir = dist_dir / route.strip('/')
         route_dir.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(index, route_dir / 'index.html')
-    for locale in ("zh", "en", "ja", "ko"):
-        routes = [locale, f"{locale}/portfolio", f"{locale}/aboutme"]
-        routes.extend(f"{locale}/projects/{project['id']}" for project in payload["projects"])
-        for route in routes:
-            route_dir = dist_dir / route
-            route_dir.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(index, route_dir / "index.html")
     shutil.copyfile(index, dist_dir / "404.html")
     (dist_dir / ".nojekyll").touch()
     return endpoint_file

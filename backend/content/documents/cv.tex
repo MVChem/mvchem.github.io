@@ -1,0 +1,85 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[margin=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\setlength{\parindent}{0pt}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{7pt}
+\setlist[itemize]{leftmargin=15pt,itemsep=3pt,topsep=4pt}
+\pagestyle{fancy}\fancyhf{}\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[R]{\scriptsize Hongkang Chu\quad|\quad\thepage}
+\hypersetup{pdfauthor={Hongkang Chu},pdftitle={Hongkang Chu - Public CV}}
+\begin{document}
+\begin{center}{\LARGE\bfseries Hongkang Chu}\\[5pt]
+\href{mailto:chuhongkang25@mails.ucas.ac.cn}{chuhongkang25@mails.ucas.ac.cn}\quad|\quad
+\href{https://chuhongkang.com}{chuhongkang.com}\end{center}
+
+{\small Multimodal learning; AI agents; synthetic image and video detection; MRI and MRSI reconstruction}
+\section{Education}
+\textbf{University of the Chinese Academy of Sciences}\hfill 2025--present\\
+Master's student, Computer Science. Expected graduation: 2028.\par\vspace{5pt}
+\textbf{Shanghai Ocean University}\hfill 2021--2025\\
+Bachelor's degree, Computer Science and Technology. Undergraduate research in protein language models.\par\vspace{5pt}
+\section{Research Experience}
+\textbf{Chinese Academy of Sciences / UCAS}\hfill 2025--present\\
+\textit{Graduate Research}\par
+Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology.\par
+\begin{itemize}
+\item Co-developed prior-informed deep learning reconstruction for weighted-average CSI, combining anatomical and spectral information; first-author ISMRM 2026 Power Pitch.
+\item Co-authored work on physics-embedded CycleGAN reconstruction for short-readout deuterium metabolic imaging, published in Magnetic Resonance Letters.
+\item Co-authored a phase model-driven deep learning study for NMR phase correction, published in The Journal of Physical Chemistry Letters.
+\end{itemize}
+\vspace{6pt}
+\textbf{Zhejiang University}\hfill Apr--Sep 2026\\
+\textit{Research Collaboration}\par
+Collaborative research in detecting AI-generated images and videos.\par
+\begin{itemize}
+\item Second author of TRACE, studying generative-model velocity responses and temporal consistency for synthetic video detection; submitted to ICLR 2027.
+\item Second author of ClueAegis, using perceptual clues, forensic skill selection, and evidence-guided reasoning for synthetic image detection; accepted to Findings of EMNLP 2026.
+\end{itemize}
+\vspace{6pt}
+\textbf{University of Illinois Urbana-Champaign}\hfill Feb 2026--present\\
+\textit{Remote Research Intern}\par
+Research in multimodal models and medical AI.\par
+\vspace{6pt}
+\textbf{Shanghai Ocean University}\hfill 2021--2025\\
+\textit{Undergraduate Research}\par
+Protein language models for druggable protein classification.\par
+\begin{itemize}
+\item Implemented ESM-2 embedding classifiers and an adapted GPT-2 sequence classifier, with additional evaluation on Pharos; first-author IJMS publication in 2024.
+\end{itemize}
+\vspace{6pt}
+\section{Technical Skills}
+Python and PyTorch; Multimodal learning and transformer fine-tuning; Tool-using agents and model evaluation; Diffusion and flow-matching representations; MRI / MRSI reconstruction.
+\newpage
+\section{Selected Publications and Conference Contributions}
+\begin{minipage}{\linewidth}
+\small\textbf{\href{https://openreview.net/forum?id=erYE1VciKv}{TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection}}\par
+Huangsen Cao, \textbf{Hongkang Chu}, Siyao Yu, Xin Ding, Jianfeng Dong, Yongwei Wang.\par
+\textit{ICLR 2027 Conference Submission}. Under Review. Second Author.\end{minipage}\par\vspace{13pt}
+\begin{minipage}{\linewidth}
+\small\textbf{\href{https://openreview.net/forum?id=Hxm5eSFUT9}{ClueAegis: Heuristic-to-Reasoning Cognitive-skill Learning for Unified Evidence-based Synthetic Image Detection}}\par
+Huangsen Cao, \textbf{Hongkang Chu}, Yuxi Li, Ying Zhang, Chen Li, Jing Lyu, Yongwei Wang, Yu Zhao, Fei Wu.\par
+\textit{Findings of EMNLP 2026}. Accepted. Second Author.\end{minipage}\par\vspace{13pt}
+\begin{minipage}{\linewidth}
+\small\textbf{\href{https://doi.org/10.1016/j.mrl.2026.200272}{Physics-embedded CycleGAN for robust metabolite mapping in short-readout deuterium metabolic imaging}}\par
+Shuang Huang, Gang Chen, Xinjie Liu, \textbf{Hongkang Chu}, Hong Shi, Zhi Zhang, Xin Zhou, Maili Liu, Chaoyang Liu, Qingjia Bao.\par
+\textit{Magnetic Resonance Letters, 6(4): 200272, 2026}. Published Online. Co-author.\end{minipage}\par\vspace{13pt}
+\begin{minipage}{\linewidth}
+\small\textbf{\href{https://doi.org/10.1021/acs.jpclett.5c03529}{Phase Model-Driven Deep Learning for Robust Phase Correction in High-Throughput NMR-Based Metabolomics}}\par
+Chuanwen Zhao, Gang Chen, Caixiang Liu, Zhao Li, Jing Zhao, Peng Sun, \textbf{Hongkang Chu}, Xin Zhou, Maili Liu, Peijun Song, Qingjia Bao, Chaoyang Liu.\par
+\textit{The Journal of Physical Chemistry Letters, 17(4): 1245--1253, 2026}. Published. Co-author.\end{minipage}\par\vspace{13pt}
+\begin{minipage}{\linewidth}
+\small\textbf{\href{https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616}{Deep Learning Enhanced Weighted Average CSI for High-Resolution Deuterium Metabolic Imaging}}\par
+\textbf{Hongkang Chu}, Gang Chen, Xinjie Liu, Hong Shi, Chaoyang Liu, Maili Liu, Xin Zhou, Elton Montrazi, Lucio Frydman, Qingjia Bao.\par
+\textit{ISMRM 2026, Cape Town, South Africa; 11 May 2026}. Power Pitch. First Author.\end{minipage}\par\vspace{13pt}
+\begin{minipage}{\linewidth}
+\small\textbf{\href{https://doi.org/10.3390/ijms25084507}{Comprehensive Research on Druggable Proteins: From PSSM to Pre-Trained Language Models}}\par
+\textbf{Hongkang Chu}, Taigang Liu.\par
+\textit{International Journal of Molecular Sciences, 25(8): 4507, 2024}. Published. First Author.\end{minipage}\par\vspace{13pt}
+\end{document}

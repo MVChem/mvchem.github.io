@@ -6,7 +6,6 @@ import unittest
 from fastapi.testclient import TestClient
 
 from backend.app import app, create_app
-from backend.models import Site
 from backend.reference import REFERENCE, ReferenceSite
 from scripts.export_static import export_static
 
@@ -17,24 +16,45 @@ class PortfolioTests(unittest.TestCase):
             response = client.get('/api/reference.json')
             self.assertEqual(response.status_code, 200)
             snapshot = ReferenceSite.model_validate(response.json())
-            self.assertEqual(snapshot.name, 'Chen Fang')
-            self.assertEqual(len(snapshot.navigation), 7)
+            self.assertEqual(snapshot.name, 'Hongkang Chu')
+            self.assertEqual(snapshot.institution, 'University of the Chinese Academy of Sciences')
             self.assertEqual(set(snapshot.documents), {'cv', 'resume'})
             self.assertTrue(all(item.path in snapshot.pages for item in snapshot.navigation))
 
-    def test_multilingual_api_contract(self):
+    def test_public_endpoints_share_personal_content(self):
         with TestClient(app) as client:
             self.assertEqual(client.get("/api/health").json(), {"status": "ok"})
             response = client.get("/api/site.json")
             self.assertEqual(response.status_code, 200)
-            site = Site.model_validate(response.json())
-            self.assertEqual(site.profile.name, "MVChem")
-            self.assertEqual(len(site.experiences), 4)
-            self.assertEqual({project.kind for project in site.projects}, {"orbit", "garden", "play"})
-            for experience in site.experiences:
-                self.assertIn("示例", experience.period.zh)
-                self.assertTrue(experience.description.zh)
-                self.assertTrue(experience.description.en)
+            site = ReferenceSite.model_validate(response.json())
+            self.assertEqual(site, REFERENCE)
+            self.assertEqual(response.json(), client.get('/api/reference.json').json())
+
+    def test_public_content_excludes_private_work_and_reference_author(self):
+        content = REFERENCE.model_dump_json().lower()
+        for excluded in ('medcase', 'cfmmp2xvbk', 'tgdnyovybf', 'chen fang', 'chenfang', 'medxr',
+                         'gazeagent', 'audioguard', 'nyulangone', 'nowmad', 'chenf3@'):
+            self.assertNotIn(excluded, content)
+        profile_images = [node for node in REFERENCE.profile.children if getattr(node, 'tag', None) == 'img']
+        self.assertEqual(profile_images, [])
+        self.assertIn('profile__avatar--empty', content)
+        for reference in ('erYE1VciKv', '10.1016/j.mrl.2026.200272', '10.1021/acs.jpclett.5c03529',
+                          'ISMRM 2026', '10.3390/ijms25084507'):
+            self.assertIn(reference.lower(), content)
+
+    def test_public_documents_and_attachments_respect_disclosure_scope(self):
+        import subprocess
+        public = Path(__file__).resolve().parents[1] / 'frontend/public'
+        for document in ('CV.pdf', 'resume.pdf'):
+            text = subprocess.check_output(['pdftotext', str(public / document), '-'], text=True)
+            self.assertIn('Hongkang Chu', text)
+            self.assertIn('chuhongkang25@mails.ucas.ac.cn', text)
+            self.assertIn('TRACE', text)
+            self.assertIn('Magnetic Resonance Letters', text)
+            for excluded in ('MedCase', 'Chen Fang', 'clinical case report'):
+                self.assertNotIn(excluded.lower(), text.lower())
+        self.assertFalse((public / 'downloads/MDLE-V8.pptx').exists())
+        self.assertFalse((public / 'img/simg-8f5a877c.webp').exists())
 
     def test_export_matches_api_and_serves_direct_routes(self):
         with TemporaryDirectory() as temp:
@@ -48,9 +68,6 @@ class PortfolioTests(unittest.TestCase):
                 self.assertEqual(json.loads(endpoint.read_text(encoding="utf-8")), client.get("/api/site.json").json())
                 routes = ["/"]
                 routes += [route + '/' for route in REFERENCE.pages if route != '/']
-                for locale in ("zh", "en", "ja", "ko"):
-                    routes += [f"/{locale}/", f"/{locale}/portfolio/", f"/{locale}/aboutme/"]
-                    routes += [f"/{locale}/projects/{project.id}/" for project in Site.model_validate(client.get("/api/site.json").json()).projects]
                 for route in routes:
                     response = client.get(route)
                     self.assertEqual(response.status_code, 200, route)
@@ -58,8 +75,6 @@ class PortfolioTests(unittest.TestCase):
                 self.assertEqual(client.get("/api/missing").status_code, 404)
                 self.assertEqual(client.get("/assets/missing.js").status_code, 404)
                 self.assertEqual(client.get("/%2e%2e/private.txt").status_code, 404)
-            self.assertEqual((dist / "zh" / "index.html").read_text(), index)
-            self.assertEqual((dist / "en" / "index.html").read_text(), index)
             self.assertEqual((dist / "404.html").read_text(), index)
             self.assertTrue((dist / ".nojekyll").is_file())
             self.assertEqual(

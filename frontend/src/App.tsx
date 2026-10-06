@@ -74,7 +74,7 @@ export default function App() {
     const next = { ArrowRight: index + 1, ArrowLeft: index - 1, Home: 0, End: 1 }[event.key]
     if (next !== undefined) { event.preventDefault(); chooseDocument(ids[(next + 2) % 2], true) }
   }
-  if (!site) return <div className="load-state" role={error ? 'alert' : 'status'}><h1>Chen Fang</h1><p>{error ? 'The page could not load.' : 'Loading…'}</p>{error && <button className="button" onClick={() => setAttempt(n => n + 1)}>Try again</button>}</div>
+  if (!site) return <div className="load-state" role={error ? 'alert' : 'status'}><h1>Hongkang Chu</h1><p>{error ? 'The page could not load.' : 'Loading…'}</p>{error && <button className="button" onClick={() => setAttempt(n => n + 1)}>Try again</button>}</div>
   const current = site.pages[route] ? route : '/', home = current === '/' || current === '/about'
   const content = current === '/cv' ? site.documents[documentId as 'cv' | 'resume'] : site.pages[current]
   return <>

@@ -1,0 +1,136 @@
+{
+  "name": "Hongkang Chu",
+  "chinese_name": "储红康",
+  "institution": "University of the Chinese Academy of Sciences",
+  "email": "chuhongkang25@mails.ucas.ac.cn",
+  "github": "https://github.com/MVChem",
+  "openreview": "https://openreview.net/profile?id=~Hongkang_Chu2",
+  "interests": "Multimodal learning; AI agents; synthetic image and video detection; MRI and MRSI reconstruction",
+  "intro": "I am a master's student at the University of the Chinese Academy of Sciences, with research at the Innovation Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy.",
+  "education": [
+    {"institution": "University of the Chinese Academy of Sciences", "degree": "Master's student, Computer Science", "dates": "2025–present", "details": "Expected graduation: 2028."},
+    {"institution": "Shanghai Ocean University", "degree": "Bachelor's degree, Computer Science and Technology", "dates": "2021–2025", "details": "Undergraduate research in protein language models."}
+  ],
+  "experiences": [
+    {
+      "id": "cas",
+      "institution": "Chinese Academy of Sciences / UCAS",
+      "role": "Graduate Research",
+      "dates": "2025–present",
+      "description": "Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology.",
+      "bullets": [
+        "Co-developed prior-informed deep learning reconstruction for weighted-average CSI, combining anatomical and spectral information; first-author ISMRM 2026 Power Pitch.",
+        "Co-authored work on physics-embedded CycleGAN reconstruction for short-readout deuterium metabolic imaging, published in Magnetic Resonance Letters.",
+        "Co-authored a phase model-driven deep learning study for NMR phase correction, published in The Journal of Physical Chemistry Letters."
+      ],
+      "paper_ids": ["ismrm-2026", "mrl-cyclegan", "jpcl-phase-correction"]
+    },
+    {
+      "id": "zhejiang",
+      "institution": "Zhejiang University",
+      "role": "Research Collaboration",
+      "dates": "Apr–Sep 2026",
+      "description": "Collaborative research in detecting AI-generated images and videos.",
+      "bullets": [
+        "Second author of TRACE, studying generative-model velocity responses and temporal consistency for synthetic video detection; submitted to ICLR 2027.",
+        "Second author of ClueAegis, using perceptual clues, forensic skill selection, and evidence-guided reasoning for synthetic image detection; accepted to Findings of EMNLP 2026."
+      ],
+      "paper_ids": ["trace", "clueaegis"]
+    },
+    {
+      "id": "uiuc",
+      "institution": "University of Illinois Urbana-Champaign",
+      "role": "Remote Research Intern",
+      "dates": "Feb 2026–present",
+      "description": "Research in multimodal models and medical AI.",
+      "bullets": [],
+      "paper_ids": []
+    },
+    {
+      "id": "shanghai-ocean",
+      "institution": "Shanghai Ocean University",
+      "role": "Undergraduate Research",
+      "dates": "2021–2025",
+      "description": "Protein language models for druggable protein classification.",
+      "bullets": [
+        "Implemented ESM-2 embedding classifiers and an adapted GPT-2 sequence classifier, with additional evaluation on Pharos; first-author IJMS publication in 2024."
+      ],
+      "paper_ids": ["ijms-druggable-proteins"]
+    }
+  ],
+  "papers": [
+    {
+      "id": "trace",
+      "title": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection",
+      "authors": ["Huangsen Cao", "Hongkang Chu", "Siyao Yu", "Xin Ding", "Jianfeng Dong", "Yongwei Wang"],
+      "venue": "ICLR 2027",
+      "citation": "ICLR 2027 Conference Submission",
+      "status": "Under Review",
+      "role": "Second Author",
+      "year": "2026",
+      "summary": "TRACE uses a pretrained Flow Matching video model to probe velocity responses in real and generated videos. It combines trajectory representations with cross-frame consistency to study detection across different video generators.",
+      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=erYE1VciKv"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25775"}]
+    },
+    {
+      "id": "clueaegis",
+      "title": "ClueAegis: Heuristic-to-Reasoning Cognitive-skill Learning for Unified Evidence-based Synthetic Image Detection",
+      "authors": ["Huangsen Cao", "Hongkang Chu", "Yuxi Li", "Ying Zhang", "Chen Li", "Jing Lyu", "Yongwei Wang", "Yu Zhao", "Fei Wu"],
+      "venue": "Findings of EMNLP 2026",
+      "citation": "Findings of EMNLP 2026",
+      "status": "Accepted",
+      "role": "Second Author",
+      "year": "2026",
+      "summary": "ClueAegis connects perceptual clues with forensic skill selection and tool-assisted reasoning. The framework produces structured evidence for synthetic image detection, with a benchmark organized around forensic cognitive skills.",
+      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=Hxm5eSFUT9"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2605.25009"}]
+    },
+    {
+      "id": "mrl-cyclegan",
+      "title": "Physics-embedded CycleGAN for robust metabolite mapping in short-readout deuterium metabolic imaging",
+      "authors": ["Shuang Huang", "Gang Chen", "Xinjie Liu", "Hongkang Chu", "Hong Shi", "Zhi Zhang", "Xin Zhou", "Maili Liu", "Chaoyang Liu", "Qingjia Bao"],
+      "venue": "Magnetic Resonance Letters, 2026",
+      "citation": "Magnetic Resonance Letters, 6(4): 200272, 2026",
+      "status": "Published Online",
+      "role": "Co-author",
+      "year": "2026",
+      "summary": "This work embeds a bSSFP-DMI forward model in a CycleGAN to estimate metabolite and off-resonance maps from short-readout measurements. Unpaired training enforces signal consistency and reduces metabolite leakage in simulations and mouse experiments.",
+      "links": [{"label": "DOI", "url": "https://doi.org/10.1016/j.mrl.2026.200272"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13352062/"}]
+    },
+    {
+      "id": "jpcl-phase-correction",
+      "title": "Phase Model-Driven Deep Learning for Robust Phase Correction in High-Throughput NMR-Based Metabolomics",
+      "authors": ["Chuanwen Zhao", "Gang Chen", "Caixiang Liu", "Zhao Li", "Jing Zhao", "Peng Sun", "Hongkang Chu", "Xin Zhou", "Maili Liu", "Peijun Song", "Qingjia Bao", "Chaoyang Liu"],
+      "venue": "The Journal of Physical Chemistry Letters, 2026",
+      "citation": "The Journal of Physical Chemistry Letters, 17(4): 1245–1253, 2026",
+      "status": "Published",
+      "role": "Co-author",
+      "year": "2026",
+      "summary": "A physically informed phase model guides a residual attention network for automated NMR phase correction. The study evaluates the method on metabolomics spectra, including brain extracts, plasma, and urine. Chuanwen Zhao is the first author.",
+      "links": [{"label": "DOI", "url": "https://doi.org/10.1021/acs.jpclett.5c03529"}, {"label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/41508827/"}]
+    },
+    {
+      "id": "ismrm-2026",
+      "title": "Deep Learning Enhanced Weighted Average CSI for High-Resolution Deuterium Metabolic Imaging",
+      "authors": ["Hongkang Chu", "Gang Chen", "Xinjie Liu", "Hong Shi", "Chaoyang Liu", "Maili Liu", "Xin Zhou", "Elton Montrazi", "Lucio Frydman", "Qingjia Bao"],
+      "venue": "ISMRM 2026",
+      "citation": "ISMRM 2026, Cape Town, South Africa; 11 May 2026",
+      "status": "Power Pitch",
+      "role": "First Author",
+      "year": "2026",
+      "summary": "Weighted-average CSI acquisition is combined with deep learning that uses anatomical and spectral priors to reconstruct deuterium metabolite maps. This first-author work was selected for the ISMRM 2026 Power Pitch session on AI Methods.",
+      "links": [{"label": "Conference Program", "url": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616"}]
+    },
+    {
+      "id": "ijms-druggable-proteins",
+      "title": "Comprehensive Research on Druggable Proteins: From PSSM to Pre-Trained Language Models",
+      "authors": ["Hongkang Chu", "Taigang Liu"],
+      "venue": "International Journal of Molecular Sciences, 2024",
+      "citation": "International Journal of Molecular Sciences, 25(8): 4507, 2024",
+      "status": "Published",
+      "role": "First Author",
+      "year": "2024",
+      "summary": "This study compares PSSM features and pretrained protein language models for druggable protein classification. It evaluates ESM-2 embeddings and an adapted GPT-2 classifier, with additional validation using Pharos.",
+      "links": [{"label": "DOI", "url": "https://doi.org/10.3390/ijms25084507"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/"}]
+    }
+  ],
+  "skills": ["Python and PyTorch", "Multimodal learning and transformer fine-tuning", "Tool-using agents and model evaluation", "Diffusion and flow-matching representations", "MRI / MRSI reconstruction"]
+}

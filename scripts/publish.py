@@ -1,6 +1,7 @@
 """Publish this repository's static build to gh-pages without rewriting history."""
 
 from pathlib import Path
+import json
 import re
 import shutil
 import subprocess
@@ -45,9 +46,22 @@ def validate_build() -> None:
             raise PublishError(f"Build is missing {required}. Build the frontend and run export_static.py first.")
     if (DIST / 'CNAME').read_text().strip() != 'chuhongkang.com':
         raise PublishError('Build must retain the chuhongkang.com custom domain.')
+    public_data = json.loads((DIST / 'api/reference.json').read_text())
+    if public_data.get('name') != 'Hongkang Chu':
+        raise PublishError('Build must contain Hongkang Chu’s personal profile.')
+    forbidden = re.compile(r'medcase|cfmMp2xvbk|tgdnYoVYBF|Chen\s+Fang|chenf3@|MedXRAgent|GazeAgent|AudioGuard', re.IGNORECASE)
     for item in DIST.rglob("*"):
         if item.is_symlink() or ".git" in item.relative_to(DIST).parts:
             raise PublishError("Build must not contain symbolic links or Git metadata.")
+        if item.is_file() and item.suffix in {'.json', '.html', '.js', '.css', '.svg', '.txt'}:
+            if forbidden.search(item.read_text(errors='ignore')):
+                raise PublishError('Build contains content outside the approved public profile.')
+        if item.is_file() and item.suffix == '.pdf':
+            document = subprocess.run(['pdftotext', str(item), '-'], capture_output=True, text=True)
+            if document.returncode or forbidden.search(document.stdout):
+                raise PublishError('A public PDF failed the disclosure check.')
+        if item.is_file() and item.suffix == '.pptx':
+            raise PublishError('Presentation attachments are not part of the approved public build.')
 
 
 def publish() -> None:
@@ -95,7 +109,7 @@ def publish() -> None:
         if not git("status", "--porcelain", cwd=checkout).stdout.strip():
             print("Static build is unchanged; nothing to publish.")
             return
-        git("commit", "-m", "Deploy MVChem portfolio", cwd=checkout)
+        git("commit", "-m", "Deploy Hongkang Chu academic homepage", cwd=checkout)
         git("push", "origin", f"HEAD:refs/heads/{BRANCH}", cwd=checkout)
         print("Published frontend/dist to MVChem/mvchem.github.io gh-pages.")
 
