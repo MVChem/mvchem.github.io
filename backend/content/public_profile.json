@@ -2,12 +2,12 @@
   "name": "Hongkang Chu",
   "chinese_name": "储红康",
   "portrait": "/photos/chuhongkang-centered.png",
-  "institution": "University of the Chinese Academy of Sciences",
+  "institution": "UCAS",
   "email": "chuhongkang25@mails.ucas.ac.cn",
   "github": "https://github.com/MVChem",
   "openreview": "https://openreview.net/profile?id=~Hongkang_Chu2",
   "interests": "Multimodal learning; AI agents; synthetic image and video detection; MRI and MRSI reconstruction",
-  "intro": "I am a master's student at the University of the Chinese Academy of Sciences, with research at the Innovation Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy.",
+  "intro": "I am a master's student in Computer Science at UCAS. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy.",
   "education": [
     {"institution": "University of the Chinese Academy of Sciences", "degree": "Master's student, Computer Science", "dates": "2025–present", "details": "Expected graduation: 2028."},
     {"institution": "Shanghai Ocean University", "degree": "Bachelor's degree, Computer Science and Technology", "dates": "2021–2025", "details": "Undergraduate research in protein language models."}
@@ -15,10 +15,10 @@
   "experiences": [
     {
       "id": "cas",
-      "institution": "Chinese Academy of Sciences / UCAS",
+      "institution": "UCAS",
       "role": "Graduate Research",
       "dates": "2025–present",
-      "description": "Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology.",
+      "description": "Research in MRI, MRSI, and deuterium metabolic imaging.",
       "bullets": [
         "Co-developed prior-informed deep learning reconstruction for weighted-average CSI, combining anatomical and spectral information; first-author ISMRM 2026 Power Pitch Oral.",
         "Co-authored work on physics-embedded CycleGAN reconstruction for short-readout deuterium metabolic imaging, published in Magnetic Resonance Letters.",

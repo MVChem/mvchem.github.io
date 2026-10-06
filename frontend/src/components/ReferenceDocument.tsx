@@ -46,7 +46,7 @@ function NewsFeed({ node }: { node: ElementNode }) {
     {node.children.map((child, index) => <DocumentNode key={index} node={child} />)}
   </div>
 }
-const labels: Record<string, string> = { name: 'UCAS · Chinese Academy of Sciences', eyes: 'Image & video forensics', people: 'Multimodal AI', health: 'MRI · MRSI reconstruction' }
+const labels: Record<string, string> = { name: 'UCAS · Computer Science', eyes: 'Image & video forensics', people: 'Multimodal AI', health: 'MRI · MRSI reconstruction' }
 interface Phrase { id: string; x: number; y: number; width: number; height: number; delay: number; right: boolean }
 function IntroHero({ node }: { node: ElementNode }) {
   const hero = useRef<HTMLDivElement>(null)

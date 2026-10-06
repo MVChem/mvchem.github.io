@@ -104,7 +104,7 @@ def site(data: dict) -> dict:
         el('div', el('img', src=data['portrait'], alt=data['name'], width='1448', height='1086',
             fetchpriority='high', decoding='async', cls='profile__portrait-image'),
             cls='profile__avatar profile__portrait'),
-        el('div', el('p', el('span', 'Master’s Student @ UCAS'), el('span', 'AI · MRI · Multimodal Learning'), cls='profile__roles'), cls='profile__id'),
+        el('div', el('p', el('span', 'Master’s Student @ UCAS'), el('span', 'Computer Science'), cls='profile__roles'), cls='profile__id'),
         el('ul',
             el('li', external('UCAS', 'https://english.ucas.ac.cn/')),
             el('li', el('a', 'Email', href='mailto:' + data['email'])),

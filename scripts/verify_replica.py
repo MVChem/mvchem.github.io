@@ -9,6 +9,21 @@ OUT = Path(__file__).resolve().parents[1] / 'artifacts'
 OUT.mkdir(exist_ok=True)
 errors = []
 routes = ['/', '/researches', '/publications', '/teaching', '/projects', '/talks']
+
+
+def assert_link_chips_fit(page) -> None:
+    overflow = page.locator('.link-chip').evaluate_all('''links => links.flatMap(link => {
+        const box = link.getBoundingClientRect();
+        const range = document.createRange();
+        range.selectNodeContents(link);
+        const outside = [...range.getClientRects()].some(text =>
+            text.top < box.top - 1 || text.bottom > box.bottom + 1 ||
+            text.left < box.left - 1 || text.right > box.right + 1);
+        return outside ? [link.textContent] : [];
+    })''')
+    assert not overflow, {'url': page.url, 'viewport': page.viewport_size, 'overflowing_links': overflow}
+
+
 with sync_playwright() as p:
     browser = p.chromium.launch(executable_path='/usr/bin/google-chrome', headless=True, args=['--no-sandbox'])
     page = browser.new_page(viewport={'width':1440,'height':1000}, reduced_motion='reduce')
@@ -28,6 +43,7 @@ with sync_playwright() as p:
         assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), route
         assert page.locator('main h1').count() == 1
         assert page.locator('img').evaluate_all('(images)=>images.every(i=>i.complete && i.naturalWidth>0)'), route
+        assert_link_chips_fit(page)
         layouts[route] = page.locator('main section').evaluate_all('(sections)=>sections.map(s=>({id:s.id,rect:s.getBoundingClientRect().toJSON()}))')
         name = route.strip('/') or 'home'
         page.screenshot(path=str(OUT/f'{name}-desktop.png'), full_page=True)
@@ -45,9 +61,10 @@ with sync_playwright() as p:
     expect(page).to_have_url(BASE + '/researches')
     page.go_back()
     expect(page).to_have_url(BASE + '/')
-    for width in [960, 768, 390, 360]:
+    for width in [960, 768, 640, 412, 390, 360, 320]:
         page.set_viewport_size({'width':width,'height':844})
         assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), width
+        assert_link_chips_fit(page)
     page.set_viewport_size({'width':390,'height':844})
     page.locator('.nav__toggle').click()
     expect(page.locator('.nav__toggle')).to_have_attribute('aria-expanded','true')
@@ -65,8 +82,9 @@ with sync_playwright() as p:
         page.wait_for_timeout(200)
         page.evaluate('scrollTo(0,0)')
         assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), route
+        assert_link_chips_fit(page)
         page.screenshot(path=str(OUT/f'{route.strip("/") or "home"}-mobile.png'), full_page=True)
     browser.close()
 assert not errors, errors
-(OUT/'verification.json').write_text(json.dumps({'status':'passed','routes':routes,'widths':[360,390,768,960,1440],'errors':errors,'layouts':layouts},indent=2))
-print(json.dumps({'status':'passed','pages':len(routes),'widths':[360,390,768,960,1440],'errors':errors},indent=2))
+(OUT/'verification.json').write_text(json.dumps({'status':'passed','routes':routes,'widths':[320,360,390,412,640,768,960,1440],'errors':errors,'layouts':layouts},indent=2))
+print(json.dumps({'status':'passed','pages':len(routes),'widths':[320,360,390,412,640,768,960,1440],'errors':errors},indent=2))

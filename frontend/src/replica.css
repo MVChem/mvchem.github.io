@@ -7,6 +7,16 @@
 .pub__title a:hover { text-decoration: underline; }
 .row__text { margin-top: 8px; line-height: 1.65; }
 .row .link-row { flex-wrap: wrap; }
+.link-row { align-items: flex-start; }
+.link-chip {
+  height: auto;
+  min-height: 30px;
+  min-width: 0;
+  max-width: 100%;
+  padding: 4px 11px 4px 9px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
 .profile__meta { justify-content: center; }
 @media (max-width: 960px) {
   .profile { grid-template-columns: 112px minmax(0, 1fr); }
@@ -17,4 +27,6 @@
   .hero .hp { white-space: normal; }
   .hero .scan-label, .hero .scan-box { display: none; }
   .project__title, .pub__title { overflow-wrap: anywhere; }
+  .row .link-row { flex-direction: column; align-items: stretch; }
+  .row .link-chip { width: 100%; padding-block: 8px; }
 }
