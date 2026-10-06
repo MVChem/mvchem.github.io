@@ -114,7 +114,7 @@ def site(data: dict) -> dict:
         el('h1', 'Hi, I’m ', el('span', data['name'], cls='hp', data_p='name'), '.', cls='hero__title'),
         el('p', 'I study ', el('span', 'multimodal learning', cls='hp', data_p='people'), ', ',
             el('span', 'synthetic media detection', cls='hp', data_p='eyes'), ', and ',
-            el('span', 'AI for magnetic resonance imaging', cls='hp', data_p='health'), '.', cls='hero__lede'),
+            el('span', 'AI for magnetic resonance imaging/medical', cls='hp', data_p='health'), '.', cls='hero__lede'),
         cls='hero'), cls='page-head page-head--hero')
     news_records = [
         ('2026-09-22', 'Sep 2026', 'TRACE is available on arXiv and submitted to ICLR 2027.', papers['trace']['links'][1]['url']),
