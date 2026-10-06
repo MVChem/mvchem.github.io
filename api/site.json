@@ -187,6 +187,10 @@
     {
       "label": "Projects",
       "path": "/projects"
+    },
+    {
+      "label": "Demo",
+      "path": "/demo"
     }
   ],
   "pages": {
@@ -7839,6 +7843,60 @@
                       ]
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/demo": {
+      "kind": "element",
+      "tag": "main",
+      "attrs": {
+        "id": "main",
+        "class": "content"
+      },
+      "children": [
+        {
+          "kind": "element",
+          "tag": "article",
+          "attrs": {
+            "class": "page page--research demo"
+          },
+          "children": [
+            {
+              "kind": "element",
+              "tag": "header",
+              "attrs": {
+                "class": "page-head"
+              },
+              "children": [
+                {
+                  "kind": "element",
+                  "tag": "h1",
+                  "attrs": {
+                    "class": "page-title"
+                  },
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "Research demo"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "element",
+              "tag": "p",
+              "attrs": {
+                "class": "page-intro"
+              },
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "Interactive vertebrae refinement: authentic CT, before/after predictions and a quantitative audit."
                 }
               ]
             }

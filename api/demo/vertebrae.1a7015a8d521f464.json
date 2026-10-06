@@ -1,0 +1,4368 @@
+{
+  "version": "1a7015a8d521f464",
+  "author": "Hongkang Chu",
+  "groundTruthAvailable": false,
+  "cases": [
+    {
+      "id": "BDMAP_00000006",
+      "before_components": 45,
+      "after_components": 30,
+      "changed_voxels": 338,
+      "labels": [
+        {
+          "id": 1,
+          "name": "vertebrae_L5",
+          "before_voxels": 37965,
+          "after_voxels": 37941,
+          "before_components": 5,
+          "after_components": 2,
+          "removed_voxels": 24,
+          "added_voxels": 0,
+          "before_volume_ml": 57.92999267578125,
+          "after_volume_ml": 57.89337158203125,
+          "centroid_ras_mm": [
+            -7.974886583774804,
+            147.4521275631902,
+            -833.8486334044965
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#d4a15d"
+        },
+        {
+          "id": 2,
+          "name": "vertebrae_L4",
+          "before_voxels": 38362,
+          "after_voxels": 38362,
+          "before_components": 3,
+          "after_components": 3,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 58.5357666015625,
+          "after_volume_ml": 58.5357666015625,
+          "centroid_ras_mm": [
+            -6.446423218288942,
+            164.22482697721705,
+            -810.7330691830457
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#c58a61"
+        },
+        {
+          "id": 3,
+          "name": "vertebrae_L3",
+          "before_voxels": 37484,
+          "after_voxels": 37484,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 57.196044921875,
+          "after_volume_ml": 57.196044921875,
+          "centroid_ras_mm": [
+            -3.1842602843880172,
+            168.05898850176075,
+            -780.736754348522
+          ],
+          "flags": [],
+          "color": "#b97463"
+        },
+        {
+          "id": 4,
+          "name": "vertebrae_L2",
+          "before_voxels": 31403,
+          "after_voxels": 31403,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 47.91717529296875,
+          "after_volume_ml": 47.91717529296875,
+          "centroid_ras_mm": [
+            -2.7189943038881665,
+            166.0643912404866,
+            -749.2344839665
+          ],
+          "flags": [],
+          "color": "#ae6a74"
+        },
+        {
+          "id": 5,
+          "name": "vertebrae_L1",
+          "before_voxels": 29015,
+          "after_voxels": 28971,
+          "before_components": 2,
+          "after_components": 1,
+          "removed_voxels": 44,
+          "added_voxels": 0,
+          "before_volume_ml": 44.27337646484375,
+          "after_volume_ml": 44.20623779296875,
+          "centroid_ras_mm": [
+            -3.763888349556453,
+            154.5498057324566,
+            -721.4868661765214
+          ],
+          "flags": [],
+          "color": "#997baf"
+        },
+        {
+          "id": 6,
+          "name": "vertebrae_T12",
+          "before_voxels": 28291,
+          "after_voxels": 28291,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 43.16864013671875,
+          "after_volume_ml": 43.16864013671875,
+          "centroid_ras_mm": [
+            -3.946435593474945,
+            140.931908005196,
+            -694.9201512848609
+          ],
+          "flags": [],
+          "color": "#7e8cc4"
+        },
+        {
+          "id": 7,
+          "name": "vertebrae_T11",
+          "before_voxels": 25139,
+          "after_voxels": 25103,
+          "before_components": 3,
+          "after_components": 1,
+          "removed_voxels": 36,
+          "added_voxels": 0,
+          "before_volume_ml": 38.35906982421875,
+          "after_volume_ml": 38.30413818359375,
+          "centroid_ras_mm": [
+            -4.022809151296656,
+            130.0001400480022,
+            -668.1389873720273
+          ],
+          "flags": [],
+          "color": "#6a9fbd"
+        },
+        {
+          "id": 8,
+          "name": "vertebrae_T10",
+          "before_voxels": 24602,
+          "after_voxels": 24602,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 37.5396728515625,
+          "after_volume_ml": 37.5396728515625,
+          "centroid_ras_mm": [
+            -2.0033254410210475,
+            118.56733573489959,
+            -643.136614909357
+          ],
+          "flags": [],
+          "color": "#61b4b2"
+        },
+        {
+          "id": 9,
+          "name": "vertebrae_T9",
+          "before_voxels": 20681,
+          "after_voxels": 20681,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 31.55670166015625,
+          "after_volume_ml": 31.55670166015625,
+          "centroid_ras_mm": [
+            1.878006231565223,
+            110.85363301460278,
+            -618.9383250326387
+          ],
+          "flags": [],
+          "color": "#71b29a"
+        },
+        {
+          "id": 10,
+          "name": "vertebrae_T8",
+          "before_voxels": 19901,
+          "after_voxels": 19901,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 30.36651611328125,
+          "after_volume_ml": 30.36651611328125,
+          "centroid_ras_mm": [
+            4.773102639314629,
+            107.9720357959399,
+            -595.4463846037887
+          ],
+          "flags": [],
+          "color": "#88b17d"
+        },
+        {
+          "id": 11,
+          "name": "vertebrae_T7",
+          "before_voxels": 17917,
+          "after_voxels": 17917,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 27.33917236328125,
+          "after_volume_ml": 27.33917236328125,
+          "centroid_ras_mm": [
+            7.080690649941403,
+            107.04848659792376,
+            -571.746497739577
+          ],
+          "flags": [],
+          "color": "#aaa773"
+        },
+        {
+          "id": 12,
+          "name": "vertebrae_T6",
+          "before_voxels": 16610,
+          "after_voxels": 16606,
+          "before_components": 2,
+          "after_components": 1,
+          "removed_voxels": 4,
+          "added_voxels": 0,
+          "before_volume_ml": 25.3448486328125,
+          "after_volume_ml": 25.3387451171875,
+          "centroid_ras_mm": [
+            7.747269435746119,
+            111.78425719619415,
+            -549.4264723593881
+          ],
+          "flags": [],
+          "color": "#c8a365"
+        },
+        {
+          "id": 13,
+          "name": "vertebrae_T5",
+          "before_voxels": 15383,
+          "after_voxels": 15375,
+          "before_components": 2,
+          "after_components": 1,
+          "removed_voxels": 8,
+          "added_voxels": 0,
+          "before_volume_ml": 23.47259521484375,
+          "after_volume_ml": 23.46038818359375,
+          "centroid_ras_mm": [
+            4.684527439024379,
+            117.44692581300812,
+            -527.949268292683
+          ],
+          "flags": [],
+          "color": "#c69278"
+        },
+        {
+          "id": 14,
+          "name": "vertebrae_T4",
+          "before_voxels": 14286,
+          "after_voxels": 14286,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 21.7987060546875,
+          "after_volume_ml": 21.7987060546875,
+          "centroid_ras_mm": [
+            0.7806418871622611,
+            127.35159203065939,
+            -508.2824793504129
+          ],
+          "flags": [],
+          "color": "#b68594"
+        },
+        {
+          "id": 15,
+          "name": "vertebrae_T3",
+          "before_voxels": 13214,
+          "after_voxels": 13214,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 20.1629638671875,
+          "after_volume_ml": 20.1629638671875,
+          "centroid_ras_mm": [
+            -1.5850187301347205,
+            141.34302397078858,
+            -491.9501286514303
+          ],
+          "flags": [],
+          "color": "#a58bb4"
+        },
+        {
+          "id": 16,
+          "name": "vertebrae_T2",
+          "before_voxels": 13317,
+          "after_voxels": 13317,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 20.32012939453125,
+          "after_volume_ml": 20.32012939453125,
+          "centroid_ras_mm": [
+            -2.096306647518219,
+            157.6703121480063,
+            -479.50792220470066
+          ],
+          "flags": [],
+          "color": "#8b9cba"
+        },
+        {
+          "id": 17,
+          "name": "vertebrae_T1",
+          "before_voxels": 14103,
+          "after_voxels": 14103,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 21.51947021484375,
+          "after_volume_ml": 21.51947021484375,
+          "centroid_ras_mm": [
+            -3.7832298535772395,
+            175.8331394472807,
+            -469.7461887541657
+          ],
+          "flags": [],
+          "color": "#75acb6"
+        },
+        {
+          "id": 18,
+          "name": "vertebrae_C7",
+          "before_voxels": 11689,
+          "after_voxels": 11689,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 17.83599853515625,
+          "after_volume_ml": 17.83599853515625,
+          "centroid_ras_mm": [
+            -5.676903766361534,
+            190.15421149157328,
+            -458.79771580118063
+          ],
+          "flags": [],
+          "color": "#73b1a5"
+        },
+        {
+          "id": 19,
+          "name": "vertebrae_C6",
+          "before_voxels": 7550,
+          "after_voxels": 7542,
+          "before_components": 2,
+          "after_components": 1,
+          "removed_voxels": 8,
+          "added_voxels": 0,
+          "before_volume_ml": 11.5203857421875,
+          "after_volume_ml": 11.5081787109375,
+          "centroid_ras_mm": [
+            -8.493855243967118,
+            201.3760234354283,
+            -449.55906921241046
+          ],
+          "flags": [],
+          "color": "#92b092"
+        },
+        {
+          "id": 20,
+          "name": "vertebrae_C5",
+          "before_voxels": 6680,
+          "after_voxels": 6680,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 10.19287109375,
+          "after_volume_ml": 10.19287109375,
+          "centroid_ras_mm": [
+            -8.493357035928142,
+            209.1808570359281,
+            -441.3334580838323
+          ],
+          "flags": [],
+          "color": "#b4ae83"
+        },
+        {
+          "id": 21,
+          "name": "vertebrae_C4",
+          "before_voxels": 7762,
+          "after_voxels": 7762,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 11.8438720703125,
+          "after_volume_ml": 11.8438720703125,
+          "centroid_ras_mm": [
+            -10.224696437773758,
+            218.35563079747487,
+            -431.8122906467405
+          ],
+          "flags": [],
+          "color": "#c1a283"
+        },
+        {
+          "id": 22,
+          "name": "vertebrae_C3",
+          "before_voxels": 6787,
+          "after_voxels": 6755,
+          "before_components": 3,
+          "after_components": 1,
+          "removed_voxels": 32,
+          "added_voxels": 0,
+          "before_volume_ml": 10.35614013671875,
+          "after_volume_ml": 10.30731201171875,
+          "centroid_ras_mm": [
+            -10.12804172834936,
+            224.82553432642487,
+            -422.1728349370835
+          ],
+          "flags": [],
+          "color": "#b796a0"
+        },
+        {
+          "id": 23,
+          "name": "vertebrae_C2",
+          "before_voxels": 12149,
+          "after_voxels": 12029,
+          "before_components": 4,
+          "after_components": 1,
+          "removed_voxels": 120,
+          "added_voxels": 0,
+          "before_volume_ml": 18.53790283203125,
+          "after_volume_ml": 18.35479736328125,
+          "centroid_ras_mm": [
+            -10.54172338723086,
+            233.8646513114141,
+            -408.57980713276254
+          ],
+          "flags": [
+            "centroid_order_review"
+          ],
+          "color": "#a496b6"
+        },
+        {
+          "id": 24,
+          "name": "vertebrae_C1",
+          "before_voxels": 9863,
+          "after_voxels": 9801,
+          "before_components": 5,
+          "after_components": 4,
+          "removed_voxels": 62,
+          "added_voxels": 0,
+          "before_volume_ml": 15.04974365234375,
+          "after_volume_ml": 14.95513916015625,
+          "centroid_ras_mm": [
+            -17.85312244923989,
+            235.1780829124579,
+            -424.5963167023773
+          ],
+          "flags": [
+            "remaining_disconnected_components",
+            "centroid_order_review"
+          ],
+          "color": "#8aaab7"
+        }
+      ],
+      "frames": {
+        "sagittal": [
+          {
+            "index": 0,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/0-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/0-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 15,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/15-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/15-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 29,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/29-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/29-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 44,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/44-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/44-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 58,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/58-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/58-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 73,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/73-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/73-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 88,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/88-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/88-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 102,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/102-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/102-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 117,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/117-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/117-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 131,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/131-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/131-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 140,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/140-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/140-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 8
+          },
+          {
+            "index": 144,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/144-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/144-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 146,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/146-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/146-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 161,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/161-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/161-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 175,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/175-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/175-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 190,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/190-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/190-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 204,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/204-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/204-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 219,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/219-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/219-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 233,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/233-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/233-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 234,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/234-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/234-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 238,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/238-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/238-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 14
+          },
+          {
+            "index": 240,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/240-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/240-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 248,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/248-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/248-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 251,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/251-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/251-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 257,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/257-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/257-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 260,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/260-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/260-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 261,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/261-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/261-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 263,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/263-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/263-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 265,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/265-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/265-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 10
+          },
+          {
+            "index": 266,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/266-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/266-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 16
+          },
+          {
+            "index": 267,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/267-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/267-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 16
+          },
+          {
+            "index": 268,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/268-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/268-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 12
+          },
+          {
+            "index": 269,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/269-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/269-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 12
+          },
+          {
+            "index": 270,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/270-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/270-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 18
+          },
+          {
+            "index": 271,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/271-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/271-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 18
+          },
+          {
+            "index": 274,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/274-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/274-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 276,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/276-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/276-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 277,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/277-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/277-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 279,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/279-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/279-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 280,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/280-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/280-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 282,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/282-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/282-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 283,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/283-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/283-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 292,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/292-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/292-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 300,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/300-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/300-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 307,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/307-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/307-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 321,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/321-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/321-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 336,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/336-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/336-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 350,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/350-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/350-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 365,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/365-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/365-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 380,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/380-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/380-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 394,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/394-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/394-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 409,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/409-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/409-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 423,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/423-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/423-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 438,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/438-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/438-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 453,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/453-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/453-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 467,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/467-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/467-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 482,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/482-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/482-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 496,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/496-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/496-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 511,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/511-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/sagittal/511-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          }
+        ],
+        "coronal": [
+          {
+            "index": 0,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/0-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/0-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 15,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/15-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/15-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 29,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/29-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/29-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 44,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/44-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/44-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 58,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/58-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/58-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 73,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/73-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/73-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 88,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/88-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/88-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 102,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/102-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/102-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 103,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/103-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/103-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 108,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/108-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/108-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 117,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/117-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/117-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 130,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/130-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/130-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 131,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/131-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/131-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 135,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/135-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/135-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 136,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/136-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/136-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 138,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/138-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/138-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 12
+          },
+          {
+            "index": 141,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/141-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/141-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 8
+          },
+          {
+            "index": 143,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/143-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/143-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 145,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/145-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/145-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 146,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/146-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/146-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 156,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/156-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/156-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 160,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/160-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/160-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 161,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/161-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/161-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 173,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/173-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/173-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 174,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/174-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/174-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 175,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/175-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/175-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 182,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/182-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/182-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 183,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/183-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/183-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 190,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/190-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/190-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 191,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/191-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/191-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 195,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/195-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/195-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 203,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/203-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/203-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 204,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/204-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/204-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 205,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/205-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/205-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 10
+          },
+          {
+            "index": 206,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/206-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/206-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 10
+          },
+          {
+            "index": 208,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/208-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/208-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 211,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/211-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/211-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 2
+          },
+          {
+            "index": 218,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/218-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/218-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 219,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/219-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/219-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 234,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/234-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/234-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 236,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/236-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/236-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 248,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/248-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/248-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 251,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/251-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/251-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 261,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/261-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/261-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 263,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/263-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/263-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 268,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/268-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/268-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 21
+          },
+          {
+            "index": 269,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/269-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/269-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 21
+          },
+          {
+            "index": 271,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/271-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/271-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 23
+          },
+          {
+            "index": 272,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/272-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/272-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 31
+          },
+          {
+            "index": 273,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/273-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/273-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 31
+          },
+          {
+            "index": 274,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/274-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/274-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 6
+          },
+          {
+            "index": 277,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/277-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/277-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 281,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/281-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/281-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 292,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/292-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/292-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 4
+          },
+          {
+            "index": 294,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/294-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/294-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 307,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/307-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/307-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 321,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/321-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/321-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 336,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/336-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/336-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 350,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/350-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/350-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 365,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/365-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/365-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 380,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/380-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/380-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 394,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/394-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/394-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 409,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/409-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/409-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 423,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/423-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/423-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 438,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/438-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/438-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 453,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/453-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/453-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 467,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/467-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/467-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 482,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/482-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/482-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 496,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/496-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/496-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          },
+          {
+            "index": 511,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/511-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/coronal/511-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 977.5,
+            "changedPixels": 0
+          }
+        ],
+        "axial": [
+          {
+            "index": 0,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/0-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/0-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 11,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/11-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/11-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 22,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/22-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/22-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 33,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/33-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/33-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 45,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/45-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/45-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 56,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/56-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/56-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 67,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/67-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/67-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 69,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/69-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/69-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 8
+          },
+          {
+            "index": 70,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/70-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/70-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 28
+          },
+          {
+            "index": 78,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/78-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/78-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 89,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/89-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/89-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 100,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/100-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/100-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 111,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/111-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/111-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 123,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/123-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/123-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 134,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/134-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/134-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 145,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/145-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/145-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 148,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/148-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/148-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 4
+          },
+          {
+            "index": 154,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/154-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/154-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 156,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/156-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/156-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 166,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/166-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/166-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 167,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/167-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/167-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 178,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/178-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/178-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 179,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/179-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/179-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 185,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/185-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/185-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 28
+          },
+          {
+            "index": 189,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/189-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/189-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 190,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/190-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/190-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 200,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/200-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/200-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 201,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/201-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/201-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 211,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/211-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/211-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 212,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/212-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/212-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 217,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/217-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/217-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 219,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/219-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/219-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 14
+          },
+          {
+            "index": 221,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/221-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/221-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 8
+          },
+          {
+            "index": 223,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/223-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/223-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 231,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/231-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/231-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 234,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/234-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/234-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 240,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/240-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/240-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 245,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/245-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/245-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 250,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/250-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/250-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 256,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/256-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/256-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 259,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/259-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/259-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 267,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/267-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/267-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 275,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/275-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/275-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 279,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/279-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/279-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 8
+          },
+          {
+            "index": 282,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/282-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/282-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 287,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/287-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/287-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 290,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/290-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/290-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 291,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/291-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/291-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 295,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/295-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/295-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 299,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/299-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/299-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 8
+          },
+          {
+            "index": 301,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/301-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/301-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 302,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/302-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/302-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 306,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/306-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/306-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 309,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/309-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/309-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 310,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/310-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/310-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 312,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/312-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/312-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 4
+          },
+          {
+            "index": 315,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/315-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/315-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 316,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/316-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/316-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 16
+          },
+          {
+            "index": 319,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/319-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/319-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 12
+          },
+          {
+            "index": 320,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/320-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/320-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 80
+          },
+          {
+            "index": 323,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/323-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/323-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 325,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/325-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/325-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 48
+          },
+          {
+            "index": 326,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/326-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/326-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 14
+          },
+          {
+            "index": 334,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/334-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/334-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 345,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/345-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/345-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 357,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/357-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/357-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 368,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/368-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/368-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 379,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/379-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/379-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 390,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/390-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/axial/390-labels.png",
+            "widthMm": 400.0,
+            "heightMm": 400.0,
+            "changedPixels": 0
+          }
+        ]
+      },
+      "meshes": {
+        "raw": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/raw-meshes.json.gz",
+        "refined": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000006/refined-meshes.json.gz"
+      },
+      "original_shape": [
+        512,
+        512,
+        391
+      ],
+      "shape": [
+        512,
+        512,
+        391
+      ],
+      "spacing_mm": [
+        0.78125,
+        0.78125,
+        2.5
+      ],
+      "affine_ras_mm": [
+        [
+          0.78125,
+          0.0,
+          0.0,
+          -213.609375
+        ],
+        [
+          0.0,
+          0.78125,
+          0.0,
+          5.390625
+        ],
+        [
+          0.0,
+          0.0,
+          2.5,
+          -1196.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_orientation": [
+        "L",
+        "A",
+        "S"
+      ],
+      "display_resampled": false,
+      "initial_indices": {
+        "sagittal": 271,
+        "coronal": 183,
+        "axial": 217
+      },
+      "change_indices": {
+        "sagittal": 266,
+        "coronal": 272,
+        "axial": 319
+      },
+      "source_units": "mm",
+      "removed_voxels": 338,
+      "added_voxels": 0,
+      "parameters": {
+        "max_component_fraction": 0.01,
+        "min_distance_mm": 3.0,
+        "fill_holes_mm3": 0.0,
+        "conservative": false
+      },
+      "limitations": [
+        "No ground truth: component reduction is not an accuracy measure.",
+        "Large artifacts, connected leakage, missing anatomy and wrong label identities may remain.",
+        "Boundary components are retained; they may include artifacts.",
+        "No identity reassignment, model retraining, or clinical validation."
+      ],
+      "hashes": {
+        "raw_sha256": "4a13532f1034860c98319e679c792e1baf7aa69d517d4aa092cbc1a7d5b8356b",
+        "ct_sha256": "1161524469c3b4b4623e36c8c5c1cd546863a1ac05fde4047ebf211b2fe848e7",
+        "refined_sha256": "0f3dff5b240d7cd732073c2b9b934c2b289142f9ea56aca7415720010bab3c32"
+      },
+      "comparisonPdf": "/demo-data/vertebrae/1a7015a8d521f464/downloads/BDMAP_00000006_research_comparison.pdf"
+    },
+    {
+      "id": "BDMAP_00000031",
+      "before_components": 122,
+      "after_components": 57,
+      "changed_voxels": 3226,
+      "labels": [
+        {
+          "id": 1,
+          "name": "vertebrae_L5",
+          "before_voxels": 106318,
+          "after_voxels": 106318,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 62.18084436342979,
+          "after_volume_ml": 62.18084436342979,
+          "centroid_ras_mm": [
+            -5.204531379328984,
+            148.02221431225195,
+            -932.5761306157626
+          ],
+          "flags": [],
+          "color": "#d4a15d"
+        },
+        {
+          "id": 2,
+          "name": "vertebrae_L4",
+          "before_voxels": 116638,
+          "after_voxels": 116624,
+          "before_components": 2,
+          "after_components": 1,
+          "removed_voxels": 14,
+          "added_voxels": 0,
+          "before_volume_ml": 68.21657033486073,
+          "after_volume_ml": 68.2083823345119,
+          "centroid_ras_mm": [
+            -5.7629843691049984,
+            153.31134029016326,
+            -896.3595445918864
+          ],
+          "flags": [],
+          "color": "#c58a61"
+        },
+        {
+          "id": 3,
+          "name": "vertebrae_L3",
+          "before_voxels": 117831,
+          "after_voxels": 117797,
+          "before_components": 3,
+          "after_components": 1,
+          "removed_voxels": 34,
+          "added_voxels": 0,
+          "before_volume_ml": 68.9143049360155,
+          "after_volume_ml": 68.89441979231118,
+          "centroid_ras_mm": [
+            -4.058202584477954,
+            152.90826123940974,
+            -859.3876090291898
+          ],
+          "flags": [],
+          "color": "#b97463"
+        },
+        {
+          "id": 4,
+          "name": "vertebrae_L2",
+          "before_voxels": 90433,
+          "after_voxels": 89985,
+          "before_components": 4,
+          "after_components": 1,
+          "removed_voxels": 448,
+          "added_voxels": 0,
+          "before_volume_ml": 52.89038825333478,
+          "after_volume_ml": 52.628372242171885,
+          "centroid_ras_mm": [
+            -0.13874278525585737,
+            148.95671557238705,
+            -825.4589324125986
+          ],
+          "flags": [],
+          "color": "#ae6a74"
+        },
+        {
+          "id": 5,
+          "name": "vertebrae_L1",
+          "before_voxels": 39785,
+          "after_voxels": 39676,
+          "before_components": 10,
+          "after_components": 5,
+          "removed_voxels": 109,
+          "added_voxels": 0,
+          "before_volume_ml": 23.268542419901188,
+          "after_volume_ml": 23.204792988613786,
+          "centroid_ras_mm": [
+            0.3100349156291031,
+            132.5042671813565,
+            -808.6447958591508
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#997baf"
+        },
+        {
+          "id": 6,
+          "name": "vertebrae_T12",
+          "before_voxels": 105326,
+          "after_voxels": 105122,
+          "before_components": 9,
+          "after_components": 3,
+          "removed_voxels": 204,
+          "added_voxels": 0,
+          "before_volume_ml": 61.600666052997674,
+          "after_volume_ml": 61.48135519077171,
+          "centroid_ras_mm": [
+            0.8973481407317365,
+            146.59649272095757,
+            -779.8085781406428
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#7e8cc4"
+        },
+        {
+          "id": 7,
+          "name": "vertebrae_T11",
+          "before_voxels": 102407,
+          "after_voxels": 101580,
+          "before_components": 11,
+          "after_components": 3,
+          "removed_voxels": 827,
+          "added_voxels": 0,
+          "before_volume_ml": 59.89346798026444,
+          "after_volume_ml": 59.40979110251508,
+          "centroid_ras_mm": [
+            5.564073344285276,
+            140.07694597238628,
+            -746.2089886625861
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#6a9fbd"
+        },
+        {
+          "id": 8,
+          "name": "vertebrae_T10",
+          "before_voxels": 94936,
+          "after_voxels": 94600,
+          "before_components": 8,
+          "after_components": 2,
+          "removed_voxels": 336,
+          "added_voxels": 0,
+          "before_volume_ml": 55.52400007982252,
+          "after_volume_ml": 55.327488071450354,
+          "centroid_ras_mm": [
+            6.941973523387929,
+            130.3825912559461,
+            -715.2105415475992
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#61b4b2"
+        },
+        {
+          "id": 9,
+          "name": "vertebrae_T9",
+          "before_voxels": 61215,
+          "after_voxels": 60802,
+          "before_components": 10,
+          "after_components": 6,
+          "removed_voxels": 413,
+          "added_voxels": 0,
+          "before_volume_ml": 35.80203152530479,
+          "after_volume_ml": 35.560485515014,
+          "centroid_ras_mm": [
+            5.386855592743672,
+            123.23483178493306,
+            -690.7266599914763
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#71b29a"
+        },
+        {
+          "id": 10,
+          "name": "vertebrae_T8",
+          "before_voxels": 95013,
+          "after_voxels": 94901,
+          "before_components": 9,
+          "after_components": 6,
+          "removed_voxels": 112,
+          "added_voxels": 0,
+          "before_volume_ml": 55.56903408174115,
+          "after_volume_ml": 55.503530078950426,
+          "centroid_ras_mm": [
+            7.819182333760978,
+            132.56996472804553,
+            -659.8669752180762
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#88b17d"
+        },
+        {
+          "id": 11,
+          "name": "vertebrae_T7",
+          "before_voxels": 71034,
+          "after_voxels": 70879,
+          "before_components": 9,
+          "after_components": 5,
+          "removed_voxels": 155,
+          "added_voxels": 0,
+          "before_volume_ml": 41.54474405568081,
+          "after_volume_ml": 41.45409119467578,
+          "centroid_ras_mm": [
+            6.818103574842354,
+            143.38814679991606,
+            -633.2449709764907
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#aaa773"
+        },
+        {
+          "id": 12,
+          "name": "vertebrae_T6",
+          "before_voxels": 55038,
+          "after_voxels": 54966,
+          "before_components": 7,
+          "after_components": 4,
+          "removed_voxels": 72,
+          "added_voxels": 0,
+          "before_volume_ml": 32.189368799962836,
+          "after_volume_ml": 32.147259083883085,
+          "centroid_ras_mm": [
+            5.307687223692824,
+            148.47038524383254,
+            -603.8118045771525
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#c8a365"
+        },
+        {
+          "id": 13,
+          "name": "vertebrae_T5",
+          "before_voxels": 49972,
+          "after_voxels": 49968,
+          "before_components": 3,
+          "after_components": 2,
+          "removed_voxels": 4,
+          "added_voxels": 0,
+          "before_volume_ml": 29.22648238801815,
+          "after_volume_ml": 29.224142959347052,
+          "centroid_ras_mm": [
+            3.3833092241534644,
+            156.85327218795027,
+            -580.2585082170966
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#c69278"
+        },
+        {
+          "id": 14,
+          "name": "vertebrae_T4",
+          "before_voxels": 42495,
+          "after_voxels": 42487,
+          "before_components": 3,
+          "after_components": 2,
+          "removed_voxels": 8,
+          "added_voxels": 0,
+          "before_volume_ml": 24.853505344569584,
+          "after_volume_ml": 24.84882648722739,
+          "centroid_ras_mm": [
+            -0.6855752384553,
+            166.84345533266057,
+            -557.5575294570202
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#b68594"
+        },
+        {
+          "id": 15,
+          "name": "vertebrae_T3",
+          "before_voxels": 39791,
+          "after_voxels": 39791,
+          "before_components": 2,
+          "after_components": 2,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 23.272051562907833,
+          "after_volume_ml": 23.272051562907833,
+          "centroid_ras_mm": [
+            -5.211358743968503,
+            176.0234480041027,
+            -535.70139236246
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#a58bb4"
+        },
+        {
+          "id": 16,
+          "name": "vertebrae_T2",
+          "before_voxels": 40236,
+          "after_voxels": 40236,
+          "before_components": 2,
+          "after_components": 2,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 23.532313002567403,
+          "after_volume_ml": 23.532313002567403,
+          "centroid_ras_mm": [
+            -7.456141771361473,
+            188.8876565762004,
+            -514.6696468921681
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#8b9cba"
+        },
+        {
+          "id": 17,
+          "name": "vertebrae_T1",
+          "before_voxels": 39598,
+          "after_voxels": 39594,
+          "before_components": 3,
+          "after_components": 2,
+          "removed_voxels": 4,
+          "added_voxels": 0,
+          "before_volume_ml": 23.15917412952739,
+          "after_volume_ml": 23.156834700856294,
+          "centroid_ras_mm": [
+            -8.70977787827701,
+            200.50768819139262,
+            -494.5645232532863
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#75acb6"
+        },
+        {
+          "id": 18,
+          "name": "vertebrae_C7",
+          "before_voxels": 29519,
+          "after_voxels": 29388,
+          "before_components": 5,
+          "after_components": 2,
+          "removed_voxels": 131,
+          "added_voxels": 0,
+          "before_volume_ml": 17.26439873553005,
+          "after_volume_ml": 17.187782446551616,
+          "centroid_ras_mm": [
+            -7.075511528940382,
+            209.38993115812576,
+            -479.6329747299012
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#73b1a5"
+        },
+        {
+          "id": 19,
+          "name": "vertebrae_C6",
+          "before_voxels": 27162,
+          "after_voxels": 27002,
+          "before_components": 8,
+          "after_components": 1,
+          "removed_voxels": 160,
+          "added_voxels": 0,
+          "before_volume_ml": 15.885890391085988,
+          "after_volume_ml": 15.792313244242097,
+          "centroid_ras_mm": [
+            -7.359804077012797,
+            218.94822779331162,
+            -459.78814524782126
+          ],
+          "flags": [],
+          "color": "#92b092"
+        },
+        {
+          "id": 20,
+          "name": "vertebrae_C5",
+          "before_voxels": 24467,
+          "after_voxels": 24455,
+          "before_components": 2,
+          "after_components": 1,
+          "removed_voxels": 12,
+          "added_voxels": 0,
+          "before_volume_ml": 14.309700323934205,
+          "after_volume_ml": 14.302682037920913,
+          "centroid_ras_mm": [
+            -6.288006510682891,
+            223.60584827361478,
+            -442.03426840580005
+          ],
+          "flags": [],
+          "color": "#b4ae83"
+        },
+        {
+          "id": 21,
+          "name": "vertebrae_C4",
+          "before_voxels": 21870,
+          "after_voxels": 21745,
+          "before_components": 3,
+          "after_components": 1,
+          "removed_voxels": 125,
+          "added_voxels": 0,
+          "before_volume_ml": 12.790826259224305,
+          "after_volume_ml": 12.717719113252516,
+          "centroid_ras_mm": [
+            -5.514427346803842,
+            227.04522286014026,
+            -424.49076430685466
+          ],
+          "flags": [],
+          "color": "#c1a283"
+        },
+        {
+          "id": 22,
+          "name": "vertebrae_C3",
+          "before_voxels": 21405,
+          "after_voxels": 21405,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 12.518867676209247,
+          "after_volume_ml": 12.518867676209247,
+          "centroid_ras_mm": [
+            -5.241456617904703,
+            229.61887427733006,
+            -406.83853211332723
+          ],
+          "flags": [],
+          "color": "#b796a0"
+        },
+        {
+          "id": 23,
+          "name": "vertebrae_C2",
+          "before_voxels": 31464,
+          "after_voxels": 31464,
+          "before_components": 1,
+          "after_components": 1,
+          "removed_voxels": 0,
+          "added_voxels": 0,
+          "before_volume_ml": 18.4019459268511,
+          "after_volume_ml": 18.4019459268511,
+          "centroid_ras_mm": [
+            -4.224444007437057,
+            232.0402200729405,
+            -387.52145902608083
+          ],
+          "flags": [],
+          "color": "#a496b6"
+        },
+        {
+          "id": 24,
+          "name": "vertebrae_C1",
+          "before_voxels": 27349,
+          "after_voxels": 27291,
+          "before_components": 6,
+          "after_components": 2,
+          "removed_voxels": 58,
+          "added_voxels": 0,
+          "before_volume_ml": 15.995258681459786,
+          "after_volume_ml": 15.961336965728876,
+          "centroid_ras_mm": [
+            -3.2285965668627057,
+            235.29165306900626,
+            -370.86117167121597
+          ],
+          "flags": [
+            "remaining_disconnected_components"
+          ],
+          "color": "#8aaab7"
+        }
+      ],
+      "frames": {
+        "sagittal": [
+          {
+            "index": 0,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/0-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/0-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 15,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/15-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/15-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 29,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/29-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/29-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 44,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/44-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/44-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 58,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/58-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/58-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 73,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/73-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/73-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 83,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/83-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/83-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 10
+          },
+          {
+            "index": 88,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/88-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/88-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 53
+          },
+          {
+            "index": 90,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/90-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/90-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 24
+          },
+          {
+            "index": 102,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/102-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/102-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 117,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/117-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/117-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 131,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/131-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/131-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 146,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/146-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/146-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 161,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/161-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/161-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 175,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/175-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/175-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 190,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/190-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/190-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 204,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/204-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/204-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 219,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/219-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/219-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 234,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/234-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/234-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 248,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/248-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/248-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 22
+          },
+          {
+            "index": 250,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/250-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/250-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 20
+          },
+          {
+            "index": 263,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/263-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/263-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 30
+          },
+          {
+            "index": 264,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/264-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/264-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 63
+          },
+          {
+            "index": 265,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/265-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/265-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 63
+          },
+          {
+            "index": 266,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/266-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/266-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 68
+          },
+          {
+            "index": 267,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/267-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/267-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 57
+          },
+          {
+            "index": 268,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/268-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/268-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 57
+          },
+          {
+            "index": 269,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/269-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/269-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 29
+          },
+          {
+            "index": 272,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/272-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/272-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 72
+          },
+          {
+            "index": 273,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/273-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/273-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 72
+          },
+          {
+            "index": 274,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/274-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/274-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 135
+          },
+          {
+            "index": 276,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/276-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/276-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 136
+          },
+          {
+            "index": 277,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/277-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/277-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 36
+          },
+          {
+            "index": 279,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/279-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/279-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 113
+          },
+          {
+            "index": 280,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/280-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/280-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 50
+          },
+          {
+            "index": 281,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/281-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/281-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 50
+          },
+          {
+            "index": 282,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/282-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/282-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 96
+          },
+          {
+            "index": 283,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/283-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/283-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 96
+          },
+          {
+            "index": 292,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/292-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/292-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 12
+          },
+          {
+            "index": 294,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/294-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/294-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 22
+          },
+          {
+            "index": 301,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/301-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/301-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 89
+          },
+          {
+            "index": 304,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/304-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/304-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 82
+          },
+          {
+            "index": 307,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/307-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/307-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 2
+          },
+          {
+            "index": 321,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/321-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/321-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 336,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/336-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/336-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 350,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/350-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/350-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 365,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/365-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/365-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 380,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/380-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/380-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 394,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/394-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/394-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 4
+          },
+          {
+            "index": 409,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/409-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/409-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 423,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/423-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/423-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 438,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/438-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/438-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 453,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/453-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/453-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 467,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/467-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/467-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 482,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/482-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/482-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 496,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/496-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/496-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 511,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/511-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/sagittal/511-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          }
+        ],
+        "coronal": [
+          {
+            "index": 0,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/0-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/0-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 15,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/15-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/15-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 29,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/29-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/29-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 44,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/44-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/44-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 58,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/58-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/58-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 73,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/73-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/73-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 77,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/77-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/77-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 14
+          },
+          {
+            "index": 88,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/88-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/88-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 42
+          },
+          {
+            "index": 90,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/90-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/90-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 116
+          },
+          {
+            "index": 93,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/93-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/93-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 34
+          },
+          {
+            "index": 98,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/98-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/98-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 114
+          },
+          {
+            "index": 102,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/102-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/102-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 35
+          },
+          {
+            "index": 115,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/115-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/115-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 21
+          },
+          {
+            "index": 117,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/117-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/117-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 77
+          },
+          {
+            "index": 119,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/119-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/119-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 29
+          },
+          {
+            "index": 124,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/124-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/124-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 6
+          },
+          {
+            "index": 126,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/126-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/126-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 7
+          },
+          {
+            "index": 131,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/131-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/131-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 20
+          },
+          {
+            "index": 134,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/134-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/134-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 4
+          },
+          {
+            "index": 136,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/136-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/136-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 8
+          },
+          {
+            "index": 141,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/141-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/141-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 66
+          },
+          {
+            "index": 145,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/145-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/145-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 48
+          },
+          {
+            "index": 146,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/146-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/146-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 12
+          },
+          {
+            "index": 147,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/147-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/147-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 20
+          },
+          {
+            "index": 148,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/148-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/148-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 20
+          },
+          {
+            "index": 152,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/152-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/152-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 34
+          },
+          {
+            "index": 153,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/153-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/153-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 34
+          },
+          {
+            "index": 154,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/154-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/154-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 30
+          },
+          {
+            "index": 159,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/159-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/159-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 12
+          },
+          {
+            "index": 160,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/160-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/160-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 6
+          },
+          {
+            "index": 161,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/161-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/161-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 6
+          },
+          {
+            "index": 163,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/163-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/163-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 2
+          },
+          {
+            "index": 174,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/174-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/174-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 175,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/175-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/175-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 184,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/184-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/184-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 190,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/190-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/190-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 198,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/198-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/198-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 2
+          },
+          {
+            "index": 204,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/204-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/204-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 211,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/211-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/211-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 10
+          },
+          {
+            "index": 219,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/219-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/219-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 220,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/220-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/220-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 231,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/231-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/231-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 14
+          },
+          {
+            "index": 232,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/232-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/232-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 14
+          },
+          {
+            "index": 234,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/234-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/234-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 236,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/236-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/236-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 240,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/240-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/240-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 243,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/243-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/243-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 21
+          },
+          {
+            "index": 245,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/245-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/245-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 17
+          },
+          {
+            "index": 248,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/248-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/248-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 249,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/249-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/249-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 263,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/263-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/263-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 17
+          },
+          {
+            "index": 277,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/277-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/277-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 292,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/292-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/292-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 307,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/307-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/307-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 321,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/321-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/321-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 336,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/336-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/336-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 350,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/350-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/350-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 365,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/365-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/365-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 380,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/380-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/380-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 394,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/394-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/394-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 409,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/409-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/409-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 423,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/423-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/423-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 430,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/430-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/430-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 55
+          },
+          {
+            "index": 435,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/435-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/435-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 8
+          },
+          {
+            "index": 438,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/438-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/438-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 453,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/453-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/453-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 467,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/467-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/467-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 482,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/482-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/482-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 496,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/496-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/496-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          },
+          {
+            "index": 511,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/511-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/coronal/511-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 975.799983382225,
+            "changedPixels": 0
+          }
+        ],
+        "axial": [
+          {
+            "index": 0,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/0-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/0-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 4,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/4-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/4-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 6
+          },
+          {
+            "index": 40,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/40-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/40-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 80,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/80-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/80-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 119,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/119-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/119-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 159,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/159-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/159-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 199,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/199-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/199-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 239,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/239-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/239-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 279,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/279-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/279-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 318,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/318-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/318-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 358,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/358-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/358-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 398,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/398-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/398-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 434,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/434-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/434-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 438,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/438-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/438-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 478,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/478-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/478-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 486,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/486-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/486-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 517,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/517-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/517-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 536,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/536-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/536-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 52
+          },
+          {
+            "index": 539,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/539-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/539-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 18
+          },
+          {
+            "index": 557,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/557-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/557-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 587,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/587-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/587-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 16
+          },
+          {
+            "index": 597,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/597-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/597-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 599,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/599-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/599-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 8
+          },
+          {
+            "index": 611,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/611-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/611-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 5
+          },
+          {
+            "index": 637,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/637-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/637-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 653,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/653-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/653-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 6
+          },
+          {
+            "index": 657,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/657-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/657-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 45
+          },
+          {
+            "index": 677,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/677-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/677-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 701,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/701-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/701-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 4
+          },
+          {
+            "index": 716,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/716-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/716-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 717,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/717-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/717-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 4
+          },
+          {
+            "index": 744,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/744-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/744-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 4
+          },
+          {
+            "index": 745,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/745-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/745-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 4
+          },
+          {
+            "index": 752,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/752-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/752-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 46
+          },
+          {
+            "index": 756,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/756-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/756-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 9
+          },
+          {
+            "index": 763,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/763-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/763-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 6
+          },
+          {
+            "index": 778,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/778-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/778-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 21
+          },
+          {
+            "index": 780,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/780-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/780-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 14
+          },
+          {
+            "index": 790,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/790-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/790-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 44
+          },
+          {
+            "index": 796,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/796-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/796-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 19
+          },
+          {
+            "index": 815,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/815-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/815-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 18
+          },
+          {
+            "index": 824,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/824-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/824-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 836,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/836-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/836-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 859,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/859-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/859-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 19
+          },
+          {
+            "index": 862,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/862-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/862-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 7
+          },
+          {
+            "index": 876,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/876-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/876-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 904,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/904-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/904-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 915,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/915-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/915-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 938,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/938-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/938-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 955,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/955-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/955-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 970,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/970-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/970-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 995,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/995-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/995-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1001,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1001-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1001-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1031,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1031-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1031-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1035,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1035-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1035-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1060,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1060-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1060-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1075,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1075-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1075-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1081,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1081-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1081-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1089,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1089-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1089-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 2
+          },
+          {
+            "index": 1110,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1110-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1110-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1114,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1114-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1114-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 3
+          },
+          {
+            "index": 1135,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1135-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1135-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1154,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1154-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1154-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1160,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1160-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1160-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1185,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1185-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1185-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1194,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1194-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1194-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1213,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1213-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1213-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1234,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1234-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1234-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1237,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1237-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1237-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1274,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1274-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1274-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1313,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1313-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1313-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1353,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1353-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1353-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          },
+          {
+            "index": 1373,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1373-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1373-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 39
+          },
+          {
+            "index": 1383,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1383-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1383-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 8
+          },
+          {
+            "index": 1393,
+            "ct": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1393-ct.png",
+            "labels": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/axial/1393-labels.png",
+            "widthMm": 468.0,
+            "heightMm": 468.0,
+            "changedPixels": 0
+          }
+        ]
+      },
+      "meshes": {
+        "raw": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/raw-meshes.json.gz",
+        "refined": "/demo-data/vertebrae/1a7015a8d521f464/BDMAP_00000031/refined-meshes.json.gz"
+      },
+      "original_shape": [
+        512,
+        512,
+        1394
+      ],
+      "shape": [
+        512,
+        512,
+        1394
+      ],
+      "spacing_mm": [
+        0.9140625,
+        0.9140625,
+        0.699999988079071
+      ],
+      "affine_ras_mm": [
+        [
+          0.9140625,
+          0.0,
+          0.0,
+          -249.54296875
+        ],
+        [
+          0.0,
+          0.9140625,
+          0.0,
+          7.95703125
+        ],
+        [
+          0.0,
+          0.0,
+          0.699999988079071,
+          -1236.5999755859375
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "original_orientation": [
+        "L",
+        "A",
+        "S"
+      ],
+      "display_resampled": false,
+      "initial_indices": {
+        "sagittal": 273,
+        "coronal": 160,
+        "axial": 744
+      },
+      "change_indices": {
+        "sagittal": 274,
+        "coronal": 124,
+        "axial": 763
+      },
+      "source_units": "mm",
+      "removed_voxels": 3226,
+      "added_voxels": 0,
+      "parameters": {
+        "max_component_fraction": 0.01,
+        "min_distance_mm": 3.0,
+        "fill_holes_mm3": 0.0,
+        "conservative": false
+      },
+      "limitations": [
+        "No ground truth: component reduction is not an accuracy measure.",
+        "Large artifacts, connected leakage, missing anatomy and wrong label identities may remain.",
+        "Boundary components are retained; they may include artifacts.",
+        "No identity reassignment, model retraining, or clinical validation."
+      ],
+      "hashes": {
+        "raw_sha256": "27933d4a73a0a40dc1966b3e3639fb259b28a802794135c5b895ba395f525dfa",
+        "ct_sha256": "04315196422637113e49bc912ee08cbb1ca04bbf1e3c9c4182f262ccb802c5c3",
+        "refined_sha256": "14c39c5a015b54d893415a6a9e327e89c110e04d88a6ba0086df603f7858e775"
+      },
+      "comparisonPdf": "/demo-data/vertebrae/1a7015a8d521f464/downloads/BDMAP_00000031_research_comparison.pdf"
+    }
+  ],
+  "downloads": {
+    "script": "/demo-data/vertebrae/1a7015a8d521f464/downloads/postprocessing_vertebrae.py",
+    "csv": "/demo-data/vertebrae/1a7015a8d521f464/downloads/research_summary.csv",
+    "masks": "/demo-data/vertebrae/1a7015a8d521f464/downloads/AbdomenAtlasDemoPredict.zip"
+  },
+  "createdAt": "2026-10-06T14:00:12.855865+00:00",
+  "title": "Vertebrae refinement",
+  "sourceModel": "SuPreM",
+  "sourceData": "AbdomenAtlasDemo",
+  "taskUrl": "https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md",
+  "dataUrl": "https://www.cs.jhu.edu/~zongwei/dataset/AbdomenAtlasDemo.tar.gz",
+  "upstreamLicenseUrl": "https://github.com/MrGiovanni/SuPreM/blob/main/LICENSE",
+  "ctEncoding": "int16 HU + 32768: R=low byte, G=high byte, B=0; opaque RGB PNG",
+  "maskEncoding": "R=raw ID, G=refined ID, B=0; opaque RGB PNG"
+}
