@@ -2,7 +2,7 @@
   "source": "https://chuhongkang.com/",
   "captured_at": "2026-10-06",
   "name": "Hongkang Chu",
-  "institution": "University of the Chinese Academy of Sciences",
+  "institution": "UCAS",
   "profile": {
     "kind": "element",
     "tag": "aside",
@@ -66,7 +66,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "AI · MRI · Multimodal Learning"
+                    "text": "Computer Science"
                   }
                 ]
               }
@@ -358,7 +358,7 @@
                       "children": [
                         {
                           "kind": "text",
-                          "text": "I am a master's student at the University of the Chinese Academy of Sciences, with research at the Innovation Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy."
+                          "text": "I am a master's student in Computer Science at UCAS. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy."
                         }
                       ]
                     },
@@ -783,7 +783,7 @@
                                   "children": [
                                     {
                                       "kind": "text",
-                                      "text": "Chinese Academy of Sciences / UCAS"
+                                      "text": "UCAS"
                                     }
                                   ]
                                 },
@@ -811,7 +811,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology."
+                                  "text": "Research in MRI, MRSI, and deuterium metabolic imaging."
                                 }
                               ]
                             },
@@ -2644,7 +2644,7 @@
                       "children": [
                         {
                           "kind": "text",
-                          "text": "I am a master's student at the University of the Chinese Academy of Sciences, with research at the Innovation Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy."
+                          "text": "I am a master's student in Computer Science at UCAS. My work spans multimodal learning, synthetic image and video detection, and deep learning for magnetic resonance imaging and spectroscopy."
                         }
                       ]
                     },
@@ -3069,7 +3069,7 @@
                                   "children": [
                                     {
                                       "kind": "text",
-                                      "text": "Chinese Academy of Sciences / UCAS"
+                                      "text": "UCAS"
                                     }
                                   ]
                                 },
@@ -3097,7 +3097,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology."
+                                  "text": "Research in MRI, MRSI, and deuterium metabolic imaging."
                                 }
                               ]
                             },
@@ -4873,7 +4873,7 @@
                                   "children": [
                                     {
                                       "kind": "text",
-                                      "text": "Chinese Academy of Sciences / UCAS"
+                                      "text": "UCAS"
                                     }
                                   ]
                                 },
@@ -4901,7 +4901,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology."
+                                  "text": "Research in MRI, MRSI, and deuterium metabolic imaging."
                                 }
                               ]
                             },
