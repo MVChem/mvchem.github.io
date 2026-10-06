@@ -84,19 +84,6 @@
           {
             "kind": "element",
             "tag": "li",
-            "attrs": {
-              "class": "profile__meta"
-            },
-            "children": [
-              {
-                "kind": "text",
-                "text": "Wuhan, China"
-              }
-            ]
-          },
-          {
-            "kind": "element",
-            "tag": "li",
             "attrs": {},
             "children": [
               {
