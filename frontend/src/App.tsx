@@ -2,7 +2,10 @@ import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { DocumentNode } from './components/ReferenceDocument'
 import type { ReferenceSite } from './reference-types'
 
-const readRoute = () => location.pathname.replace(/\/$/, '') || '/'
+const readRoute = () => {
+  const path = location.pathname.replace(/\/$/, '') || '/'
+  return path === '/demo' ? '/projects/vertebrae' : path
+}
 const VertebraeDemo = lazy(() => import('./demo/VertebraeDemo'))
 export default function App() {
   const [site, setSite] = useState<ReferenceSite | null>(null)
@@ -11,6 +14,11 @@ export default function App() {
   const [error, setError] = useState(false)
   const [attempt, setAttempt] = useState(0)
   const toggle = useRef<HTMLButtonElement>(null)
+  useEffect(() => {
+    if (location.pathname.replace(/\/$/, '') === '/demo') {
+      history.replaceState(history.state, '', '/projects/vertebrae/' + location.search + location.hash)
+    }
+  }, [route])
   useEffect(() => {
     const controller = new AbortController()
     setError(false)
@@ -64,7 +72,7 @@ export default function App() {
     return () => media.removeEventListener('change', resize)
   }, [])
   if (!site) return <div className="load-state" role={error ? 'alert' : 'status'}><h1>Hongkang Chu</h1><p>{error ? 'The page could not load.' : 'Loading…'}</p>{error && <button className="button" onClick={() => setAttempt(n => n + 1)}>Try again</button>}</div>
-  if (route === '/demo') return <Suspense fallback={<div className="load-state" role="status">Loading research demo…</div>}><VertebraeDemo /></Suspense>
+  if (route === '/projects/vertebrae') return <Suspense fallback={<div className="load-state" role="status">Loading Vertebrae Study…</div>}><VertebraeDemo /></Suspense>
   const current = site.pages[route] ? route : '/', home = current === '/' || current === '/about'
   const content = site.pages[current]
   return <>

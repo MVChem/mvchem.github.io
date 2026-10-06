@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT))
 from fastapi.testclient import TestClient  # noqa: E402
 
 from backend.app import app  # noqa: E402
-from backend.reference import CONTENT_VERSION, ReferenceSite  # noqa: E402
+from backend.reference import CONTENT_VERSION, ROUTE_REDIRECTS, ReferenceSite  # noqa: E402
 from backend.demo import CONTENT as DEMO_CONTENT, load_manifest
 
 
@@ -48,6 +48,19 @@ def export_static(dist_dir: Path) -> Path:
         route_dir = dist_dir / route.strip('/')
         route_dir.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(index, route_dir / 'index.html')
+    for route, target in ROUTE_REDIRECTS.items():
+        route_dir = dist_dir / route.strip('/')
+        route_dir.mkdir(parents=True, exist_ok=True)
+        (route_dir / 'index.html').write_text(
+            '<!doctype html><html lang="en"><head><meta charset="UTF-8">'
+            '<meta name="viewport" content="width=device-width, initial-scale=1">'
+            f'<link rel="canonical" href="https://chuhongkang.com{target}">'
+            f'<meta http-equiv="refresh" content="0;url={target}">'
+            '<title>Vertebrae Study · Hongkang Chu</title>'
+            f'<script>location.replace({json.dumps(target)}+location.search+location.hash)</script>'
+            f'</head><body><a href="{target}">Open Vertebrae Study</a></body></html>\n',
+            encoding='utf-8',
+        )
     shutil.copyfile(index, dist_dir / "404.html")
     (dist_dir / ".nojekyll").touch()
     return endpoint_file

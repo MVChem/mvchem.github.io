@@ -15,7 +15,9 @@ async function surface(page){await page.locator('.vd-surface-host canvas').waitF
   page.on('pageerror',error=>report.pageErrors.push(error.message));
   page.on('response',response=>{if(response.status()>=400&&!response.url().endsWith('/favicon.ico'))report.failedResponses.push({url:response.url(),status:response.status()})});
   try{
-    await page.goto(base+'/demo/',{waitUntil:'domcontentloaded'});await page.locator('.vd-metrics').waitFor({timeout:60000});
+    await page.goto(base+'/projects/vertebrae/',{waitUntil:'domcontentloaded'});await page.locator('.vd-metrics').waitFor({timeout:60000});
+    assert.equal(await page.locator('.vd-page-heading h1').innerText(),'Vertebrae Study');
+    assert.equal(await page.title(),'Vertebrae Study · Hongkang Chu');
     const manifest=await page.request.get(base+'/api/demo/vertebrae.json').then(r=>r.json());
     for(const id of ['BDMAP_00000006','BDMAP_00000031']){
       await page.getByLabel('Select CT case',{exact:true}).selectOption(id);await page.waitForFunction(id=>document.querySelector('.vd-metrics p')?.textContent.includes(id),id);
@@ -55,8 +57,12 @@ async function surface(page){await page.locator('.vd-surface-host canvas').waitF
     await page.getByRole('button',{name:'Visible labels'}).click();await page.evaluate(()=>scrollTo(0,0));await page.screenshot({path:path.join(root,`artifacts/demo_${slug}_mobile.png`)});
     await page.locator('.vd-plane-tabs').getByRole('button',{name:'Axial',exact:true}).click();await slices(page);await page.locator('#comparison').screenshot({path:path.join(root,`artifacts/demo_${slug}_mobile_comparison.png`)});
     await page.getByRole('link',{name:'Back to homepage',exact:true}).click();await page.locator('.profile').waitFor();
-    await page.getByRole('button',{name:'Menu',exact:true}).click();await page.getByRole('link',{name:'Demo',exact:true}).click();await page.locator('.vd-metrics').waitFor();
-    report.checks.push('Audit JSON and three downloads; desktop/mobile rendering; mobile label controls; homepage → Demo navigation and back; no page overflow');
+    await page.getByRole('button',{name:'Menu',exact:true}).click();await page.getByRole('link',{name:'Projects',exact:true}).click();await page.locator('#vertebrae-study').waitFor();
+    await page.getByRole('link',{name:'Open interactive study',exact:true}).click();await page.locator('.vd-metrics').waitFor();
+    assert.equal(new URL(page.url()).pathname,'/projects/vertebrae/');
+    await page.goto(base+'/demo/?from=legacy#method',{waitUntil:'domcontentloaded'});await page.locator('.vd-metrics').waitFor({timeout:60000});
+    assert.equal(new URL(page.url()).pathname,'/projects/vertebrae/');assert.equal(new URL(page.url()).search,'?from=legacy');assert.equal(new URL(page.url()).hash,'#method');
+    report.checks.push('Audit JSON and three downloads; desktop/mobile rendering; mobile label controls; homepage → Projects → Vertebrae Study; legacy URL preserves query and anchor; no page overflow');
     assert.deepEqual(report.pageErrors,[]);assert.deepEqual(report.failedResponses,[]);report.status='passed';
   }finally{await browser.close();fs.writeFileSync(path.join(root,`artifacts/demo_${slug}_verification.json`),JSON.stringify(report,null,2)+'\n')}
 })().catch(error=>{console.error(error);process.exitCode=1});

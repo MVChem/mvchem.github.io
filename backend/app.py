@@ -1,10 +1,10 @@
 from pathlib import Path
 
-from fastapi import FastAPI, HTTPException
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import FileResponse, RedirectResponse
 from fastapi.middleware.gzip import GZipMiddleware
 
-from backend.reference import CONTENT_VERSION, REFERENCE, ReferenceSite
+from backend.reference import CONTENT_VERSION, REFERENCE, ROUTE_REDIRECTS, ReferenceSite
 from backend.demo import DemoManifest, load_manifest
 
 
@@ -42,8 +42,11 @@ def create_app(dist_dir: Path | None = None) -> FastAPI:
             raise HTTPException(404, 'Not found')
         return manifest
 
-    @application.get("/{path:path}", include_in_schema=False)
-    def frontend_file(path: str) -> FileResponse:
+    @application.get("/{path:path}", include_in_schema=False, response_model=None)
+    def frontend_file(path: str, request: Request) -> FileResponse | RedirectResponse:
+        if target := ROUTE_REDIRECTS.get('/' + path.strip('/')):
+            query = '?' + request.url.query if request.url.query else ''
+            return RedirectResponse(target + query, status_code=308)
         candidate = (frontend / path).resolve()
         if not candidate.is_relative_to(frontend):
             raise HTTPException(status_code=404, detail="Not found")

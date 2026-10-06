@@ -6,7 +6,7 @@ import unittest
 from fastapi.testclient import TestClient
 
 from backend.app import app, create_app
-from backend.reference import CONTENT_VERSION, REFERENCE, ReferenceSite
+from backend.reference import CONTENT_VERSION, REFERENCE, ROUTE_REDIRECTS, ReferenceSite
 from scripts.export_static import export_static
 from backend.demo import load_manifest
 
@@ -21,6 +21,9 @@ class PortfolioTests(unittest.TestCase):
             self.assertEqual(snapshot.institution, 'UCAS')
             self.assertEqual(snapshot.documents, {})
             self.assertTrue(all(item.path in snapshot.pages for item in snapshot.navigation))
+            self.assertEqual([item.label for item in snapshot.navigation], ['About', 'Research', 'Publications', 'Projects'])
+            self.assertIn('/projects/vertebrae', snapshot.pages)
+            self.assertNotIn('/demo', snapshot.pages)
 
     def test_public_endpoints_share_personal_content(self):
         with TestClient(app) as client:
@@ -69,6 +72,15 @@ class PortfolioTests(unittest.TestCase):
                     response = client.get(route)
                     self.assertEqual(response.status_code, 200, route)
                     self.assertEqual(response.text, index)
+                for route, target in ROUTE_REDIRECTS.items():
+                    for suffix in ('', '/'):
+                        response = client.get(route + suffix + '?from=old-link', follow_redirects=False)
+                        self.assertEqual(response.status_code, 308)
+                        self.assertEqual(response.headers['location'], target + '?from=old-link')
+                    redirect = (dist / route.strip('/') / 'index.html').read_text()
+                    self.assertIn('location.replace(', redirect)
+                    self.assertIn('location.search+location.hash', redirect)
+                    self.assertIn(f'href="{target}"', redirect)
                 self.assertEqual(client.get("/api/missing").status_code, 404)
                 for path in ('/cv', '/CV.pdf', '/resume.pdf', '/previews/cv-1.png'):
                     self.assertEqual(client.get(path).status_code, 404, path)
@@ -78,7 +90,7 @@ class PortfolioTests(unittest.TestCase):
             self.assertTrue((dist / ".nojekyll").is_file())
             self.assertEqual(
                 {path.relative_to(dist).as_posix() for path in dist.rglob("*") if path.is_file()},
-                {"index.html", "404.html", ".nojekyll", "api/site.json", "api/reference.json", f"api/reference.{CONTENT_VERSION}.json", "api/demo/vertebrae.json", f"api/demo/vertebrae.{load_manifest().version}.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"},
+                {"index.html", "404.html", ".nojekyll", "api/site.json", "api/reference.json", f"api/reference.{CONTENT_VERSION}.json", "api/demo/vertebrae.json", f"api/demo/vertebrae.{load_manifest().version}.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"} | {f"{route.strip('/')}/index.html" for route in ROUTE_REDIRECTS},
             )
             self.assertEqual(json.loads((dist/'api/reference.json').read_text()), REFERENCE.model_dump(mode='json'))
 

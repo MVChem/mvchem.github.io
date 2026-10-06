@@ -139,15 +139,23 @@ def site(data: dict) -> dict:
             section('Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
             el('ol', *(research(p) for p in data['papers']), cls='projects'), kind='research'),
         '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs')),
-        '/projects': page('Projects', el('p', 'Selected research projects. Publication details and links are listed below.', cls='page-intro'),
-            el('ol', *(research(papers[id]) for id in ('trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
-        '/demo': page('Research demo', el('p', 'Interactive vertebrae refinement: authentic CT, before/after predictions and a quantitative audit.', cls='page-intro')),
+        '/projects': page('Projects', el('p', 'Selected research projects and interactive studies.', cls='page-intro'),
+            el('ol', el('li', el('div',
+                el('div', el('h2', el('a', 'Vertebrae Study', href='/projects/vertebrae/'), cls='project__title'),
+                    el('span', 'Independent study', cls='role'), cls='project__head'),
+                el('div', el('p', 'SuPreM vertebrae segmentation and postprocessing: explore authentic CT predictions, before/after changes, 3D anatomy and a per-vertebra audit.'), cls='project__text'),
+                el('p', 'Medical imaging · Research warmup from Zongwei Zhou’s lab at Johns Hopkins University', cls='row__meta'),
+                el('div', el('div', el('a', 'Open interactive study', href='/projects/vertebrae/', cls='link-chip'),
+                    external('Original task', 'https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md', cls='link-chip'), cls='link-row'), cls='project__foot'),
+                cls='project__body'), cls='project project--text', id='vertebrae-study'),
+                *(research(papers[id]) for id in ('trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
+        '/projects/vertebrae': page('Vertebrae Study', el('p', 'SuPreM vertebrae segmentation and postprocessing.', cls='page-intro'), kind='vertebrae'),
         '/teaching': page('Teaching', el('p', 'Teaching information will be added here.', cls='page-intro')),
         '/talks': page('Personal', el('p', 'More about me soon.', cls='page-intro'), kind='personal')}
     return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-10-06', 'name': data['name'],
         'institution': data['institution'], 'profile': profile,
         'navigation': [{'label': label, 'path': path} for label, path in [('About', '/about'), ('Research', '/researches'),
-            ('Publications', '/publications'), ('Projects', '/projects'), ('Demo', '/demo')]],
+            ('Publications', '/publications'), ('Projects', '/projects')]],
         'pages': pages, 'documents': {}}
 
 

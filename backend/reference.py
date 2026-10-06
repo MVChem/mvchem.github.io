@@ -61,5 +61,6 @@ class ReferenceSite(ContentModel):
 
 
 CONTENT_FILE = Path(__file__).parent / 'content' / 'reference.json'
+ROUTE_REDIRECTS = {'/demo': '/projects/vertebrae/'}
 CONTENT_VERSION = hashlib.sha256(CONTENT_FILE.read_bytes()).hexdigest()[:16]
 REFERENCE = ReferenceSite.model_validate(json.loads(CONTENT_FILE.read_text(encoding='utf-8')))

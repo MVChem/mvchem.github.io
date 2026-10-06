@@ -28,7 +28,7 @@ relative = f'/demo-data/vertebrae/{version}'
 output = ROOT/'frontend/public'/relative.lstrip('/')
 output.mkdir(parents=True, exist_ok=True)
 manifest = {'version':version, 'createdAt':datetime.now(timezone.utc).isoformat(),
-            'title':'Vertebrae refinement', 'author':'Hongkang Chu', 'groundTruthAvailable':False,
+            'title':'Vertebrae Study', 'author':'Hongkang Chu', 'groundTruthAvailable':False,
             'sourceModel':'SuPreM', 'sourceData':'AbdomenAtlasDemo',
             'taskUrl':'https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md',
             'dataUrl':'https://www.cs.jhu.edu/~zongwei/dataset/AbdomenAtlasDemo.tar.gz',

@@ -187,10 +187,6 @@
     {
       "label": "Projects",
       "path": "/projects"
-    },
-    {
-      "label": "Demo",
-      "path": "/demo"
     }
   ],
   "pages": {
@@ -7438,7 +7434,7 @@
               "children": [
                 {
                   "kind": "text",
-                  "text": "Selected research projects. Publication details and links are listed below."
+                  "text": "Selected research projects and interactive studies."
                 }
               ]
             },
@@ -7449,6 +7445,150 @@
                 "class": "projects"
               },
               "children": [
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "project project--text",
+                    "id": "vertebrae-study"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "project__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__head"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "h2",
+                              "attrs": {
+                                "class": "project__title"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "/projects/vertebrae/"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Vertebrae Study"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "role"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Independent study"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "SuPreM vertebrae segmentation and postprocessing: explore authentic CT predictions, before/after changes, 3D anatomy and a per-vertebra audit."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "row__meta"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Medical imaging · Research warmup from Zongwei Zhou’s lab at Johns Hopkins University"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "/projects/vertebrae/",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Open interactive study"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Original task"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "kind": "element",
                   "tag": "li",
@@ -7850,7 +7990,7 @@
         }
       ]
     },
-    "/demo": {
+    "/projects/vertebrae": {
       "kind": "element",
       "tag": "main",
       "attrs": {
@@ -7862,7 +8002,7 @@
           "kind": "element",
           "tag": "article",
           "attrs": {
-            "class": "page page--research demo"
+            "class": "page page--vertebrae"
           },
           "children": [
             {
@@ -7881,7 +8021,7 @@
                   "children": [
                     {
                       "kind": "text",
-                      "text": "Research demo"
+                      "text": "Vertebrae Study"
                     }
                   ]
                 }
@@ -7896,7 +8036,7 @@
               "children": [
                 {
                   "kind": "text",
-                  "text": "Interactive vertebrae refinement: authentic CT, before/after predictions and a quantitative audit."
+                  "text": "SuPreM vertebrae segmentation and postprocessing."
                 }
               ]
             }

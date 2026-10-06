@@ -9,8 +9,8 @@
 - About：本人介绍、研究经历、可滚动的真实研究新闻和精选论文。
 - Research：中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历，以及本人研究概要。
 - Publications：TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
-- Projects：三个已有公开成果的研究项目。
-- Demo：`/demo/` 的椎骨分割研究展示，包含两例官方CT的前后对比、改动定位、窗宽窗位、标签筛选、真实3D曲面和逐椎骨统计。来源为SuPreM / AbdomenAtlasDemo；明确区分后处理改动与准确率评价，不表示已经加入JHU项目。
+- Projects：Vertebrae Study 和三个已有公开成果的研究项目，以后可继续加入其他领域的项目。
+- Vertebrae Study：`/projects/vertebrae/` 的椎骨分割研究展示，副标题为 SuPreM vertebrae segmentation and postprocessing。包含两例官方CT的前后对比、改动定位、窗宽窗位、标签筛选、真实3D曲面和逐椎骨统计。任务来源注明 JHU 的 Zongwei Zhou 实验室和 SuPreM / AbdomenAtlasDemo；明确区分后处理改动与准确率评价。旧 `/demo/` 链接自动跳转到新地址，保留查询参数和锚点。
 - CV / Resume：按本人要求从导航、侧栏、页面、下载和公开 API 数据中移除。原本站 PDF 与预览仅保留在本地 `artifacts/documents/`，不会发布。
 - Teaching / Personal：暂无本人确认的内容，不出现在导航；旧网址保留空状态。
 
@@ -54,7 +54,7 @@ npm --prefix frontend run build
 
 静态导出包含本人栏目入口、API 数据快照、`404.html` 和 `.nojekyll`，可放到 GitHub Pages。`frontend/public/CNAME` 保留域名 `chuhongkang.com`。GitHub Pages 在线上读取静态数据快照，FastAPI 用于本地开发和导出。
 
-研究Demo由React组件渲染，通过FastAPI的 `/api/demo/vertebrae.{version}.json` 获取经过验证的数据；静态发布导出相同接口。网页保留采样切片的原生像素，用两个PNG分别无损编码CT的16位HU及前后标签，再在浏览器计算窗宽、透明度和改动叠加。每方向包含57–75张实际切片，覆盖主体、各椎骨及改动区域；界面标明原始切片位置和采样数量。3D曲面按毫米坐标导出，按需加载gzip包。完整网格统计和精炼预测下载与本地研究结果一致。
+Vertebrae Study 由React组件渲染，通过FastAPI的 `/api/demo/vertebrae.{version}.json` 获取经过验证的数据；静态发布导出相同接口。网页保留采样切片的原生像素，用两个PNG分别无损编码CT的16位HU及前后标签，再在浏览器计算窗宽、透明度和改动叠加。每方向包含57–75张实际切片，覆盖主体、各椎骨及改动区域；界面标明原始切片位置和采样数量。3D曲面按毫米坐标导出，按需加载gzip包。完整网格统计和精炼预测下载与本地研究结果一致。
 
 导出研究数据使用已经完成的10月6日项目，不重新推理，不复制模型权重、原上游代码、邮件或完整CT卷。生成的网页数据约148MiB，不进入源码分支；发布脚本会将构建后的数据写入 `gh-pages`。重建命令：
 
