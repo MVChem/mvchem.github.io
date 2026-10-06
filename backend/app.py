@@ -4,7 +4,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import FileResponse
 from fastapi.middleware.gzip import GZipMiddleware
 
-from backend.reference import REFERENCE, ReferenceSite
+from backend.reference import CONTENT_VERSION, REFERENCE, ReferenceSite
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,6 +22,12 @@ def create_app(dist_dir: Path | None = None) -> FastAPI:
     @application.get('/api/site.json', response_model=ReferenceSite)
     @application.get('/api/reference.json', response_model=ReferenceSite)
     def reference_site() -> ReferenceSite:
+        return REFERENCE
+
+    @application.get('/api/reference.{version}.json', response_model=ReferenceSite)
+    def versioned_reference_site(version: str) -> ReferenceSite:
+        if version != CONTENT_VERSION:
+            raise HTTPException(status_code=404, detail='Not found')
         return REFERENCE
 
     @application.get("/{path:path}", include_in_schema=False)

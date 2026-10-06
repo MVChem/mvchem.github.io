@@ -2,6 +2,7 @@
 
 from pathlib import Path
 import json
+import hashlib
 import re
 import shutil
 import subprocess
@@ -46,9 +47,17 @@ def validate_build() -> None:
             raise PublishError(f"Build is missing {required}. Build the frontend and run export_static.py first.")
     if (DIST / 'CNAME').read_text().strip() != 'chuhongkang.com':
         raise PublishError('Build must retain the chuhongkang.com custom domain.')
+    version = hashlib.sha256((ROOT / 'backend/content/reference.json').read_bytes()).hexdigest()[:16]
+    if not (DIST / f'api/reference.{version}.json').is_file():
+        raise PublishError('Build must include its versioned content snapshot.')
     public_data = json.loads((DIST / 'api/reference.json').read_text())
     if public_data.get('name') != 'Hongkang Chu':
         raise PublishError('Build must contain Hongkang Chu’s personal profile.')
+    if public_data.get('documents') or '/cv' in public_data.get('pages', {}):
+        raise PublishError('CV and Resume sections must not be published.')
+    for removed in ('cv', 'CV.pdf', 'resume.pdf', 'previews/cv-1.png', 'previews/cv-2.png', 'previews/resume-1.png'):
+        if (DIST / removed).exists():
+            raise PublishError('Build contains a removed CV/Resume page or download.')
     forbidden = re.compile(r'medcase|cfmMp2xvbk|tgdnYoVYBF|Chen\s+Fang|chenf3@|MedXRAgent|GazeAgent|AudioGuard', re.IGNORECASE)
     for item in DIST.rglob("*"):
         if item.is_symlink() or ".git" in item.relative_to(DIST).parts:

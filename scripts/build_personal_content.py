@@ -6,6 +6,7 @@ and their CV are intentionally not copied into the website.
 from __future__ import annotations
 
 import copy
+import argparse
 import json
 from pathlib import Path
 import subprocess
@@ -107,7 +108,7 @@ def site(data: dict) -> dict:
         el('ul', el('li', 'Wuhan, China', cls='profile__meta'),
             el('li', external('UCAS', 'https://english.ucas.ac.cn/')),
             el('li', el('a', 'Email', href='mailto:' + data['email'])),
-            el('li', external('CV', '/CV.pdf')), el('li', external('OpenReview', data['openreview'])),
+            el('li', external('OpenReview', data['openreview'])),
             el('li', external('GitHub', data['github'])), cls='profile__links'), cls='profile', aria_label='Profile')
     hero = el('header', el('div',
         el('h1', 'Hi, I’m ', el('span', data['name'], cls='hp', data_p='name'), '.', cls='hero__title'),
@@ -133,7 +134,6 @@ def site(data: dict) -> dict:
         section('Research Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
         section('Selected Publications', 'selected-publications', el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs')),
         cls='page page--about'), id='main', cls='content')
-    cv = documents('cv', 2)
     pages = {'/': about, '/about': copy.deepcopy(about),
         '/researches': page('Research', el('p', 'My research connects multimodal learning and media forensics with deep learning for magnetic resonance imaging and spectroscopy.', cls='page-intro'),
             section('Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
@@ -142,12 +142,12 @@ def site(data: dict) -> dict:
         '/projects': page('Projects', el('p', 'Selected research projects. Publication details and links are listed below.', cls='page-intro'),
             el('ol', *(research(papers[id]) for id in ('trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
         '/teaching': page('Teaching', el('p', 'Teaching information will be added here.', cls='page-intro')),
-        '/talks': page('Personal', el('p', 'More about me soon.', cls='page-intro'), kind='personal'), '/cv': cv}
+        '/talks': page('Personal', el('p', 'More about me soon.', cls='page-intro'), kind='personal')}
     return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-10-06', 'name': data['name'],
         'institution': data['institution'], 'profile': profile,
         'navigation': [{'label': label, 'path': path} for label, path in [('About', '/about'), ('Research', '/researches'),
-            ('Publications', '/publications'), ('Projects', '/projects'), ('CV', '/cv')]],
-        'pages': pages, 'documents': {'cv': copy.deepcopy(cv), 'resume': documents('resume', 1)}}
+            ('Publications', '/publications'), ('Projects', '/projects')]],
+        'pages': pages, 'documents': {}}
 
 
 def tex(text: str) -> str:
@@ -207,8 +207,9 @@ def cv_source(data: dict, resume: bool = False) -> str:
 
 
 def build_documents(data: dict) -> None:
-    public = ROOT / 'frontend' / 'public'
-    previews = public / 'previews'
+    output = ROOT / 'artifacts' / 'documents'
+    output.mkdir(parents=True, exist_ok=True)
+    previews = output / 'previews'
     previews.mkdir(exist_ok=True)
     sources = ROOT / 'backend' / 'content' / 'documents'
     sources.mkdir(exist_ok=True)
@@ -231,18 +232,22 @@ def build_documents(data: dict) -> None:
             content = subprocess.check_output(['pdftotext', str(pdf), '-'], text=True)
             if 'Hongkang Chu' not in content or 'chuhongkang25@mails.ucas.ac.cn' not in content:
                 raise RuntimeError('Public document identity missing')
-            (public / filename).write_bytes(pdf.read_bytes())
+            (output / filename).write_bytes(pdf.read_bytes())
             for i in range(1, expected + 1):
                 subprocess.run(['pdftoppm', '-f', str(i), '-l', str(i), '-scale-to', '1300', '-png', '-singlefile',
                     str(pdf), str(previews / f'{id}-{i}')], check=True, capture_output=True)
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--documents', action='store_true', help='Also generate local CV/Resume in artifacts/documents; these are never published.')
+    args = parser.parse_args()
     data = json.loads((ROOT / 'backend/content/public_profile.json').read_text())
     payload = ReferenceSite.model_validate(site(data)).model_dump(mode='json')
-    build_documents(data)
+    if args.documents:
+        build_documents(data)
     (ROOT / 'backend/content/reference.json').write_text(json.dumps(payload, ensure_ascii=False, indent=2) + '\n')
-    print('Built personal website content, a two-page public CV, and a one-page resume.')
+    print('Built personal website content without a CV section or document downloads.')
 
 
 if __name__ == '__main__':

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 from typing import Annotated, Literal
 
@@ -59,6 +60,6 @@ class ReferenceSite(ContentModel):
     documents: dict[Literal['cv', 'resume'], ElementNode]
 
 
-REFERENCE = ReferenceSite.model_validate(json.loads(
-    (Path(__file__).parent / 'content' / 'reference.json').read_text(encoding='utf-8')
-))
+CONTENT_FILE = Path(__file__).parent / 'content' / 'reference.json'
+CONTENT_VERSION = hashlib.sha256(CONTENT_FILE.read_bytes()).hexdigest()[:16]
+REFERENCE = ReferenceSite.model_validate(json.loads(CONTENT_FILE.read_text(encoding='utf-8')))

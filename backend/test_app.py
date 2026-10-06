@@ -6,7 +6,7 @@ import unittest
 from fastapi.testclient import TestClient
 
 from backend.app import app, create_app
-from backend.reference import REFERENCE, ReferenceSite
+from backend.reference import CONTENT_VERSION, REFERENCE, ReferenceSite
 from scripts.export_static import export_static
 
 
@@ -18,7 +18,7 @@ class PortfolioTests(unittest.TestCase):
             snapshot = ReferenceSite.model_validate(response.json())
             self.assertEqual(snapshot.name, 'Hongkang Chu')
             self.assertEqual(snapshot.institution, 'University of the Chinese Academy of Sciences')
-            self.assertEqual(set(snapshot.documents), {'cv', 'resume'})
+            self.assertEqual(snapshot.documents, {})
             self.assertTrue(all(item.path in snapshot.pages for item in snapshot.navigation))
 
     def test_public_endpoints_share_personal_content(self):
@@ -29,6 +29,8 @@ class PortfolioTests(unittest.TestCase):
             site = ReferenceSite.model_validate(response.json())
             self.assertEqual(site, REFERENCE)
             self.assertEqual(response.json(), client.get('/api/reference.json').json())
+            self.assertEqual(response.json(), client.get(f'/api/reference.{CONTENT_VERSION}.json').json())
+            self.assertEqual(client.get('/api/reference.unknown.json').status_code, 404)
 
     def test_public_content_excludes_private_work_and_reference_author(self):
         content = REFERENCE.model_dump_json().lower()
@@ -41,16 +43,12 @@ class PortfolioTests(unittest.TestCase):
             self.assertIn(reference.lower(), content)
 
     def test_public_documents_and_attachments_respect_disclosure_scope(self):
-        import subprocess
         public = Path(__file__).resolve().parents[1] / 'frontend/public'
-        for document in ('CV.pdf', 'resume.pdf'):
-            text = subprocess.check_output(['pdftotext', str(public / document), '-'], text=True)
-            self.assertIn('Hongkang Chu', text)
-            self.assertIn('chuhongkang25@mails.ucas.ac.cn', text)
-            self.assertIn('TRACE', text)
-            self.assertIn('Magnetic Resonance Letters', text)
-            for excluded in ('MedCase', 'Chen Fang', 'clinical case report'):
-                self.assertNotIn(excluded.lower(), text.lower())
+        for path in ('CV.pdf', 'resume.pdf', 'previews/cv-1.png', 'previews/cv-2.png', 'previews/resume-1.png'):
+            self.assertFalse((public / path).exists())
+        self.assertNotIn('/cv', REFERENCE.pages)
+        self.assertFalse(any(item.path == '/cv' for item in REFERENCE.navigation))
+        self.assertNotIn('/CV.pdf', REFERENCE.profile.model_dump_json())
         self.assertFalse((public / 'downloads/MDLE-V8.pptx').exists())
         self.assertFalse((public / 'img/simg-8f5a877c.webp').exists())
 
@@ -71,13 +69,15 @@ class PortfolioTests(unittest.TestCase):
                     self.assertEqual(response.status_code, 200, route)
                     self.assertEqual(response.text, index)
                 self.assertEqual(client.get("/api/missing").status_code, 404)
+                for path in ('/cv', '/CV.pdf', '/resume.pdf', '/previews/cv-1.png'):
+                    self.assertEqual(client.get(path).status_code, 404, path)
                 self.assertEqual(client.get("/assets/missing.js").status_code, 404)
                 self.assertEqual(client.get("/%2e%2e/private.txt").status_code, 404)
             self.assertEqual((dist / "404.html").read_text(), index)
             self.assertTrue((dist / ".nojekyll").is_file())
             self.assertEqual(
                 {path.relative_to(dist).as_posix() for path in dist.rglob("*") if path.is_file()},
-                {"index.html", "404.html", ".nojekyll", "api/site.json", "api/reference.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"},
+                {"index.html", "404.html", ".nojekyll", "api/site.json", "api/reference.json", f"api/reference.{CONTENT_VERSION}.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"},
             )
             self.assertEqual(json.loads((dist/'api/reference.json').read_text()), REFERENCE.model_dump(mode='json'))
 

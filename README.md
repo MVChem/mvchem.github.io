@@ -1,6 +1,6 @@
 # 储红康个人主页 · chuhongkang.com
 
-沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，在桌面 224px、手机 112px 的圆形区域中展示人物及江之岛海景，原图保持不变。
+沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，在桌面 224px、手机 112px 的圆形区域中采用突出脸部的大头照裁切，原图保持不变。
 
 项目保存位置：`/home/data2/chk/workspace/2026/10/01/chenfang-homepage`。
 
@@ -10,10 +10,10 @@
 - Research：中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历，以及本人研究概要。
 - Publications：TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
 - Projects：三个已有公开成果的研究项目。
-- CV：本站公开内容生成的两页 CV 与一页 Resume，支持键盘切换、预览、打开与下载；不复制申请材料中的 CV。
+- CV / Resume：按本人要求从导航、侧栏、页面、下载和公开 API 数据中移除。原本站 PDF 与预览仅保留在本地 `artifacts/documents/`，不会发布。
 - Teaching / Personal：暂无本人确认的内容，不出现在导航；旧网址保留空状态。
 
-桌面保留固定资料栏，手机首页显示紧凑资料区，其他手机页面聚焦正文。导航支持手机菜单、Escape 关闭、历史返回和研究段落锚点。页面使用 React + TypeScript + Vite；FastAPI 的 `/api/reference.json` 提供经过 Pydantic 验证的内容数据。兼容入口 `/api/site.json` 返回同一份本人内容，旧的演示数据不再发布。
+桌面保留固定资料栏，手机首页显示紧凑资料区，其他手机页面聚焦正文。导航支持手机菜单、Escape 关闭、历史返回和研究段落锚点。页面使用 React + TypeScript + Vite；FastAPI 的 `/api/reference.json` 提供经过 Pydantic 验证的内容数据。前端使用根据内容生成的版本号读取 API，防止更新后继续显示旧的缓存标签。兼容入口 `/api/site.json` 返回同一份本人内容，旧的演示数据不再发布。
 
 本人要求不公开的病例报告代理相关工作不进入网页、元数据、PDF、预览和下载附件。包含相关内容的旧 MDLE 演示附件已从网站发布目录移除，工作区原材料保持独立。
 
@@ -61,14 +61,14 @@ npm --prefix frontend run build
 
 ## 内容和文件
 
-- `frontend/src/App.tsx`：导航、路由、手机菜单、CV 切换。
+- `frontend/src/App.tsx`：导航、路由、手机菜单、带版本号的内容读取。
 - `frontend/src/components/ReferenceDocument.tsx`：正文、新闻滚动、首页扫描动画。
 - `frontend/src/styles.css`：参考网站样式。
 - `backend/content/public_profile.json`：唯一公开内容编辑源，含本人资料、经历及允许公开的论文。
-- `scripts/build_personal_content.py`：从公开内容生成网页、两页 CV、一页 Resume 和预览。
+- `scripts/build_personal_content.py`：从公开内容生成网页；可用 `--documents` 生成本地 PDF 和预览，不会写入发布目录。
 - `backend/content/reference.json`：生成的语义页面数据；不要单独编辑。
-- `backend/content/documents/`：可复现的公开 CV 和 Resume LaTeX 源文件。
-- `frontend/public/`：公开 PDF、预览、字体、图标和域名配置。
+- `backend/content/documents/`：本地 CV 和 Resume LaTeX 源文件，不作为网页内容发布。
+- `frontend/public/`：本人照片、字体、图标和域名配置。
 - `SOURCE_NOTICE.md`：参考内容和素材来源。
 
 源代码位于 `feat/chenfang-homepage` 分支，静态构建发布到 `gh-pages`。原主页和参考作者版本保留在 Git 历史中。
@@ -82,4 +82,4 @@ npm --prefix frontend run build
 .venv/bin/python scripts/verify_replica.py http://127.0.0.1:5178
 ```
 
-浏览器检查使用已安装的 `/usr/bin/google-chrome`，覆盖五个导航栏目和两个旧链接、360/390/768/960/1440 像素宽度、新闻滚动、CV 切换、PDF、手机菜单与历史返回。截图和结果输出到 `artifacts/`。后端检查另核对公开数据、本人头像及 PDF 的公开范围。
+浏览器检查使用已安装的 `/usr/bin/google-chrome`，覆盖四个导航栏目和两个旧链接、360/390/768/960/1440 像素宽度、新闻滚动、手机菜单与历史返回，并确认 CV 栏目和下载已移除。截图和结果输出到 `artifacts/`。后端检查另核对公开数据、本人头像及移除的文档地址。

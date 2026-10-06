@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { DocumentNode } from './components/ReferenceDocument'
 import type { ReferenceSite } from './reference-types'
 
@@ -6,7 +6,6 @@ const readRoute = () => location.pathname.replace(/\/$/, '') || '/'
 export default function App() {
   const [site, setSite] = useState<ReferenceSite | null>(null)
   const [route, setRoute] = useState(readRoute)
-  const [documentId, setDocumentId] = useState(() => new URLSearchParams(location.search).get('doc') === 'resume' ? 'resume' : 'cv')
   const [menuOpen, setMenuOpen] = useState(false)
   const [error, setError] = useState(false)
   const [attempt, setAttempt] = useState(0)
@@ -14,7 +13,7 @@ export default function App() {
   useEffect(() => {
     const controller = new AbortController()
     setError(false)
-    fetch('/api/reference.json', { signal: controller.signal }).then(async response => {
+    fetch(`/api/reference.${import.meta.env.VITE_CONTENT_VERSION}.json`, { signal: controller.signal, cache: 'no-cache' }).then(async response => {
       if (!response.ok) throw new Error('Could not load page')
       setSite(await response.json())
     }).catch(error => { if (error.name !== 'AbortError') setError(true) })
@@ -23,7 +22,6 @@ export default function App() {
   useEffect(() => {
     const pop = () => {
       setRoute(readRoute()); setMenuOpen(false)
-      setDocumentId(new URLSearchParams(location.search).get('doc') === 'resume' ? 'resume' : 'cv')
     }
     const click = (event: MouseEvent) => {
       if (event.defaultPrevented || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return
@@ -34,7 +32,7 @@ export default function App() {
       event.preventDefault()
       const same = target === route
       history.pushState({}, '', url.pathname + url.search + url.hash)
-      setRoute(target); setMenuOpen(false); setDocumentId(url.searchParams.get('doc') === 'resume' ? 'resume' : 'cv')
+      setRoute(target); setMenuOpen(false)
       if (same && url.hash) document.getElementById(decodeURIComponent(url.hash.slice(1)))?.scrollIntoView()
       else if (same) window.scrollTo(0, 0)
     }
@@ -64,19 +62,9 @@ export default function App() {
     media.addEventListener('change', resize)
     return () => media.removeEventListener('change', resize)
   }, [])
-  const chooseDocument = (id: string, focus = false) => {
-    setDocumentId(id); history.replaceState({}, '', `/cv${id === 'resume' ? '?doc=resume' : ''}`)
-    if (focus) requestAnimationFrame(() => document.getElementById(`doc-tab-${id}`)?.focus())
-  }
-  const documentKey = (event: KeyboardEvent) => {
-    if (!(event.target as Element).closest('[role="tab"]')) return
-    const ids = ['cv', 'resume'], index = ids.indexOf(documentId)
-    const next = { ArrowRight: index + 1, ArrowLeft: index - 1, Home: 0, End: 1 }[event.key]
-    if (next !== undefined) { event.preventDefault(); chooseDocument(ids[(next + 2) % 2], true) }
-  }
   if (!site) return <div className="load-state" role={error ? 'alert' : 'status'}><h1>Hongkang Chu</h1><p>{error ? 'The page could not load.' : 'Loading…'}</p>{error && <button className="button" onClick={() => setAttempt(n => n + 1)}>Try again</button>}</div>
   const current = site.pages[route] ? route : '/', home = current === '/' || current === '/about'
-  const content = current === '/cv' ? site.documents[documentId as 'cv' | 'resume'] : site.pages[current]
+  const content = site.pages[current]
   return <>
     <a className="skip-link" href="#main">Skip to content</a>
     {menuOpen && <div className="nav-scrim" aria-hidden="true" onClick={() => setMenuOpen(false)} />}
@@ -88,12 +76,9 @@ export default function App() {
         return <li key={item.path}><a href={item.path} data-label={item.label} className={`nav__link${active ? ' is-active' : ''}`} aria-current={active ? 'page' : undefined}>{item.label}</a></li>
       })}</ul></nav>
     </div></header>
-    <div className={`shell${home ? ' shell--home' : ''}`} onClick={event => {
-      const tab = (event.target as Element).closest<HTMLElement>('[role="tab"]')
-      if (tab) chooseDocument(tab.id.replace('doc-tab-', ''))
-    }} onKeyDown={documentKey}>
+    <div className={`shell${home ? ' shell--home' : ''}`}>
       <DocumentNode node={site.profile} />
-      <DocumentNode key={current === '/cv' ? `${current}:${documentId}` : current} node={content} />
+      <DocumentNode key={current} node={content} />
     </div>
     <footer className="footer"><div className="footer__inner"><span>© {new Date().getFullYear()} {site.name}</span><span className="sep" aria-hidden="true">·</span><span>{site.institution}</span></div></footer>
   </>

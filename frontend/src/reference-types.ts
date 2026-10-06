@@ -6,5 +6,5 @@ export interface ReferenceSite {
   profile: ElementNode
   navigation: { label: string; path: string }[]
   pages: Record<string, ElementNode>
-  documents: Record<'cv' | 'resume', ElementNode>
+  documents: Partial<Record<'cv' | 'resume', ElementNode>>
 }

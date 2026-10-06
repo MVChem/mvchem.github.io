@@ -1,4 +1,4 @@
-"""Exercise all pages, local media, responsive navigation, CV tabs, and export."""
+"""Exercise public pages, media, responsive navigation, and removed CV links."""
 import json
 from pathlib import Path
 import sys
@@ -8,7 +8,7 @@ BASE = sys.argv[1] if len(sys.argv) > 1 else 'http://127.0.0.1:5178'
 OUT = Path(__file__).resolve().parents[1] / 'artifacts'
 OUT.mkdir(exist_ok=True)
 errors = []
-routes = ['/', '/researches', '/publications', '/teaching', '/projects', '/cv', '/talks']
+routes = ['/', '/researches', '/publications', '/teaching', '/projects', '/talks']
 with sync_playwright() as p:
     browser = p.chromium.launch(executable_path='/usr/bin/google-chrome', headless=True, args=['--no-sandbox'])
     page = browser.new_page(viewport={'width':1440,'height':1000}, reduced_motion='reduce')
@@ -32,21 +32,9 @@ with sync_playwright() as p:
         name = route.strip('/') or 'home'
         page.screenshot(path=str(OUT/f'{name}-desktop.png'), full_page=True)
         page.screenshot(path=str(OUT/f'{name}-hero.png'))
-    page.goto(BASE + '/cv', wait_until='networkidle')
-    page.get_by_role('tab', name='Resume', exact=True).click()
-    expect(page).to_have_url(BASE + '/cv?doc=resume')
-    expect(page.get_by_role('tab', name='Resume', exact=True)).to_have_attribute('aria-selected', 'true')
-    assert page.locator('.doc-page').count() == 1
-    assert page.locator('.doc-action').first.get_attribute('href') == '/resume.pdf'
-    page.reload(wait_until='networkidle')
-    expect(page.get_by_role('tab', name='Resume', exact=True)).to_have_attribute('aria-selected', 'true')
-    page.get_by_role('tab', name='Resume', exact=True).focus()
-    page.keyboard.press('ArrowLeft')
-    expect(page.get_by_role('tab', name='Curriculum Vitae')).to_be_focused()
-    assert page.locator('.doc-page').count() == 2
-    for path in ['/CV.pdf','/resume.pdf']:
-        response = page.request.get(BASE + path)
-        assert response.status == 200 and response.body().startswith(b'%PDF'), path
+    assert page.locator('a[href="/cv"], a[href="/CV.pdf"], a[href="/resume.pdf"]').count() == 0
+    for path in ['/cv','/CV.pdf','/resume.pdf','/previews/cv-1.png']:
+        assert page.request.get(BASE + path).status == 404, path
     page.goto(BASE + '/', wait_until='networkidle')
     feed = page.locator('.news-scroll')
     feed.evaluate('(el)=>el.scrollTop=el.scrollHeight')

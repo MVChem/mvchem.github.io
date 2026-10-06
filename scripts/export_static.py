@@ -12,7 +12,7 @@ sys.path.insert(0, str(ROOT))
 from fastapi.testclient import TestClient  # noqa: E402
 
 from backend.app import app  # noqa: E402
-from backend.reference import ReferenceSite  # noqa: E402
+from backend.reference import CONTENT_VERSION, ReferenceSite  # noqa: E402
 
 
 def export_static(dist_dir: Path) -> Path:
@@ -33,6 +33,7 @@ def export_static(dist_dir: Path) -> Path:
     endpoint_file.parent.mkdir(parents=True, exist_ok=True)
     endpoint_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (endpoint_file.parent / 'reference.json').write_text(json.dumps(reference, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    (endpoint_file.parent / f'reference.{CONTENT_VERSION}.json').write_text(json.dumps(reference, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     for route in reference['pages']:
         if route == '/':
             continue
