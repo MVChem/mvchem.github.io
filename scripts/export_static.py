@@ -13,6 +13,7 @@ from fastapi.testclient import TestClient  # noqa: E402
 
 from backend.app import app  # noqa: E402
 from backend.reference import CONTENT_VERSION, ReferenceSite  # noqa: E402
+from backend.demo import CONTENT as DEMO_CONTENT, load_manifest
 
 
 def export_static(dist_dir: Path) -> Path:
@@ -34,6 +35,13 @@ def export_static(dist_dir: Path) -> Path:
     endpoint_file.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (endpoint_file.parent / 'reference.json').write_text(json.dumps(reference, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     (endpoint_file.parent / f'reference.{CONTENT_VERSION}.json').write_text(json.dumps(reference, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    if DEMO_CONTENT.is_file():
+        manifest = load_manifest()
+        demo_dir = endpoint_file.parent/'demo'
+        demo_dir.mkdir(exist_ok=True)
+        content = manifest.model_dump_json(indent=2)
+        (demo_dir/'vertebrae.json').write_text(content+'\n')
+        (demo_dir/f'vertebrae.{manifest.version}.json').write_text(content+'\n')
     for route in reference['pages']:
         if route == '/':
             continue

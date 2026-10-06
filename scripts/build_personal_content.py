@@ -141,12 +141,13 @@ def site(data: dict) -> dict:
         '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs')),
         '/projects': page('Projects', el('p', 'Selected research projects. Publication details and links are listed below.', cls='page-intro'),
             el('ol', *(research(papers[id]) for id in ('trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
+        '/demo': page('Research demo', el('p', 'Interactive vertebrae refinement: authentic CT, before/after predictions and a quantitative audit.', cls='page-intro')),
         '/teaching': page('Teaching', el('p', 'Teaching information will be added here.', cls='page-intro')),
         '/talks': page('Personal', el('p', 'More about me soon.', cls='page-intro'), kind='personal')}
     return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-10-06', 'name': data['name'],
         'institution': data['institution'], 'profile': profile,
         'navigation': [{'label': label, 'path': path} for label, path in [('About', '/about'), ('Research', '/researches'),
-            ('Publications', '/publications'), ('Projects', '/projects')]],
+            ('Publications', '/publications'), ('Projects', '/projects'), ('Demo', '/demo')]],
         'pages': pages, 'documents': {}}
 
 

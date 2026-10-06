@@ -8,6 +8,7 @@ from fastapi.testclient import TestClient
 from backend.app import app, create_app
 from backend.reference import CONTENT_VERSION, REFERENCE, ReferenceSite
 from scripts.export_static import export_static
+from backend.demo import load_manifest
 
 
 class PortfolioTests(unittest.TestCase):
@@ -17,7 +18,7 @@ class PortfolioTests(unittest.TestCase):
             self.assertEqual(response.status_code, 200)
             snapshot = ReferenceSite.model_validate(response.json())
             self.assertEqual(snapshot.name, 'Hongkang Chu')
-            self.assertEqual(snapshot.institution, 'University of the Chinese Academy of Sciences')
+            self.assertEqual(snapshot.institution, 'UCAS')
             self.assertEqual(snapshot.documents, {})
             self.assertTrue(all(item.path in snapshot.pages for item in snapshot.navigation))
 
@@ -77,7 +78,7 @@ class PortfolioTests(unittest.TestCase):
             self.assertTrue((dist / ".nojekyll").is_file())
             self.assertEqual(
                 {path.relative_to(dist).as_posix() for path in dist.rglob("*") if path.is_file()},
-                {"index.html", "404.html", ".nojekyll", "api/site.json", "api/reference.json", f"api/reference.{CONTENT_VERSION}.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"},
+                {"index.html", "404.html", ".nojekyll", "api/site.json", "api/reference.json", f"api/reference.{CONTENT_VERSION}.json", "api/demo/vertebrae.json", f"api/demo/vertebrae.{load_manifest().version}.json"} | {f"{route.strip('/')}/index.html" for route in routes if route != "/"},
             )
             self.assertEqual(json.loads((dist/'api/reference.json').read_text()), REFERENCE.model_dump(mode='json'))
 
@@ -87,6 +88,25 @@ class PortfolioTests(unittest.TestCase):
             with self.assertRaises(FileNotFoundError):
                 export_static(dist)
             self.assertFalse((dist / "api").exists())
+
+    def test_research_demo_retains_authentic_cases_and_changed_slices(self):
+        with TestClient(app) as client:
+            response = client.get('/api/demo/vertebrae.json')
+            self.assertEqual(response.status_code, 200)
+            manifest = response.json()
+            self.assertEqual(client.get(f"/api/demo/vertebrae.{manifest['version']}.json").json(), manifest)
+            self.assertEqual(client.get('/api/demo/vertebrae.unknown.json').status_code, 404)
+        self.assertFalse(manifest['groundTruthAvailable'])
+        self.assertEqual({case['id'] for case in manifest['cases']}, {'BDMAP_00000006','BDMAP_00000031'})
+        for case in manifest['cases']:
+            self.assertEqual(len(case['labels']), 24)
+            self.assertEqual(case['added_voxels'], 0)
+            for plane,frames in case['frames'].items():
+                indices=[frame['index'] for frame in frames]
+                self.assertEqual(indices, sorted(set(indices)))
+                edited=[frame for frame in frames if frame['index']==case['change_indices'][plane]]
+                self.assertEqual(len(edited), 1)
+                self.assertGreater(edited[0]['changedPixels'], 0)
 
 
 if __name__ == "__main__":

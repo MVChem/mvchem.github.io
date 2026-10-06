@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { DocumentNode } from './components/ReferenceDocument'
 import type { ReferenceSite } from './reference-types'
 
 const readRoute = () => location.pathname.replace(/\/$/, '') || '/'
+const VertebraeDemo = lazy(() => import('./demo/VertebraeDemo'))
 export default function App() {
   const [site, setSite] = useState<ReferenceSite | null>(null)
   const [route, setRoute] = useState(readRoute)
@@ -63,6 +64,7 @@ export default function App() {
     return () => media.removeEventListener('change', resize)
   }, [])
   if (!site) return <div className="load-state" role={error ? 'alert' : 'status'}><h1>Hongkang Chu</h1><p>{error ? 'The page could not load.' : 'Loading…'}</p>{error && <button className="button" onClick={() => setAttempt(n => n + 1)}>Try again</button>}</div>
+  if (route === '/demo') return <Suspense fallback={<div className="load-state" role="status">Loading research demo…</div>}><VertebraeDemo /></Suspense>
   const current = site.pages[route] ? route : '/', home = current === '/' || current === '/about'
   const content = site.pages[current]
   return <>

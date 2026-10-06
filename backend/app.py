@@ -5,6 +5,7 @@ from fastapi.responses import FileResponse
 from fastapi.middleware.gzip import GZipMiddleware
 
 from backend.reference import CONTENT_VERSION, REFERENCE, ReferenceSite
+from backend.demo import DemoManifest, load_manifest
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -29,6 +30,17 @@ def create_app(dist_dir: Path | None = None) -> FastAPI:
         if version != CONTENT_VERSION:
             raise HTTPException(status_code=404, detail='Not found')
         return REFERENCE
+
+    @application.get('/api/demo/vertebrae.json', response_model=DemoManifest)
+    @application.get('/api/demo/vertebrae.{version}.json', response_model=DemoManifest)
+    def vertebrae_demo(version: str | None = None) -> DemoManifest:
+        try:
+            manifest = load_manifest()
+        except FileNotFoundError:
+            raise HTTPException(503, 'Research demo export is being prepared')
+        if version is not None and version != manifest.version:
+            raise HTTPException(404, 'Not found')
+        return manifest
 
     @application.get("/{path:path}", include_in_schema=False)
     def frontend_file(path: str) -> FileResponse:

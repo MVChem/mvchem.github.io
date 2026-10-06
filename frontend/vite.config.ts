@@ -6,10 +6,11 @@ import { readFileSync } from 'node:fs'
 const contentVersion = createHash('sha256')
   .update(readFileSync(new URL('../backend/content/reference.json', import.meta.url)))
   .digest('hex').slice(0, 16)
+const demoVersion = JSON.parse(readFileSync(new URL('../backend/content/vertebrae_demo.json', import.meta.url), 'utf8')).version
 
 export default defineConfig({
   plugins: [react()],
-  define: { 'import.meta.env.VITE_CONTENT_VERSION': JSON.stringify(contentVersion) },
+  define: { 'import.meta.env.VITE_CONTENT_VERSION': JSON.stringify(contentVersion), 'import.meta.env.VITE_DEMO_VERSION': JSON.stringify(demoVersion) },
   server: { host: '127.0.0.1', port: 5178, proxy: { '/api': 'http://127.0.0.1:8038' } },
   build: { sourcemap: false },
 })
