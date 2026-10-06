@@ -1,6 +1,6 @@
 # 储红康个人主页 · chuhongkang.com
 
-沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，通过 CSS 在圆形区域内突出脸部和肩部，原图保持不变。
+沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，在桌面 224px、手机 112px 的圆形区域中展示人物及江之岛海景，原图保持不变。
 
 项目保存位置：`/home/data2/chk/workspace/2026/10/01/chenfang-homepage`。
 
@@ -8,7 +8,7 @@
 
 - About：本人介绍、研究经历、可滚动的真实研究新闻和精选论文。
 - Research：中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历，以及本人研究概要。
-- Publications：TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch 和本科 IJMS 论文；保留完整作者顺序和明确状态。
+- Publications：TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
 - Projects：三个已有公开成果的研究项目。
 - CV：本站公开内容生成的两页 CV 与一页 Resume，支持键盘切换、预览、打开与下载；不复制申请材料中的 CV。
 - Teaching / Personal：暂无本人确认的内容，不出现在导航；旧网址保留空状态。

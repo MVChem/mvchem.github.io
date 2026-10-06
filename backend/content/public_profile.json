@@ -20,7 +20,7 @@
       "dates": "2025–present",
       "description": "Research in MRI, MRSI, and deuterium metabolic imaging at the Innovation Academy for Precision Measurement Science and Technology.",
       "bullets": [
-        "Co-developed prior-informed deep learning reconstruction for weighted-average CSI, combining anatomical and spectral information; first-author ISMRM 2026 Power Pitch.",
+        "Co-developed prior-informed deep learning reconstruction for weighted-average CSI, combining anatomical and spectral information; first-author ISMRM 2026 Power Pitch Oral.",
         "Co-authored work on physics-embedded CycleGAN reconstruction for short-readout deuterium metabolic imaging, published in Magnetic Resonance Letters.",
         "Co-authored a phase model-driven deep learning study for NMR phase correction, published in The Journal of Physical Chemistry Letters."
       ],
@@ -114,10 +114,10 @@
       "authors": ["Hongkang Chu", "Gang Chen", "Xinjie Liu", "Hong Shi", "Chaoyang Liu", "Maili Liu", "Xin Zhou", "Elton Montrazi", "Lucio Frydman", "Qingjia Bao"],
       "venue": "ISMRM 2026",
       "citation": "ISMRM 2026, Cape Town, South Africa; 11 May 2026",
-      "status": "Power Pitch",
+      "status": "Power Pitch Oral",
       "role": "First Author",
       "year": "2026",
-      "summary": "Weighted-average CSI acquisition is combined with deep learning that uses anatomical and spectral priors to reconstruct deuterium metabolite maps. This first-author work was selected for the ISMRM 2026 Power Pitch session on AI Methods.",
+      "summary": "Weighted-average CSI acquisition is combined with deep learning that uses anatomical and spectral priors to reconstruct deuterium metabolite maps. This first-author work was selected for the ISMRM 2026 Power Pitch Oral session on AI Methods.",
       "links": [{"label": "Conference Program", "url": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616"}]
     },
     {

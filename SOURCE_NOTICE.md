@@ -14,7 +14,7 @@
 - ClueAegis：[arXiv](https://arxiv.org/abs/2605.25009) 和 [OpenReview](https://openreview.net/forum?id=Hxm5eSFUT9)。本地认证记录确认 Findings of EMNLP 2026 录用。
 - MRL：[出版页面](https://www.sciencedirect.com/science/article/pii/S2772516226000161)、[PubMed](https://pubmed.ncbi.nlm.nih.gov/42433312/) 和 Crossref DOI 元数据。用户为第四作者；在线发表日期为 2026-04-06，卷期标作 2026 年 11 月，页面写 Published Online。
 - JPCL：[PubMed](https://pubmed.ncbi.nlm.nih.gov/41508827/) 和 [DOI](https://doi.org/10.1021/acs.jpclett.5c03529)。赵传文为第一作者，储红康为第七作者。
-- ISMRM：[2026 官方 Power Pitch 日程](https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616)。储红康为第一作者；页面表述入选报告形式，不推定本人到场。
+- ISMRM：[2026 官方 Power Pitch Oral 日程](https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616)。储红康为第一作者；页面表述入选报告形式，不推定本人到场。
 - IJMS：[PubMed](https://pubmed.ncbi.nlm.nih.gov/38674091/) 和 [全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/)。储红康为第一作者。
 
 Source Serif 4 字体采用 SIL Open Font License，许可证保留在 `frontend/public/licenses/Source-Serif-4-OFL.txt`。参考样式及其他保留素材的权利归其权利人；本项目未授予额外许可证。

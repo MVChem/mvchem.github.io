@@ -118,7 +118,7 @@ def site(data: dict) -> dict:
     news_records = [
         ('2026-09-22', 'Sep 2026', 'TRACE is available on arXiv and submitted to ICLR 2027.', papers['trace']['links'][1]['url']),
         ('2026', '2026', 'ClueAegis was accepted to Findings of EMNLP 2026.', papers['clueaegis']['links'][0]['url']),
-        ('2026-05-11', 'May 2026', 'Our weighted-average CSI work was selected for an ISMRM 2026 Power Pitch.', papers['ismrm-2026']['links'][0]['url']),
+        ('2026-05-11', 'May 2026', 'Our weighted-average CSI work was selected for an ISMRM 2026 Power Pitch Oral.', papers['ismrm-2026']['links'][0]['url']),
         ('2026-04-06', 'Apr 2026', 'Our physics-embedded CycleGAN study is published online in Magnetic Resonance Letters.', papers['mrl-cyclegan']['links'][0]['url']),
         ('2026-01-29', 'Jan 2026', 'Our NMR phase correction study is published in The Journal of Physical Chemistry Letters.', papers['jpcl-phase-correction']['links'][0]['url']),
         ('2024-04-19', 'Apr 2024', 'My first-author work on druggable proteins was published in IJMS.', papers['ijms-druggable-proteins']['links'][0]['url']),
