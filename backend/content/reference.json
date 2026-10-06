@@ -15,10 +15,24 @@
         "kind": "element",
         "tag": "div",
         "attrs": {
-          "class": "profile__avatar profile__avatar--empty",
-          "aria-hidden": "true"
+          "class": "profile__avatar profile__portrait"
         },
-        "children": []
+        "children": [
+          {
+            "kind": "element",
+            "tag": "img",
+            "attrs": {
+              "src": "/photos/chuhongkang-centered.png",
+              "alt": "Hongkang Chu",
+              "width": "1448",
+              "height": "1086",
+              "fetchpriority": "high",
+              "decoding": "async",
+              "class": "profile__portrait-image"
+            },
+            "children": []
+          }
+        ]
       },
       {
         "kind": "element",

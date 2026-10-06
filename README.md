@@ -1,6 +1,6 @@
 # 储红康个人主页 · chuhongkang.com
 
-沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。照片区域暂时留空。
+沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，通过 CSS 在圆形区域内突出脸部和肩部，原图保持不变。
 
 项目保存位置：`/home/data2/chk/workspace/2026/10/01/chenfang-homepage`。
 
@@ -82,4 +82,4 @@ npm --prefix frontend run build
 .venv/bin/python scripts/verify_replica.py http://127.0.0.1:5178
 ```
 
-浏览器检查使用已安装的 `/usr/bin/google-chrome`，覆盖五个导航栏目和两个旧链接、360/390/768/960/1440 像素宽度、新闻滚动、CV 切换、PDF、手机菜单与历史返回。截图和结果输出到 `artifacts/`。后端检查另核对公开数据、留空头像及 PDF 的公开范围。
+浏览器检查使用已安装的 `/usr/bin/google-chrome`，覆盖五个导航栏目和两个旧链接、360/390/768/960/1440 像素宽度、新闻滚动、CV 切换、PDF、手机菜单与历史返回。截图和结果输出到 `artifacts/`。后端检查另核对公开数据、本人头像及 PDF 的公开范围。

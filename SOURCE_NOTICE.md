@@ -2,7 +2,7 @@
 
 页面版式沿用用户此前选定的 [Chen Fang 主页](https://www.chenfangcs.com/) 参考版本，使用本项目的 React 组件和 FastAPI 内容接口。
 
-2026-10-06 已替换为储红康（Hongkang Chu）的个人资料。头像留空；参考作者的照片、经历、研究、论文、个人生活、CV、Resume 和附件不再发布。无已核实资料的 Teaching 和 Personal 栏目不出现在导航中，旧链接保留简短空状态。
+2026-10-06 已替换为储红康（Hongkang Chu）的个人资料。头像采用本人提供的 `frontend/public/photos/chuhongkang-centered.png`；参考作者的照片、经历、研究、论文、个人生活、CV、Resume 和附件不再发布。无已核实资料的 Teaching 和 Personal 栏目不出现在导航中，旧链接保留简短空状态。
 
 公开内容的唯一编辑源为 `backend/content/public_profile.json`。网页数据、公开 CV、Resume 和预览由 `scripts/build_personal_content.py` 生成，不从申请用 CV 或未公开论文稿件复制内容。
 

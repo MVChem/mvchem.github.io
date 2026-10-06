@@ -35,9 +35,7 @@ class PortfolioTests(unittest.TestCase):
         for excluded in ('medcase', 'cfmmp2xvbk', 'tgdnyovybf', 'chen fang', 'chenfang', 'medxr',
                          'gazeagent', 'audioguard', 'nyulangone', 'nowmad', 'chenf3@'):
             self.assertNotIn(excluded, content)
-        profile_images = [node for node in REFERENCE.profile.children if getattr(node, 'tag', None) == 'img']
-        self.assertEqual(profile_images, [])
-        self.assertIn('profile__avatar--empty', content)
+        self.assertIn('/photos/chuhongkang-centered.png', REFERENCE.profile.model_dump_json())
         for reference in ('erYE1VciKv', '10.1016/j.mrl.2026.200272', '10.1021/acs.jpclett.5c03529',
                           'ISMRM 2026', '10.3390/ijms25084507'):
             self.assertIn(reference.lower(), content)

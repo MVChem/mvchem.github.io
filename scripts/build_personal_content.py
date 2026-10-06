@@ -100,7 +100,9 @@ def documents(document_id: str, pages: int) -> dict:
 def site(data: dict) -> dict:
     papers = {p['id']: p for p in data['papers']}
     profile = el('aside',
-        el('div', cls='profile__avatar profile__avatar--empty', aria_hidden='true'),
+        el('div', el('img', src=data['portrait'], alt=data['name'], width='1448', height='1086',
+            fetchpriority='high', decoding='async', cls='profile__portrait-image'),
+            cls='profile__avatar profile__portrait'),
         el('div', el('p', el('span', 'Master’s Student @ UCAS'), el('span', 'AI · MRI · Multimodal Learning'), cls='profile__roles'), cls='profile__id'),
         el('ul', el('li', 'Wuhan, China', cls='profile__meta'),
             el('li', external('UCAS', 'https://english.ucas.ac.cn/')),
