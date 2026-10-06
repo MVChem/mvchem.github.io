@@ -7,7 +7,10 @@ const report={base,checkedAt:new Date().toISOString(),checks:[],pageErrors:[],fa
 async function slices(page){await page.waitForFunction(()=>document.querySelectorAll('.vd-slice-image canvas').length===3&&document.querySelectorAll('.vd-slice-image .vd-view-message').length===0,null,{timeout:60000})}
 async function surface(page){await page.locator('.vd-surface-host canvas').waitFor();await page.waitForFunction(()=>document.querySelectorAll('.vd-surface-stage .vd-view-message').length===0,null,{timeout:60000})}
 (async()=>{
-  const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,args:['--no-sandbox','--enable-unsafe-swiftshader']});
+  const proxyValue=process.env.HTTPS_PROXY||process.env.https_proxy||process.env.ALL_PROXY||process.env.all_proxy;
+  let proxy;
+  if(base.startsWith('https://')&&proxyValue){const url=new URL(proxyValue);proxy={server:`${url.protocol}//${url.hostname}${url.port?':'+url.port:''}`,username:decodeURIComponent(url.username)||undefined,password:decodeURIComponent(url.password)||undefined}}
+  const browser=await chromium.launch({executablePath:'/usr/bin/google-chrome',headless:true,proxy,args:['--no-sandbox','--enable-unsafe-swiftshader']});
   const page=await browser.newPage({viewport:{width:1500,height:1080},baseURL:base});
   page.on('pageerror',error=>report.pageErrors.push(error.message));
   page.on('response',response=>{if(response.status()>=400&&!response.url().endsWith('/favicon.ico'))report.failedResponses.push({url:response.url(),status:response.status()})});
