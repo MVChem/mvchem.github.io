@@ -86,6 +86,14 @@ npm --prefix frontend run build
 
 源代码位于 `feat/chenfang-homepage` 分支，静态构建发布到 `gh-pages`。原主页和参考作者版本保留在 Git 历史中。
 
+## 主页访问统计（2026-10-09）
+
+主页和 About 页底部接入 MapMyVisitors 的官方图片组件，显示真实访客地图和累计 pageviews；使用 eager 图片加载，打开主页就发起统计请求，不需要滚动到底部。统计入口为 [chuhongkang.com 的访客统计](https://mapmyvisitors.com/web/1c8re)。图片加载失败时保留入口并显示不可用状态。
+
+组件在 `frontend/src/components/VisitorMap.tsx`，样式在同目录的 `visitor-map.css`。公开 widget key 属于 `https://chuhongkang.com/`，不能替换成其他人的代码。此方案由浏览器直接请求 MapMyVisitors，不依赖额外服务器；统计按该服务的 pageview 定义累计，从接入开始，初期数据包含接入检查。当前仅统计主页及 About 页，不代表所有子页面的总访问量，也不能用于确定访问者身份。所在地是基于 IP 的近似位置，VPN/代理可能影响结果。
+
+账号按用户指示使用 UCAS 校邮箱。登录凭据只保存在本机 `~/.local/share/mapmyvisitors/account.json`，目录权限 `0700`，文件权限 `0600`；不进入 Git、构建或网页。可用该邮箱在官网重置密码。`.runtime/` 中的接入会话也是私有数据，已加入 Git 忽略。
+
 ## 检查
 
 ```bash

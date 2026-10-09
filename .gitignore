@@ -6,4 +6,5 @@ frontend/dist/
 .env
 .DS_Store
 artifacts/
+.runtime/
 frontend/public/demo-data/

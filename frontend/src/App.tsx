@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react'
 import { DocumentNode } from './components/ReferenceDocument'
+import VisitorMap from './components/VisitorMap'
 import type { ReferenceSite } from './reference-types'
 
 const readRoute = () => {
@@ -88,7 +89,7 @@ export default function App() {
     </div></header>
     <div className={`shell${home ? ' shell--home' : ''}`}>
       <DocumentNode node={site.profile} />
-      <DocumentNode key={current} node={content} />
+      <DocumentNode key={current} node={content}>{home && <VisitorMap />}</DocumentNode>
     </div>
     <footer className="footer"><div className="footer__inner"><span>© {new Date().getFullYear()} {site.name}</span><span className="sep" aria-hidden="true">·</span><span>{site.institution}</span></div></footer>
   </>

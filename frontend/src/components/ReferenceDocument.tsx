@@ -17,12 +17,12 @@ function inlineStyle(value: string): CSSProperties {
   }
   return properties as CSSProperties
 }
-export function DocumentNode({ node }: { node: RichNode }): ReactNode {
+export function DocumentNode({ node, children }: { node: RichNode; children?: ReactNode }): ReactNode {
   if (node.kind === 'text') return node.text
   if (node.attrs.class === 'hero') return <IntroHero node={node} />
   if (node.attrs.class?.split(' ').includes('news-box')) return <NewsFeed node={node} />
   const props = Object.fromEntries(Object.entries(node.attrs).map(([key, value]) => [names[key] ?? key, key === 'style' ? inlineStyle(value) : key === 'download' && value === '' ? true : value]))
-  return createElement(node.tag === 'clippath' ? 'clipPath' : node.tag, props, ...node.children.map((child, index) => <DocumentNode key={index} node={child} />))
+  return createElement(node.tag === 'clippath' ? 'clipPath' : node.tag, props, ...node.children.map((child, index) => <DocumentNode key={index} node={child} />), children)
 }
 function NewsFeed({ node }: { node: ElementNode }) {
   const box = useRef<HTMLDivElement>(null)
