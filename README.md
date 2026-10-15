@@ -88,11 +88,21 @@ npm --prefix frontend run build
 
 ## 主页访问统计（2026-10-09）
 
-主页和 About 页底部接入 MapMyVisitors 的官方图片组件，显示真实访客地图和累计 pageviews；使用 eager 图片加载，打开主页就发起统计请求，不需要滚动到底部。统计入口为 [chuhongkang.com 的访客统计](https://mapmyvisitors.com/web/1c8re)。图片加载失败时保留入口并显示不可用状态。
+主页和 About 页底部接入 MapMyVisitors 的官方图片组件，显示真实访客地图和累计 pageviews；使用 eager 图片加载，打开主页就发起统计请求，不需要滚动到底部。统计入口为 [chuhongkang.com 的访客统计](https://mapmyvisitors.com/web/1c8re)。第三方图片加载期间或失败时，显示随本站发布的真实地图快照，并标明快照日期；快照不是实时统计，也不能记录第三方连接失败时的访客。实时图片请求八秒超时后自动重试，最多两次；提供手动重试并在网络恢复时重连。迟到的成功响应也能恢复实时地图，离开页面会清理重试计时器。
 
 组件在 `frontend/src/components/VisitorMap.tsx`，样式在同目录的 `visitor-map.css`。公开 widget key 属于 `https://chuhongkang.com/`，不能替换成其他人的代码。此方案由浏览器直接请求 MapMyVisitors，不依赖额外服务器；统计按该服务的 pageview 定义累计，从接入开始，初期数据包含接入检查。当前仅统计主页及 About 页，不代表所有子页面的总访问量，也不能用于确定访问者身份。所在地是基于 IP 的近似位置，VPN/代理可能影响结果。
 
 账号按用户指示使用 UCAS 校邮箱。登录凭据只保存在本机 `~/.local/share/mapmyvisitors/account.json`，目录权限 `0700`，文件权限 `0600`；不进入 Git、构建或网页。可用该邮箱在官网重置密码。`.runtime/` 中的接入会话也是私有数据，已加入 Git 忽略。
+
+官方图片地址和统计入口统一在 `frontend/src/components/visitor-map-config.json`。快照在 `frontend/src/assets/visitor-map.png`，采集日期和尺寸在相邻 JSON 中；Vite 会生成带内容哈希的本站资源地址。快照按需更新，更新请求本身也可能计入服务商的 pageviews，不设置周期刷新以免持续增加检查流量。更新后需要重新构建、导出和发布：
+
+```bash
+.venv/bin/python scripts/refresh_visitor_map.py
+npm --prefix frontend run build
+.venv/bin/python scripts/export_static.py
+```
+
+运行中的 FastAPI 入口可用 `.venv/bin/python scripts/check_visitor_map.py http://127.0.0.1:8038` 验证断线、有限重试、手动恢复、网络恢复、请求超时及手机布局。脚本拦截第三方统计请求，不额外增加 pageviews；结果和截图保存在 `artifacts/visitors/`。
 
 ## 检查
 

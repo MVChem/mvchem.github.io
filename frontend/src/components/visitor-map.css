@@ -7,7 +7,7 @@
   position: relative;
   width: 100%;
   max-width: 420px;
-  aspect-ratio: 420 / 226;
+  aspect-ratio: 420 / 218;
   margin-top: 18px;
   border-radius: var(--radius);
   overflow: hidden;
@@ -19,14 +19,23 @@
   width: 100%;
   height: auto;
 }
-.site-visitors__status {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  padding: 20px;
-  text-align: center;
-  font-size: 14px;
+.site-visitors__map img[hidden] {
+  display: none;
+}
+.site-visitors__notice {
+  margin-top: 8px;
+  color: var(--ink-3);
+  font-size: 13px;
+}
+.site-visitors__notice button {
+  border: 0;
+  padding: 0;
+  background: none;
+  color: var(--blue);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: .2em;
+  cursor: pointer;
 }
 .site-visitors__caption {
   margin-top: 12px;
