@@ -1,6 +1,6 @@
 {
   "source": "https://chuhongkang.com/",
-  "captured_at": "2026-10-06",
+  "captured_at": "2026-10-26",
   "name": "Hongkang Chu",
   "institution": "UCAS",
   "profile": {
@@ -430,6 +430,53 @@
                                 "class": "news"
                               },
                               "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "li",
+                                  "attrs": {
+                                    "class": "news__item"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "time",
+                                      "attrs": {
+                                        "datetime": "2026-10-23",
+                                        "class": "news__date"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Oct 2026"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "p",
+                                      "attrs": {
+                                        "class": "news__text"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "https://arxiv.org/abs/2610.32258",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "My first-author paper MedCaseAgent is now available on arXiv."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
                                 {
                                   "kind": "element",
                                   "tag": "li",
@@ -1238,6 +1285,204 @@
                         "class": "pubs"
                       },
                       "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "pub",
+                            "id": "selected-medcaseagent"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "pub__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "h2",
+                                  "attrs": {
+                                    "class": "pub__title"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/abs/2610.32258",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "p",
+                                  "attrs": {
+                                    "class": "authors"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "strong",
+                                      "attrs": {
+                                        "class": "authors__me"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Hongkang Chu"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Yifan Shen"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Tianjiao Yu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Zhuoqing Zhong"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Jianguo Cao"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Meihuan Huang"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Xu Cao"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "ul",
+                                  "attrs": {
+                                    "class": "venues"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "li",
+                                      "attrs": {
+                                        "class": "venue"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "venue__name"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "arXiv:2610.32258, 2026"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "tag"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Preprint"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "link-row"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/abs/2610.32258",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "arXiv"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/pdf/2610.32258",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "PDF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "kind": "element",
                           "tag": "li",
@@ -2727,6 +2972,53 @@
                                       "kind": "element",
                                       "tag": "time",
                                       "attrs": {
+                                        "datetime": "2026-10-23",
+                                        "class": "news__date"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Oct 2026"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "p",
+                                      "attrs": {
+                                        "class": "news__text"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "https://arxiv.org/abs/2610.32258",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "My first-author paper MedCaseAgent is now available on arXiv."
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "li",
+                                  "attrs": {
+                                    "class": "news__item"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "time",
+                                      "attrs": {
                                         "datetime": "2026-09-22",
                                         "class": "news__date"
                                       },
@@ -3524,6 +3816,204 @@
                         "class": "pubs"
                       },
                       "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "pub",
+                            "id": "selected-medcaseagent"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "pub__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "h2",
+                                  "attrs": {
+                                    "class": "pub__title"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/abs/2610.32258",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "p",
+                                  "attrs": {
+                                    "class": "authors"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "strong",
+                                      "attrs": {
+                                        "class": "authors__me"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Hongkang Chu"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Yifan Shen"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Tianjiao Yu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Zhuoqing Zhong"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Jianguo Cao"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Meihuan Huang"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Xu Cao"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "ul",
+                                  "attrs": {
+                                    "class": "venues"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "li",
+                                      "attrs": {
+                                        "class": "venue"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "venue__name"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "arXiv:2610.32258, 2026"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "tag"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Preprint"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "link-row"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/abs/2610.32258",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "arXiv"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/pdf/2610.32258",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "PDF"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "kind": "element",
                           "tag": "li",
@@ -5303,6 +5793,143 @@
                   "tag": "li",
                   "attrs": {
                     "class": "project project--text",
+                    "id": "medcaseagent"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "project__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__head"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "h2",
+                              "attrs": {
+                                "class": "project__title"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "role"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "First Author"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "MedCaseAgent turns multimodal clinical evidence and unstructured notes into rare disease case reports through patient-level data mining, literature retrieval, and iterative tool-assisted reasoning. The work introduces MedCase-150K and MedCase-Bench, alongside a Qwen3.5-9B model post-trained for case-report generation."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "row__meta"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "arXiv, 2026 · Preprint"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/abs/2610.32258",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "arXiv"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/pdf/2610.32258",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "PDF"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "project project--text",
                     "id": "trace"
                   },
                   "children": [
@@ -6154,6 +6781,204 @@
                 "class": "pubs"
               },
               "children": [
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "pub",
+                    "id": "medcaseagent"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "pub__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "h2",
+                          "attrs": {
+                            "class": "pub__title"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://arxiv.org/abs/2610.32258",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "authors"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "strong",
+                              "attrs": {
+                                "class": "authors__me"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Hongkang Chu"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Yifan Shen"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Tianjiao Yu"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Zhuoqing Zhong"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Jianguo Cao"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Meihuan Huang"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Xu Cao"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "ul",
+                          "attrs": {
+                            "class": "venues"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "li",
+                              "attrs": {
+                                "class": "venue"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "venue__name"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "arXiv:2610.32258, 2026"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "tag"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Preprint"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "link-row"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://arxiv.org/abs/2610.32258",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "arXiv"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://arxiv.org/pdf/2610.32258",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "PDF"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "kind": "element",
                   "tag": "li",
@@ -7578,6 +8403,143 @@
                                     {
                                       "kind": "text",
                                       "text": "Original task"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "project project--text",
+                    "id": "medcaseagent"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "project__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__head"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "h2",
+                              "attrs": {
+                                "class": "project__title"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "role"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "First Author"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "MedCaseAgent turns multimodal clinical evidence and unstructured notes into rare disease case reports through patient-level data mining, literature retrieval, and iterative tool-assisted reasoning. The work introduces MedCase-150K and MedCase-Bench, alongside a Qwen3.5-9B model post-trained for case-report generation."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "row__meta"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "arXiv, 2026 · Preprint"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/abs/2610.32258",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "arXiv"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/pdf/2610.32258",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "PDF"
                                     }
                                   ]
                                 }
