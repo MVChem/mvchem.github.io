@@ -8,15 +8,15 @@
 
 - About：本人介绍、研究经历、可滚动的真实研究新闻和精选论文。
 - Research：中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历，以及本人研究概要。
-- Publications：TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
-- Projects：Vertebrae Study 和三个已有公开成果的研究项目，以后可继续加入其他领域的项目。
+- Publications：MedCaseAgent、TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
+- Projects：Vertebrae Study 和四个已有公开成果的研究项目，以后可继续加入其他领域的项目。
 - Vertebrae Study：`/projects/vertebrae/` 的椎骨分割研究展示，副标题为 SuPreM vertebrae segmentation and postprocessing。包含两例官方CT的前后对比、改动定位、窗宽窗位、标签筛选、真实3D曲面和逐椎骨统计。任务来源注明 JHU 的 Zongwei Zhou 实验室和 SuPreM / AbdomenAtlasDemo；明确区分后处理改动与准确率评价。旧 `/demo/` 链接自动跳转到新地址，保留查询参数和锚点。
 - CV / Resume：按本人要求从导航、侧栏、页面、下载和公开 API 数据中移除。原本站 PDF 与预览仅保留在本地 `artifacts/documents/`，不会发布。
 - Teaching / Personal：暂无本人确认的内容，不出现在导航；旧网址保留空状态。
 
 桌面保留固定资料栏，手机首页显示紧凑资料区，其他手机页面聚焦正文。导航支持手机菜单、Escape 关闭、历史返回和研究段落锚点。页面使用 React + TypeScript + Vite；FastAPI 的 `/api/reference.json` 提供经过 Pydantic 验证的内容数据。前端使用根据内容生成的版本号读取 API，防止更新后继续显示旧的缓存标签。兼容入口 `/api/site.json` 返回同一份本人内容，旧的演示数据不再发布。
 
-本人要求不公开的病例报告代理相关工作不进入网页、元数据、PDF、预览和下载附件。包含相关内容的旧 MDLE 演示附件已从网站发布目录移除，工作区原材料保持独立。
+按本人 2026-10-26 的要求公开 MedCaseAgent 预印本（arXiv:2610.32258），在首页新闻、精选论文、Research、Publications 和 Projects 中展示，保留完整作者顺序并标为 Preprint。论文和 PDF 使用 arXiv 原链接。旧 MDLE 演示附件仍不进入网站发布目录。
 
 ## 本地运行
 

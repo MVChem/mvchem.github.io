@@ -38,11 +38,11 @@ class PortfolioTests(unittest.TestCase):
 
     def test_public_content_excludes_private_work_and_reference_author(self):
         content = REFERENCE.model_dump_json().lower()
-        for excluded in ('medcase', 'cfmmp2xvbk', 'tgdnyovybf', 'chen fang', 'chenfang', 'medxr',
+        for excluded in ('cfmmp2xvbk', 'tgdnyovybf', 'chen fang', 'chenfang', 'medxr',
                          'gazeagent', 'audioguard', 'nyulangone', 'nowmad', 'chenf3@'):
             self.assertNotIn(excluded, content)
         self.assertIn('/photos/chuhongkang-centered.png', REFERENCE.profile.model_dump_json())
-        for reference in ('erYE1VciKv', '10.1016/j.mrl.2026.200272', '10.1021/acs.jpclett.5c03529',
+        for reference in ('2610.32258', 'MedCaseAgent', 'erYE1VciKv', '10.1016/j.mrl.2026.200272', '10.1021/acs.jpclett.5c03529',
                           'ISMRM 2026', '10.3390/ijms25084507'):
             self.assertIn(reference.lower(), content)
 

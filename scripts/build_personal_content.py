@@ -44,12 +44,12 @@ def authors(paper: dict) -> dict:
 
 
 def publication(paper: dict, prefix: str = '') -> dict:
-    status_class = 'tag--review' if paper['status'] == 'Under Review' else 'tag--accepted'
+    status_class = {'Under Review': 'tag--review', 'Preprint': ''}.get(paper['status'], 'tag--accepted')
     return el('li', el('div',
         el('h2', external(paper['title'], paper['links'][0]['url']), cls='pub__title'),
         authors(paper),
         el('ul', el('li', el('span', paper['citation'], cls='venue__name'),
-                    el('span', paper['status'], cls='tag ' + status_class), cls='venue'), cls='venues'),
+                    el('span', paper['status'], cls=('tag ' + status_class).strip()), cls='venue'), cls='venues'),
         links(paper), cls='pub__body'), cls='pub', id=prefix + paper['id'])
 
 
@@ -117,6 +117,7 @@ def site(data: dict) -> dict:
             el('span', 'AI for magnetic resonance imaging/medical', cls='hp', data_p='health'), '.', cls='hero__lede'),
         cls='hero'), cls='page-head page-head--hero')
     news_records = [
+        ('2026-10-23', 'Oct 2026', 'My first-author paper MedCaseAgent is now available on arXiv.', papers['medcaseagent']['links'][0]['url']),
         ('2026-09-22', 'Sep 2026', 'TRACE is available on arXiv and submitted to ICLR 2027.', papers['trace']['links'][1]['url']),
         ('2026', '2026', 'ClueAegis was accepted to Findings of EMNLP 2026.', papers['clueaegis']['links'][0]['url']),
         ('2026-05-11', 'May 2026', 'Our weighted-average CSI work was selected for an ISMRM 2026 Power Pitch Oral.', papers['ismrm-2026']['links'][0]['url']),
@@ -148,11 +149,11 @@ def site(data: dict) -> dict:
                 el('div', el('div', el('a', 'Open interactive study', href='/projects/vertebrae/', cls='link-chip'),
                     external('Original task', 'https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md', cls='link-chip'), cls='link-row'), cls='project__foot'),
                 cls='project__body'), cls='project project--text', id='vertebrae-study'),
-                *(research(papers[id]) for id in ('trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
+                *(research(papers[id]) for id in ('medcaseagent', 'trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
         '/projects/vertebrae': page('Vertebrae Study', el('p', 'SuPreM vertebrae segmentation and postprocessing.', cls='page-intro'), kind='vertebrae'),
         '/teaching': page('Teaching', el('p', 'Teaching information will be added here.', cls='page-intro')),
         '/talks': page('Personal', el('p', 'More about me soon.', cls='page-intro'), kind='personal')}
-    return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-10-06', 'name': data['name'],
+    return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-10-26', 'name': data['name'],
         'institution': data['institution'], 'profile': profile,
         'navigation': [{'label': label, 'path': path} for label, path in [('About', '/about'), ('Research', '/researches'),
             ('Publications', '/publications'), ('Projects', '/projects')]],

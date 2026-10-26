@@ -58,7 +58,7 @@ def validate_build() -> None:
     for removed in ('cv', 'CV.pdf', 'resume.pdf', 'previews/cv-1.png', 'previews/cv-2.png', 'previews/resume-1.png'):
         if (DIST / removed).exists():
             raise PublishError('Build contains a removed CV/Resume page or download.')
-    forbidden = re.compile(r'medcase|cfmMp2xvbk|tgdnYoVYBF|Chen\s+Fang|chenf3@|MedXRAgent|GazeAgent|AudioGuard', re.IGNORECASE)
+    forbidden = re.compile(r'cfmMp2xvbk|tgdnYoVYBF|Chen\s+Fang|chenf3@|MedXRAgent|GazeAgent|AudioGuard', re.IGNORECASE)
     for item in DIST.rglob("*"):
         if item.is_symlink() or ".git" in item.relative_to(DIST).parts:
             raise PublishError("Build must not contain symbolic links or Git metadata.")

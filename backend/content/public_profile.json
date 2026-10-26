@@ -61,6 +61,18 @@
   ],
   "papers": [
     {
+      "id": "medcaseagent",
+      "title": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports",
+      "authors": ["Hongkang Chu", "Yifan Shen", "Tianjiao Yu", "Zhuoqing Zhong", "Jianguo Cao", "Meihuan Huang", "Xu Cao"],
+      "venue": "arXiv, 2026",
+      "citation": "arXiv:2610.32258, 2026",
+      "status": "Preprint",
+      "role": "First Author",
+      "year": "2026",
+      "summary": "MedCaseAgent turns multimodal clinical evidence and unstructured notes into rare disease case reports through patient-level data mining, literature retrieval, and iterative tool-assisted reasoning. The work introduces MedCase-150K and MedCase-Bench, alongside a Qwen3.5-9B model post-trained for case-report generation.",
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.32258"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32258"}]
+    },
+    {
       "id": "trace",
       "title": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection",
       "authors": ["Huangsen Cao", "Hongkang Chu", "Siyao Yu", "Xin Ding", "Jianfeng Dong", "Yongwei Wang"],
