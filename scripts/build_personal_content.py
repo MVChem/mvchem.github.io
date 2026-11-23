@@ -43,20 +43,19 @@ def authors(paper: dict) -> dict:
     return el('p', *children, cls='authors')
 
 
-def preview(paper: dict, cls: str) -> dict:
-    """Clickable 16:10 preview; duplicates the title link, so it is hidden from keyboard and screen readers."""
-    data = paper['preview']
+def preview(data: dict, url: str, cls: str) -> dict:
+    """Render the thumbnail for a destination already linked in the card text."""
     inner = (el('img', src=data['src'], alt='', width='800', height='500', loading='lazy', decoding='async')
              if 'src' in data else
              el('span', el('span', data['label'], cls='paper-thumb__label'), el('span', data['caption'], cls='paper-thumb__caption'),
                 cls='paper-thumb__text'))
-    return el('a', inner, href=paper['links'][0]['url'], target='_blank', rel='noopener noreferrer',
+    return el('a', inner, href=url, target='_blank', rel='noopener noreferrer',
               tabindex='-1', aria_hidden='true', cls=cls + ' paper-thumb')
 
 
 def publication(paper: dict, prefix: str = '') -> dict:
     status_class = {'Under Review': 'tag--review', 'Preprint': ''}.get(paper['status'], 'tag--accepted')
-    return el('li', preview(paper, 'pub__thumb'), el('div',
+    return el('li', preview(paper['preview'], paper['links'][0]['url'], 'pub__thumb'), el('div',
         el('h2', external(paper['title'], paper['links'][0]['url']), cls='pub__title'),
         authors(paper),
         el('ul', el('li', el('span', paper['citation'], cls='venue__name'),
@@ -85,7 +84,7 @@ def experience(item: dict, papers: dict) -> dict:
 
 
 def research(paper: dict) -> dict:
-    return el('li', preview(paper, 'project__figure'), el('div',
+    return el('li', preview(paper['preview'], paper['links'][0]['url'], 'project__figure'), el('div',
         el('div', el('h2', external(paper['title'], paper['links'][0]['url']), cls='project__title'), el('span', paper['role'], cls='role'), cls='project__head'),
         el('div', el('p', paper['summary']), cls='project__text'),
         el('p', paper['venue'] + ' · ' + paper['status'], cls='row__meta'),
@@ -94,10 +93,18 @@ def research(paper: dict) -> dict:
 
 
 def research_project(project: dict) -> dict:
-    return el('li', el('div',
-        el('div', el('h2', project['title'], cls='project__title'), cls='project__head'),
-        el('div', el('p', project['summary']), cls='project__text'), cls='project__body'),
-        cls='project project--text', id=project['id'])
+    heading = el('div', el('h2', project['title'], cls='project__title'), cls='project__head')
+    summary = el('div', el('p', project['summary']), cls='project__text')
+    figure = project.get('preview')
+    if not figure:
+        return el('li', el('div', heading, summary, cls='project__body'),
+            cls='project project--text', id=project['id'])
+
+    figure_link = external(figure['label'], figure['src'], 'link-chip')
+    return el('li', preview(figure, figure['src'], 'project__figure'),
+        el('div', heading, summary,
+            el('div', el('div', figure_link, cls='link-row'), cls='project__foot'), cls='project__body'),
+        cls='project project--paper', id=project['id'])
 
 
 def documents(document_id: str, pages: int) -> dict:
@@ -146,11 +153,17 @@ def site(data: dict) -> dict:
     news = el('div', el('div', el('ul', *(el('li', el('time', label, datetime=date, cls='news__date'),
         el('p', external(text, url), cls='news__text'), cls='news__item') for date, label, text, url in news_records), cls='news'),
         cls='news-scroll', tabindex='0', aria_label='Research news'), cls='news-box')
+    project_cards = [research_project(project) for project in data.get('research_projects', [])]
+    selected_projects = (
+        [section('Selected Projects', 'selected-projects', el('ol', *project_cards, cls='projects'))]
+        if project_cards else []
+    )
     about = el('main', el('article', hero,
         section('About', 'about', el('p', data['intro']),
             el('p', 'I collaborate with researchers at Zhejiang University on synthetic image and video detection and have worked remotely with UIUC on medical AI. Previously, I studied Computer Science and Technology at Shanghai Ocean University.')),
         section('News', 'news', news),
         section('Research Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
+        *selected_projects,
         section('Selected Publications', 'selected-publications', el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs pubs--thumbs')),
         cls='page page--about'), id='main', cls='content')
     pages = {'/': about, '/about': copy.deepcopy(about),
@@ -159,7 +172,7 @@ def site(data: dict) -> dict:
             el('ol', *(research(p) for p in data['papers']), cls='projects'), kind='research'),
         '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs pubs--thumbs')),
         '/projects': page('Projects', el('p', 'Selected research projects and interactive studies.', cls='page-intro'),
-            el('ol', *(research_project(project) for project in data.get('research_projects', [])),
+            el('ol', *project_cards,
                 el('li', el('a', el('img', src='/figures/vertebrae-study.webp', alt='', width='800', height='500', loading='lazy', decoding='async'),
                     href='/projects/vertebrae/', tabindex='-1', aria_hidden='true', cls='project__figure paper-thumb'), el('div',
                 el('div', el('h2', el('a', 'Vertebrae Study', href='/projects/vertebrae/'), cls='project__title'),

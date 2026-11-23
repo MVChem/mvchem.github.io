@@ -1,4 +1,4 @@
-"""Build the 16:10 preview images shown next to each paper.
+"""Build the preview images shown next to each paper.
 
 Every preview comes from the paper's own public figure: the arXiv source for
 preprints, the open-access PMC copy for journal papers and the official ISMRM
@@ -14,7 +14,6 @@ from __future__ import annotations
 
 import argparse
 import html
-import io
 import re
 import tarfile
 import urllib.request
@@ -35,14 +34,18 @@ USER_AGENT = 'Mozilla/5.0 (compatible; chuhongkang.com preview builder)'
 PREVIEWS = {
     'medcaseagent': {'arxiv': '2610.32258', 'member': 'figures/medcaseagent_teaser.pdf',
                      'crop': (0.232, 0.0, 1.0, 1.0)},
-    'trace': {'arxiv': '2609.25775', 'member': 'fig1_rebuilt.pdf', 'crop': (0.0, 0.0, 1.0, 1.0)},
+    'trace': {'figure_url': 'https://arxiv.org/html/2609.25775v1/pipline.png',
+              'output': 'trace-fig2.webp'},
     'clueaegis': {'arxiv': '2605.25009', 'member': 'pipline.pdf', 'crop': (0.0, 0.0, 1.0, 1.0)},
     # Graphical abstract, CC BY-NC-ND 4.0: shown whole, only resized.
     'mrl-cyclegan': {'pmc': 'PMC13352062', 'image': 'ga1.jpg', 'crop': (0.0, 0.0, 1.0, 1.0)},
     'ismrm-2026': {'ismrm': 'https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1',
                    'crop': (0.0, 0.0, 1.0, 1.0)},
-    # Figure 1 (study overview), CC BY 4.0.
-    'ijms-druggable-proteins': {'pmc': 'PMC11049818', 'image': 'ijms-25-04507-g001.jpg', 'crop': (0.0, 0.0, 1.0, 1.0)},
+    # Figure 5 (classification UMAP), CC BY 4.0.
+    'ijms-druggable-proteins': {
+        'figure_url': 'https://pub.mdpi-res.com/ijms/ijms-25-04507/article_deploy/html/images/ijms-25-04507-g005.png',
+        'output': 'ijms-druggable-proteins-umap.webp',
+    },
 }
 
 
@@ -105,11 +108,17 @@ def main() -> None:
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for paper_id in args.ids or PREVIEWS:
         spec = PREVIEWS[paper_id]
-        source = from_arxiv(spec) if 'arxiv' in spec else from_pmc(spec) if 'pmc' in spec else from_ismrm(spec)
-        buffer = io.BytesIO()
-        to_preview(source, spec['crop']).save(buffer, 'WEBP', quality=86, method=6)
-        (OUTPUT / f'{paper_id}.webp').write_bytes(buffer.getvalue())
-        print(f'{paper_id}.webp  {len(buffer.getvalue()) // 1024} KiB')
+        output = OUTPUT / spec.get('output', f'{paper_id}.webp')
+        if 'figure_url' in spec:
+            source = fetch(spec['figure_url'], CACHE / f'{output.stem}.png')
+            with Image.open(source) as original:
+                figure = original.convert('RGB')
+            figure.thumbnail((1800, figure.height), Image.Resampling.LANCZOS)
+            figure.save(output, 'WEBP', lossless=True, method=6)
+        else:
+            source = from_arxiv(spec) if 'arxiv' in spec else from_pmc(spec) if 'pmc' in spec else from_ismrm(spec)
+            to_preview(source, spec['crop']).save(output, 'WEBP', quality=86, method=6)
+        print(f'{output.name}  {output.stat().st_size // 1024} KiB')
 
 
 if __name__ == '__main__':

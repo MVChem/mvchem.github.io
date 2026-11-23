@@ -63,12 +63,14 @@
     {
       "id": "medworld-jepa",
       "title": "MedWorld-JEPA",
-      "summary": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+      "summary": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval.",
+      "preview": {"src": "/figures/medworld-jepa-fig2.webp", "label": "Figure 2"}
     },
     {
       "id": "videoaudience",
       "title": "VideoAudience",
-      "summary": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+      "summary": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments.",
+      "preview": {"src": "/figures/videoaudience-fig1.webp", "label": "Figure 1"}
     }
   ],
   "papers": [
@@ -95,8 +97,8 @@
       "role": "Second Author",
       "year": "2026",
       "summary": "TRACE uses a pretrained Flow Matching video model to probe velocity responses in real and generated videos. It combines trajectory representations with cross-frame consistency to study detection across different video generators.",
-      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=erYE1VciKv"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25775"}],
-      "preview": {"src": "/papers/trace.webp"}
+      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=erYE1VciKv"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25775"}, {"label": "Figure 2", "url": "https://arxiv.org/html/2609.25775v1#S3.F2"}],
+      "preview": {"src": "/papers/trace-fig2.webp"}
     },
     {
       "id": "clueaegis",
@@ -160,8 +162,8 @@
       "role": "First Author",
       "year": "2024",
       "summary": "This study compares PSSM features and pretrained protein language models for druggable protein classification. It evaluates ESM-2 embeddings and an adapted GPT-2 classifier, with additional validation using Pharos.",
-      "links": [{"label": "DOI", "url": "https://doi.org/10.3390/ijms25084507"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/"}],
-      "preview": {"src": "/papers/ijms-druggable-proteins.webp"}
+      "links": [{"label": "DOI", "url": "https://doi.org/10.3390/ijms25084507"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/"}, {"label": "UMAP Figure 5", "url": "/papers/ijms-druggable-proteins-umap.webp"}],
+      "preview": {"src": "/papers/ijms-druggable-proteins-umap.webp"}
     }
   ],
   "skills": ["Python and PyTorch", "Multimodal learning and transformer fine-tuning", "Tool-using agents and model evaluation", "Diffusion and flow-matching representations", "MRI / MRSI reconstruction"]

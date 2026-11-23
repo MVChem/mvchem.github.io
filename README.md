@@ -6,10 +6,10 @@
 
 ## 页面和交互
 
-- About：本人介绍、研究经历、可滚动的真实研究新闻和精选论文。
+- About：本人介绍、研究经历、可滚动的真实研究新闻、精选项目和精选论文。
 - Research：中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历，以及本人研究概要。
 - Publications：MedCaseAgent、TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
-- Projects：Vertebrae Study 和四个已有公开成果的研究项目，以后可继续加入其他领域的项目。
+- Projects：MedWorld-JEPA、VideoAudience、Vertebrae Study 和四个已有公开成果的研究项目。
 - Vertebrae Study：`/projects/vertebrae/` 的椎骨分割研究展示，副标题为 SuPreM vertebrae segmentation and postprocessing。包含两例官方CT的前后对比、改动定位、窗宽窗位、标签筛选、真实3D曲面和逐椎骨统计。任务来源注明 JHU 的 Zongwei Zhou 实验室和 SuPreM / AbdomenAtlasDemo；明确区分后处理改动与准确率评价。旧 `/demo/` 链接自动跳转到新地址，保留查询参数和锚点。
 - CV / Resume：按本人要求从导航、侧栏、页面、下载和公开 API 数据中移除。原本站 PDF 与预览仅保留在本地 `artifacts/documents/`，不会发布。
 - Teaching / Personal：暂无本人确认的内容，不出现在导航；旧网址保留空状态。
@@ -25,11 +25,11 @@ Publications、首页 Selected Publications、Research 和 Projects 中的每篇
 | 论文 | 来源 | 图 |
 | --- | --- | --- |
 | MedCaseAgent | arXiv 2610.32258 源文件 | `medcaseagent_teaser.pdf`（裁去左侧输入栏） |
-| TRACE | arXiv 2609.25775 源文件 | `fig1_rebuilt.pdf`（速度轨迹图） |
+| TRACE | [arXiv 2609.25775](https://arxiv.org/html/2609.25775v1#S3.F2) | Figure 2，完整流程图 |
 | ClueAegis | arXiv 2605.25009 源文件 | `pipline.pdf`（完整流程图） |
 | MRL CycleGAN | PMC13352062，CC BY-NC-ND 4.0 | 官方 graphical abstract，只缩放不改动 |
 | ISMRM 2026 | ISMRM 官方摘要页的 preview 图 | 原图 |
-| IJMS | PMC11049818，CC BY 4.0 | Figure 1 研究概览 |
+| IJMS | [PMC11049818](https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/#ijms-25-04507-f005)，CC BY 4.0 | Figure 5，分类 UMAP |
 | JPCL | ACS 付费内容，无法自动获取 | 暂用文字卡片 `JPCL · NMR phase correction` |
 
 `backend/content/public_profile.json` 中每篇论文的 `preview` 字段二选一：`{"src": "/papers/<id>.webp"}` 显示图片，`{"label": ..., "caption": ...}` 显示文字卡片。新增论文时加入 `preview` 字段；需要新图时在 `scripts/build_paper_previews.py` 的 `PREVIEWS` 里登记来源和裁切范围，再运行：
@@ -40,7 +40,9 @@ Publications、首页 Selected Publications、Research 和 Projects 中的每篇
 .venv/bin/python scripts/build_paper_previews.py trace      # 单篇
 ```
 
-脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），输出 800×500 WebP 到 `frontend/public/papers/`，四周留 3% 白边并补白到 16:10，不拉伸原图。若要换成本人提供的图（例如 JPCL 的 TOC 图），直接放入 `frontend/public/papers/<id>.webp`（800×500）并把 `preview` 改成 `src` 形式即可。
+脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），将 WebP 输出到 `frontend/public/papers/`。TRACE Figure 2 和 IJMS Figure 5 保留完整图和原始比例，其他图片补白至 800×500。若要换成本人提供的图（例如 JPCL 的 TOC 图），直接放入 `frontend/public/papers/<id>.webp`（800×500）并把 `preview` 改成 `src` 形式即可。
+
+首页的 Selected Projects 和 Projects 页展示 VideoAudience Figure 1 和 MedWorld-JEPA Figure 2，点击图或图号可查看大图。
 
 Projects 中 Vertebrae Study 的预览图 `frontend/public/figures/vertebrae-study.webp` 截自线上 `/projects/vertebrae/` 的 Before/After 矢状面视图（2× 截图，裁成 16:10）。
 
