@@ -8275,6 +8275,128 @@
                   "tag": "li",
                   "attrs": {
                     "class": "project project--text",
+                    "id": "medworld-jepa"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "project__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__head"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "h2",
+                              "attrs": {
+                                "class": "project__title"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "MedWorld-JEPA"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "project project--text",
+                    "id": "videoaudience"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "project__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__head"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "h2",
+                              "attrs": {
+                                "class": "project__title"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "VideoAudience"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "project project--text",
                     "id": "vertebrae-study"
                   },
                   "children": [
