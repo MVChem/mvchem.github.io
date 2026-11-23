@@ -1253,6 +1253,293 @@
               "tag": "section",
               "attrs": {
                 "class": "section",
+                "id": "selected-projects",
+                "aria-labelledby": "selected-projects-title"
+              },
+              "children": [
+                {
+                  "kind": "element",
+                  "tag": "h2",
+                  "attrs": {
+                    "class": "section__title",
+                    "id": "selected-projects-title"
+                  },
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "Selected Projects"
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section__body"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "ol",
+                      "attrs": {
+                        "class": "projects"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "project project--paper",
+                            "id": "medworld-jepa"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/figures/medworld-jepa-fig2.webp",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "project__figure paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/figures/medworld-jepa-fig2.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "project__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__head"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "h2",
+                                      "attrs": {
+                                        "class": "project__title"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "MedWorld-JEPA"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__text"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "p",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "/figures/medworld-jepa-fig2.webp",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Figure 2"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "project project--paper",
+                            "id": "videoaudience"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/figures/videoaudience-fig1.webp",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "project__figure paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/figures/videoaudience-fig1.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "project__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__head"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "h2",
+                                      "attrs": {
+                                        "class": "project__title"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "VideoAudience"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__text"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "p",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "/figures/videoaudience-fig1.webp",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Figure 1"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "element",
+              "tag": "section",
+              "attrs": {
+                "class": "section",
                 "id": "selected-publications",
                 "aria-labelledby": "selected-publications-title"
               },
@@ -1534,7 +1821,7 @@
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/papers/trace.webp",
+                                    "src": "/papers/trace-fig2.webp",
                                     "alt": "",
                                     "width": "800",
                                     "height": "500",
@@ -1718,6 +2005,22 @@
                                         {
                                           "kind": "text",
                                           "text": "arXiv"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/html/2609.25775v1#S3.F2",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Figure 2"
                                         }
                                       ]
                                     }
@@ -2777,7 +3080,7 @@
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/papers/ijms-druggable-proteins.webp",
+                                    "src": "/papers/ijms-druggable-proteins-umap.webp",
                                     "alt": "",
                                     "width": "800",
                                     "height": "500",
@@ -2929,6 +3232,22 @@
                                         {
                                           "kind": "text",
                                           "text": "Full Text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "/papers/ijms-druggable-proteins-umap.webp",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "UMAP Figure 5"
                                         }
                                       ]
                                     }
@@ -4011,6 +4330,293 @@
               "tag": "section",
               "attrs": {
                 "class": "section",
+                "id": "selected-projects",
+                "aria-labelledby": "selected-projects-title"
+              },
+              "children": [
+                {
+                  "kind": "element",
+                  "tag": "h2",
+                  "attrs": {
+                    "class": "section__title",
+                    "id": "selected-projects-title"
+                  },
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "Selected Projects"
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section__body"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "ol",
+                      "attrs": {
+                        "class": "projects"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "project project--paper",
+                            "id": "medworld-jepa"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/figures/medworld-jepa-fig2.webp",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "project__figure paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/figures/medworld-jepa-fig2.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "project__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__head"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "h2",
+                                      "attrs": {
+                                        "class": "project__title"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "MedWorld-JEPA"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__text"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "p",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "/figures/medworld-jepa-fig2.webp",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Figure 2"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "project project--paper",
+                            "id": "videoaudience"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/figures/videoaudience-fig1.webp",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "project__figure paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/figures/videoaudience-fig1.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "project__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__head"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "h2",
+                                      "attrs": {
+                                        "class": "project__title"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "VideoAudience"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__text"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "p",
+                                      "attrs": {},
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "/figures/videoaudience-fig1.webp",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Figure 1"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "element",
+              "tag": "section",
+              "attrs": {
+                "class": "section",
                 "id": "selected-publications",
                 "aria-labelledby": "selected-publications-title"
               },
@@ -4292,7 +4898,7 @@
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/papers/trace.webp",
+                                    "src": "/papers/trace-fig2.webp",
                                     "alt": "",
                                     "width": "800",
                                     "height": "500",
@@ -4476,6 +5082,22 @@
                                         {
                                           "kind": "text",
                                           "text": "arXiv"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://arxiv.org/html/2609.25775v1#S3.F2",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Figure 2"
                                         }
                                       ]
                                     }
@@ -5535,7 +6157,7 @@
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/papers/ijms-druggable-proteins.webp",
+                                    "src": "/papers/ijms-druggable-proteins-umap.webp",
                                     "alt": "",
                                     "width": "800",
                                     "height": "500",
@@ -5687,6 +6309,22 @@
                                         {
                                           "kind": "text",
                                           "text": "Full Text"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "/papers/ijms-druggable-proteins-umap.webp",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "UMAP Figure 5"
                                         }
                                       ]
                                     }
@@ -6441,7 +7079,7 @@
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/papers/trace.webp",
+                            "src": "/papers/trace-fig2.webp",
                             "alt": "",
                             "width": "800",
                             "height": "500",
@@ -6581,6 +7219,22 @@
                                     {
                                       "kind": "text",
                                       "text": "arXiv"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/html/2609.25775v1#S3.F2",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Figure 2"
                                     }
                                   ]
                                 }
@@ -7338,7 +7992,7 @@
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/papers/ijms-druggable-proteins.webp",
+                            "src": "/papers/ijms-druggable-proteins-umap.webp",
                             "alt": "",
                             "width": "800",
                             "height": "500",
@@ -7478,6 +8132,22 @@
                                     {
                                       "kind": "text",
                                       "text": "Full Text"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "/papers/ijms-druggable-proteins-umap.webp",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "UMAP Figure 5"
                                     }
                                   ]
                                 }
@@ -7788,7 +8458,7 @@
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/papers/trace.webp",
+                            "src": "/papers/trace-fig2.webp",
                             "alt": "",
                             "width": "800",
                             "height": "500",
@@ -7972,6 +8642,22 @@
                                 {
                                   "kind": "text",
                                   "text": "arXiv"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://arxiv.org/html/2609.25775v1#S3.F2",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Figure 2"
                                 }
                               ]
                             }
@@ -9031,7 +9717,7 @@
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/papers/ijms-druggable-proteins.webp",
+                            "src": "/papers/ijms-druggable-proteins-umap.webp",
                             "alt": "",
                             "width": "800",
                             "height": "500",
@@ -9185,6 +9871,22 @@
                                   "text": "Full Text"
                                 }
                               ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/papers/ijms-druggable-proteins-umap.webp",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "UMAP Figure 5"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -9259,10 +9961,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "medworld-jepa"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/figures/medworld-jepa-fig2.webp",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/figures/medworld-jepa-fig2.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -9311,6 +10040,40 @@
                               ]
                             }
                           ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "/figures/medworld-jepa-fig2.webp",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Figure 2"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }
@@ -9320,10 +10083,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "videoaudience"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/figures/videoaudience-fig1.webp",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/figures/videoaudience-fig1.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -9368,6 +10158,40 @@
                                 {
                                   "kind": "text",
                                   "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "/figures/videoaudience-fig1.webp",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Figure 1"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -9745,7 +10569,7 @@
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/papers/trace.webp",
+                            "src": "/papers/trace-fig2.webp",
                             "alt": "",
                             "width": "800",
                             "height": "500",
@@ -9885,6 +10709,22 @@
                                     {
                                       "kind": "text",
                                       "text": "arXiv"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/html/2609.25775v1#S3.F2",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Figure 2"
                                     }
                                   ]
                                 }
