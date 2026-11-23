@@ -47,6 +47,10 @@ a.paper-thumb {
   transition: border-color var(--t-hover) ease, box-shadow var(--t-hover) ease;
 }
 a.paper-thumb img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.project--wide-figure { grid-template-columns: minmax(0, 1fr); row-gap: 14px; }
+.project--wide-figure .project__body { grid-row: 1; }
+.project--wide-figure a.paper-thumb { aspect-ratio: auto; width: 100%; max-width: none; margin: 0; }
+.project--wide-figure a.paper-thumb img { height: auto; }
 .paper-thumb__text {
   display: flex;
   flex-direction: column;

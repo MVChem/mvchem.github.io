@@ -62,15 +62,15 @@
   "research_projects": [
     {
       "id": "medworld-jepa",
-      "title": "MedWorld-JEPA",
+      "title": "MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations",
       "summary": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval.",
-      "preview": {"src": "/figures/medworld-jepa-fig2.webp", "label": "Figure 2"}
+      "preview": {"src": "/figures/medworld-jepa-fig1.webp", "width": 1500, "height": 468}
     },
     {
       "id": "videoaudience",
-      "title": "VideoAudience",
+      "title": "VideoAudience: Learning to Understand Videos from Their Audiences",
       "summary": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments.",
-      "preview": {"src": "/figures/videoaudience-fig1.webp", "label": "Figure 1"}
+      "preview": {"src": "/figures/videoaudience-fig1.webp"}
     }
   ],
   "papers": [
@@ -136,8 +136,8 @@
       "role": "Co-author",
       "year": "2026",
       "summary": "A physically informed phase model guides a residual attention network for automated NMR phase correction. The study evaluates the method on metabolomics spectra, including brain extracts, plasma, and urine. Chuanwen Zhao is the first author.",
-      "links": [{"label": "DOI", "url": "https://doi.org/10.1021/acs.jpclett.5c03529"}, {"label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/41508827/"}],
-      "preview": {"label": "JPCL", "caption": "NMR phase correction"}
+      "links": [{"label": "DOI", "url": "https://doi.org/10.1021/acs.jpclett.5c03529"}, {"label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/41508827/"}, {"label": "Supporting Information", "url": "https://doi.org/10.1021/acs.jpclett.5c03529.s001"}, {"label": "Figure S3", "url": "/papers/jpcl-phase-correction-fig-s3.webp"}],
+      "preview": {"src": "/papers/jpcl-phase-correction-fig-s3.webp"}
     },
     {
       "id": "ismrm-2026",

@@ -1,7 +1,7 @@
 """Build the preview images shown next to each paper.
 
 Every preview comes from the paper's own public figure: the arXiv source for
-preprints, the open-access PMC copy for journal papers and the official ISMRM
+preprints, journal figures and supporting information, and the official ISMRM
 abstract preview. Downloads are cached in .runtime/paper-previews/ (not in Git);
 the finished WebP files go to frontend/public/papers/.
 
@@ -41,6 +41,14 @@ PREVIEWS = {
     'mrl-cyclegan': {'pmc': 'PMC13352062', 'image': 'ga1.jpg', 'crop': (0.0, 0.0, 1.0, 1.0)},
     'ismrm-2026': {'ismrm': 'https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1',
                    'crop': (0.0, 0.0, 1.0, 1.0)},
+    # Figure S3 on page 4 of the ACS Supporting Information, CC BY-NC 4.0.
+    'jpcl-phase-correction': {
+        'figure_url': 'https://ndownloader.figshare.com/files/60896718?download=1',
+        'page': 4,
+        'clip': (94, 245, 499, 453),
+        'scale': 4,
+        'output': 'jpcl-phase-correction-fig-s3.webp',
+    },
     # Figure 5 (classification UMAP), CC BY 4.0.
     'ijms-druggable-proteins': {
         'figure_url': 'https://pub.mdpi-res.com/ijms/ijms-25-04507/article_deploy/html/images/ijms-25-04507-g005.png',
@@ -56,6 +64,21 @@ def fetch(url: str, path: Path) -> Path:
         with urllib.request.urlopen(request, timeout=120) as response:
             path.write_bytes(response.read())
     return path
+
+
+def full_figure(spec: dict, stem: str) -> Image.Image:
+    if 'page' in spec:
+        source = fetch(spec['figure_url'], CACHE / f'{stem}.pdf')
+        with pymupdf.open(source) as document:
+            page = document[spec['page'] - 1]
+            scale = spec['scale']
+            pixmap = page.get_pixmap(matrix=pymupdf.Matrix(scale, scale),
+                clip=pymupdf.Rect(*spec['clip']), alpha=False)
+            return Image.frombytes('RGB', (pixmap.width, pixmap.height), pixmap.samples)
+
+    source = fetch(spec['figure_url'], CACHE / f'{stem}.png')
+    with Image.open(source) as original:
+        return original.convert('RGB')
 
 
 def from_arxiv(spec: dict) -> Image.Image:
@@ -110,9 +133,7 @@ def main() -> None:
         spec = PREVIEWS[paper_id]
         output = OUTPUT / spec.get('output', f'{paper_id}.webp')
         if 'figure_url' in spec:
-            source = fetch(spec['figure_url'], CACHE / f'{output.stem}.png')
-            with Image.open(source) as original:
-                figure = original.convert('RGB')
+            figure = full_figure(spec, output.stem)
             figure.thumbnail((1800, figure.height), Image.Resampling.LANCZOS)
             figure.save(output, 'WEBP', lossless=True, method=6)
         else:

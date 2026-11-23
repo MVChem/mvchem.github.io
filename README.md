@@ -30,7 +30,7 @@ Publications、首页 Selected Publications、Research 和 Projects 中的每篇
 | MRL CycleGAN | PMC13352062，CC BY-NC-ND 4.0 | 官方 graphical abstract，只缩放不改动 |
 | ISMRM 2026 | ISMRM 官方摘要页的 preview 图 | 原图 |
 | IJMS | [PMC11049818](https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/#ijms-25-04507-f005)，CC BY 4.0 | Figure 5，分类 UMAP |
-| JPCL | ACS 付费内容，无法自动获取 | 暂用文字卡片 `JPCL · NMR phase correction` |
+| JPCL | [ACS Supporting Information](https://doi.org/10.1021/acs.jpclett.5c03529.s001)，CC BY-NC 4.0 | Figure S3，Bland–Altman 相位偏差图 |
 
 `backend/content/public_profile.json` 中每篇论文的 `preview` 字段二选一：`{"src": "/papers/<id>.webp"}` 显示图片，`{"label": ..., "caption": ...}` 显示文字卡片。新增论文时加入 `preview` 字段；需要新图时在 `scripts/build_paper_previews.py` 的 `PREVIEWS` 里登记来源和裁切范围，再运行：
 
@@ -40,9 +40,9 @@ Publications、首页 Selected Publications、Research 和 Projects 中的每篇
 .venv/bin/python scripts/build_paper_previews.py trace      # 单篇
 ```
 
-脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），将 WebP 输出到 `frontend/public/papers/`。TRACE Figure 2 和 IJMS Figure 5 保留完整图和原始比例，其他图片补白至 800×500。若要换成本人提供的图（例如 JPCL 的 TOC 图），直接放入 `frontend/public/papers/<id>.webp`（800×500）并把 `preview` 改成 `src` 形式即可。
+脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），将 WebP 输出到 `frontend/public/papers/`。TRACE Figure 2、IJMS Figure 5 和 JPCL Figure S3 保留完整图和原始比例，其他图片补白至 800×500。若要换成本人提供的图，直接放入 `frontend/public/papers/<id>.webp`（800×500）并把 `preview` 改成 `src` 形式即可。
 
-首页的 Selected Projects 和 Projects 页展示 VideoAudience Figure 1 和 MedWorld-JEPA Figure 2，点击图或图号可查看大图。
+首页的 Selected Projects 和 Projects 页展示两个项目的完整论文标题及其 Figure 1。MedWorld-JEPA 的图片占满可用宽度，高度按原图比例调整。点击图片可查看大图。
 
 Projects 中 Vertebrae Study 的预览图 `frontend/public/figures/vertebrae-study.webp` 截自线上 `/projects/vertebrae/` 的 Before/After 矢状面视图（2× 截图，裁成 16:10）。
 

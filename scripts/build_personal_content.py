@@ -43,14 +43,16 @@ def authors(paper: dict) -> dict:
     return el('p', *children, cls='authors')
 
 
-def preview(data: dict, url: str, cls: str) -> dict:
-    """Render the thumbnail for a destination already linked in the card text."""
-    inner = (el('img', src=data['src'], alt='', width='800', height='500', loading='lazy', decoding='async')
+def preview(data: dict, url: str, cls: str, *, link_label: str | None = None) -> dict:
+    """Render a linked preview, with keyboard access when it is the primary link."""
+    inner = (el('img', src=data['src'], alt='', width=str(data.get('width', 800)),
+                height=str(data.get('height', 500)), loading='lazy', decoding='async')
              if 'src' in data else
              el('span', el('span', data['label'], cls='paper-thumb__label'), el('span', data['caption'], cls='paper-thumb__caption'),
                 cls='paper-thumb__text'))
+    accessibility = {'aria_label': link_label} if link_label else {'tabindex': '-1', 'aria_hidden': 'true'}
     return el('a', inner, href=url, target='_blank', rel='noopener noreferrer',
-              tabindex='-1', aria_hidden='true', cls=cls + ' paper-thumb')
+              cls=cls + ' paper-thumb', **accessibility)
 
 
 def publication(paper: dict, prefix: str = '') -> dict:
@@ -100,11 +102,13 @@ def research_project(project: dict) -> dict:
         return el('li', el('div', heading, summary, cls='project__body'),
             cls='project project--text', id=project['id'])
 
-    figure_link = external(figure['label'], figure['src'], 'link-chip')
-    return el('li', preview(figure, figure['src'], 'project__figure'),
-        el('div', heading, summary,
-            el('div', el('div', figure_link, cls='link-row'), cls='project__foot'), cls='project__body'),
-        cls='project project--paper', id=project['id'])
+    classes = 'project project--paper'
+    if 'width' in figure and 'height' in figure:
+        classes += ' project--wide-figure'
+    thumbnail = preview(figure, figure['src'], 'project__figure',
+        link_label=f"View {project['title']} image at full size")
+    return el('li', thumbnail, el('div', heading, summary, cls='project__body'),
+        cls=classes, id=project['id'])
 
 
 def documents(document_id: str, pages: int) -> dict:
