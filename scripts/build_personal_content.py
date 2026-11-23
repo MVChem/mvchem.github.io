@@ -59,15 +59,18 @@ AREAS = {
                   'text': 'Detecting AI-generated images and videos through generative-model trajectories, '
                           'temporal consistency and evidence-based reasoning.'},
     'agents': {'label': 'Multimodal & medical AI', 'tone': 'blue',
-               'text': 'Agents and world models that reason over clinical evidence, longitudinal medical images and video.'},
+               'text': 'Agents and world models that reason over clinical evidence and longitudinal medical images.'},
     'protein': {'label': 'Protein language models', 'tone': 'violet',
                 'text': 'Protein language models and PSSM features for druggable protein classification, '
                         'from undergraduate research.'},
+    'video': {'label': 'Video understanding and agentic reasoning', 'tone': 'blue',
+              'text': 'Video agents that learn to gather evidence and interpret events in context.'},
 }
 AREA_OF = {
     'acquisition-matched-dmi-mrm': 'mr', 'ismrm-2026': 'mr', 'mrl-cyclegan': 'mr', 'jpcl-phase-correction': 'mr',
     'trace': 'forensics', 'clueaegis': 'forensics',
-    'medcaseagent': 'agents', 'medworld-jepa': 'agents', 'videoaudience': 'agents', 'vertebrae-study': 'agents',
+    'medcaseagent': 'agents', 'medworld-jepa': 'agents', 'vertebrae-study': 'agents',
+    'videoaudience': 'video',
     'ijms-druggable-proteins': 'protein',
 }
 STATUS_TONE = {'Published': 'done', 'Published Online': 'done', 'Accepted': 'done', 'Under Review': 'review',
@@ -85,7 +88,8 @@ VERTEBRAE = {
 
 
 SHORT_NAMES = {
-    'acquisition-matched-dmi-mrm': 'DL-WA-CSI (MRM)', 'ismrm-2026': 'ISMRM 2026', 'mrl-cyclegan': 'Physics-embedded CycleGAN (MRL)',
+    'acquisition-matched-dmi-mrm': 'Weighted-average DMI (MRM submission)', 'ismrm-2026': 'ISMRM 2026',
+    'mrl-cyclegan': 'Physics-embedded CycleGAN (MRL)',
     'jpcl-phase-correction': 'NMR phase correction (JPCL)', 'ijms-druggable-proteins': 'Druggable proteins (IJMS)',
 }
 
@@ -191,17 +195,25 @@ def page(title: str, intro: str, *children: dict, kind: str) -> dict:
                          cls='page-head'), *children, id='main', cls='page page--' + kind)
 
 
-def experience(item: dict, papers: dict, compact: bool = False) -> dict:
-    body = [el('div', el('h3', item['institution'], cls='timeline__title'),
+def work_path(item: dict) -> str:
+    return ('/publications#' if 'authors' in item else '/projects#') + item['id']
+
+
+def experience(item: dict, works: dict, compact: bool = False) -> dict:
+    body = [el('img', src=item['logo'], alt='', width='36', height='36', loading='lazy', decoding='async',
+               cls='timeline__logo'),
+            el('div', el('h3', item['institution'], cls='timeline__title'),
                el('p', item['role'], el('span', item['dates'], cls='timeline__dates'), cls='timeline__meta'),
                cls='timeline__head'),
             el('p', item['description'], cls='timeline__text')]
     if not compact and item['bullets']:
         body.append(el('ul', *(el('li', x) for x in item['bullets']), cls='timeline__list'))
-    if item['paper_ids']:
-        body.append(el('div', *(el('a', short(papers[id]), href='/publications#' + id, cls='chip chip--quiet')
-                                for id in item['paper_ids']), cls='chips'))
-    return el('li', *body, cls='timeline__item', id=item['id'] if not compact else 'home-' + item['id'])
+    if item['work_ids']:
+        work_items = [works[work_id] for work_id in item['work_ids']]
+        body.append(el('div', *(el('a', short(work), href=work_path(work), cls='chip chip--quiet')
+                                for work in work_items), cls='chips'))
+    return el('li', *body, cls='timeline__item timeline__item--institution',
+              id=item['id'] if not compact else 'home-' + item['id'])
 
 
 def education(item: dict) -> dict:
@@ -217,7 +229,7 @@ def area(key: str, items: list[dict]) -> dict:
     return el('article',
         el('h3', info['label'], cls='area__title'),
         el('p', info['text'], cls='area__text'),
-        el('ul', *(el('li', el('a', short(x), href=('/publications#' if 'authors' in x else '/projects#') + x['id']),
+        el('ul', *(el('li', el('a', short(x), href=work_path(x)),
                          el('span', x.get('year', 'Project'), cls='area__year')) for x in members), cls='area__items'),
         cls='area area--' + info['tone'])
 
@@ -247,6 +259,8 @@ def contact_links(data: dict, cls: str) -> dict:
 def site(data: dict) -> dict:
     papers = {p['id']: p for p in data['papers']}
     projects = data.get('research_projects', [])
+    everything = data['papers'] + projects + [VERTEBRAE]
+    works = {work['id']: work for work in everything}
     topics = [t.strip() for t in data['interests'].split(';')]
     hero = el('section',
         el('div', el('img', src=data['portrait'], alt=data['name'], width='1448', height='1086',
@@ -281,18 +295,17 @@ def site(data: dict) -> dict:
         section('Publications', 'selected-publications',
                 el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs'),
                 more=('Summaries', '/publications')),
-        section('Experience', 'experience', el('ol', *(experience(x, papers, compact=True) for x in data['experiences']),
+        section('Experience', 'experience', el('ol', *(experience(x, works, compact=True) for x in data['experiences']),
                                                    cls='timeline timeline--compact'), more=('Details', '/researches')),
         id='main', cls='page page--home')
     years = sorted({p['year'] for p in data['papers']}, reverse=True)
-    everything = data['papers'] + projects + [VERTEBRAE]
     pages = {
         '/': home, '/about': copy.deepcopy(home),
         '/researches': page('Research',
             'My research connects multimodal learning and media forensics with deep learning for magnetic resonance '
             'imaging and spectroscopy.',
             section('Research Areas', 'areas', el('div', *(area(k, everything) for k in AREAS), cls='areas')),
-            section('Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='timeline')),
+            section('Experience', 'experience', el('ol', *(experience(x, works) for x in data['experiences']), cls='timeline')),
             section('Education', 'education', el('ol', *(education(x) for x in data['education']), cls='timeline')),
             kind='research'),
         '/publications': page('Publications', 'Click a figure to view it full size. My name is shown in bold.',

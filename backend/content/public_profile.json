@@ -16,6 +16,7 @@
     {
       "id": "cas",
       "institution": "UCAS",
+      "logo": "/schools/ucas.webp",
       "role": "Graduate Research",
       "dates": "2025–present",
       "description": "Research in MRI, MRSI, and deuterium metabolic imaging.",
@@ -24,11 +25,12 @@
         "Co-authored work on physics-embedded CycleGAN reconstruction for short-readout deuterium metabolic imaging, published in Magnetic Resonance Letters.",
         "Co-authored a phase model-driven deep learning study for NMR phase correction, published in The Journal of Physical Chemistry Letters."
       ],
-      "paper_ids": ["ismrm-2026", "mrl-cyclegan", "jpcl-phase-correction"]
+      "work_ids": ["acquisition-matched-dmi-mrm", "ismrm-2026", "mrl-cyclegan", "jpcl-phase-correction"]
     },
     {
       "id": "zhejiang",
       "institution": "Zhejiang University",
+      "logo": "/schools/zhejiang.webp",
       "role": "Research Collaboration",
       "dates": "Apr–Sep 2026",
       "description": "Collaborative research in detecting AI-generated images and videos.",
@@ -36,27 +38,29 @@
         "Second author of TRACE, studying generative-model velocity responses and temporal consistency for synthetic video detection; submitted to ICLR 2027.",
         "Second author of ClueAegis, using perceptual clues, forensic skill selection, and evidence-guided reasoning for synthetic image detection; accepted to Findings of EMNLP 2026."
       ],
-      "paper_ids": ["trace", "clueaegis"]
+      "work_ids": ["trace", "clueaegis"]
     },
     {
       "id": "uiuc",
       "institution": "University of Illinois Urbana-Champaign",
+      "logo": "/schools/uiuc.svg",
       "role": "Remote Research Intern",
       "dates": "Feb 2026–present",
       "description": "Research in multimodal models and medical AI.",
       "bullets": [],
-      "paper_ids": []
+      "work_ids": ["medworld-jepa", "medcaseagent"]
     },
     {
       "id": "shanghai-ocean",
       "institution": "Shanghai Ocean University",
+      "logo": "/schools/shanghai-ocean.webp",
       "role": "Undergraduate Research",
       "dates": "2021–2025",
       "description": "Protein language models for druggable protein classification.",
       "bullets": [
         "Implemented ESM-2 embedding classifiers and an adapted GPT-2 sequence classifier, with additional evaluation on Pharos; first-author IJMS publication in 2024."
       ],
-      "paper_ids": ["ijms-druggable-proteins"]
+      "work_ids": ["ijms-druggable-proteins"]
     }
   ],
   "research_projects": [

@@ -263,6 +263,21 @@ button { font: inherit; }
 .timeline__item::before { content: ''; position: absolute; left: 6px; top: 16px; bottom: -6px; width: 2px; background: var(--line); }
 .timeline__item:last-child::before { display: none; }
 .timeline__item::after { content: ''; position: absolute; left: 0; top: 6px; width: 14px; height: 14px; border: 2px solid var(--accent-2); border-radius: 50%; background: var(--bg); }
+.timeline__item--institution { padding-left: 48px; }
+.timeline__item--institution::before { left: 17px; }
+.timeline__item--institution::after { content: none; }
+.timeline__logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--frame);
+  object-fit: contain;
+}
 .timeline__title { font-size: 18px; line-height: 1.35; }
 .timeline__meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 16px; color: var(--ink-2); font-size: 14.5px; }
 .timeline__dates { color: var(--ink-3); font-variant-numeric: tabular-nums; }

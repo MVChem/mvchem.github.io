@@ -8,6 +8,8 @@
 
 姓名、教育和经历取自用户确认的申请材料；浙江大学的研究写为合作经历，UIUC 写为远程研究实习。文章方法概述不推导个人独立完成全部工作的结论。
 
+研究经历中的校徽和标志取自各校官方资料。[中国科学院大学](https://foreign.ucas.ac.cn/docs/2026-03/6a84c2bd341042a798970131f38813da.pdf)、[浙江大学](https://www.zju.edu.cn/_upload/article/images/c3/98/1fb1d281492eb477a098ef7a2901/05966b26-ab45-470d-94c1-99b1e02d12f4.png)、[伊利诺伊大学厄巴纳-香槟分校](https://cdn.brand.illinois.edu/logos/block-i.svg)、[上海海洋大学](https://www.shou.edu.cn/_upload/article/0e/ea/2e340631456e82f3a6d7695d3a73/d4079715-1546-4f8b-83ea-50efbd197199_d.jpg)。
+
 论文核对来源：
 
 - MRM 投稿：作者提供的 Acquisition-matched deep learning reconstruction for weighted-average deuterium metabolic imaging。网页预览使用稿件的 Figure 2，GitHub 保存从作者稿转换的 PDF。
