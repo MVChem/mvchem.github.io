@@ -1421,7 +1421,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "Multimodal & medical AI"
+                                  "text": "Video understanding and agentic reasoning"
                                 }
                               ]
                             }
@@ -3595,10 +3595,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-cas"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/ucas.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -3671,6 +3685,20 @@
                           "kind": "element",
                           "tag": "a",
                           "attrs": {
+                            "href": "/publications#acquisition-matched-dmi-mrm",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Weighted-average DMI (MRM submission)"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
                             "href": "/publications#ismrm-2026",
                             "class": "chip chip--quiet"
                           },
@@ -3717,10 +3745,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-zhejiang"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/zhejiang.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -3825,10 +3867,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-uiuc"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/uiuc.svg",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -3889,6 +3945,43 @@
                           "text": "Research in multimodal models and medical AI."
                         }
                       ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "chips"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "/projects#medworld-jepa",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "MedWorld-JEPA"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "/publications#medcaseagent",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "MedCaseAgent"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -3896,10 +3989,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-shanghai-ocean"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/shanghai-ocean.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -5063,7 +5170,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "Multimodal & medical AI"
+                                  "text": "Video understanding and agentic reasoning"
                                 }
                               ]
                             }
@@ -7237,10 +7344,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-cas"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/ucas.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7313,6 +7434,20 @@
                           "kind": "element",
                           "tag": "a",
                           "attrs": {
+                            "href": "/publications#acquisition-matched-dmi-mrm",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Weighted-average DMI (MRM submission)"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
                             "href": "/publications#ismrm-2026",
                             "class": "chip chip--quiet"
                           },
@@ -7359,10 +7494,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-zhejiang"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/zhejiang.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7467,10 +7616,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-uiuc"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/uiuc.svg",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7531,6 +7694,43 @@
                           "text": "Research in multimodal models and medical AI."
                         }
                       ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "chips"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "/projects#medworld-jepa",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "MedWorld-JEPA"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "/publications#medcaseagent",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "MedCaseAgent"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -7538,10 +7738,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "home-shanghai-ocean"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/shanghai-ocean.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7770,7 +7984,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "DL-WA-CSI (MRM)"
+                                  "text": "Weighted-average DMI (MRM submission)"
                                 }
                               ]
                             },
@@ -8031,7 +8245,7 @@
                       "children": [
                         {
                           "kind": "text",
-                          "text": "Agents and world models that reason over clinical evidence, longitudinal medical images and video."
+                          "text": "Agents and world models that reason over clinical evidence and longitudinal medical images."
                         }
                       ]
                     },
@@ -8090,39 +8304,6 @@
                                 {
                                   "kind": "text",
                                   "text": "MedWorld-JEPA"
-                                }
-                              ]
-                            },
-                            {
-                              "kind": "element",
-                              "tag": "span",
-                              "attrs": {
-                                "class": "area__year"
-                              },
-                              "children": [
-                                {
-                                  "kind": "text",
-                                  "text": "Project"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "kind": "element",
-                          "tag": "li",
-                          "attrs": {},
-                          "children": [
-                            {
-                              "kind": "element",
-                              "tag": "a",
-                              "attrs": {
-                                "href": "/projects#videoaudience"
-                              },
-                              "children": [
-                                {
-                                  "kind": "text",
-                                  "text": "VideoAudience"
                                 }
                               ]
                             },
@@ -8254,6 +8435,83 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "article",
+                  "attrs": {
+                    "class": "area area--blue"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "h3",
+                      "attrs": {
+                        "class": "area__title"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Video understanding and agentic reasoning"
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "p",
+                      "attrs": {
+                        "class": "area__text"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Video agents that learn to gather evidence and interpret events in context."
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "ul",
+                      "attrs": {
+                        "class": "area__items"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/projects#videoaudience"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "VideoAudience"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "area__year"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Project"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -8302,10 +8560,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "cas"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/ucas.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8420,6 +8692,20 @@
                           "kind": "element",
                           "tag": "a",
                           "attrs": {
+                            "href": "/publications#acquisition-matched-dmi-mrm",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Weighted-average DMI (MRM submission)"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
                             "href": "/publications#ismrm-2026",
                             "class": "chip chip--quiet"
                           },
@@ -8466,10 +8752,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "zhejiang"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/zhejiang.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8605,10 +8905,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "uiuc"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/uiuc.svg",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8669,6 +8983,43 @@
                           "text": "Research in multimodal models and medical AI."
                         }
                       ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "chips"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "/projects#medworld-jepa",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "MedWorld-JEPA"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "a",
+                          "attrs": {
+                            "href": "/publications#medcaseagent",
+                            "class": "chip chip--quiet"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "MedCaseAgent"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 },
@@ -8676,10 +9027,24 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "timeline__item",
+                    "class": "timeline__item timeline__item--institution",
                     "id": "shanghai-ocean"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/schools/shanghai-ocean.webp",
+                        "alt": "",
+                        "width": "36",
+                        "height": "36",
+                        "loading": "lazy",
+                        "decoding": "async",
+                        "class": "timeline__logo"
+                      },
+                      "children": []
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -11508,7 +11873,7 @@
                           "children": [
                             {
                               "kind": "text",
-                              "text": "Multimodal & medical AI"
+                              "text": "Video understanding and agentic reasoning"
                             }
                           ]
                         }
