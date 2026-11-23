@@ -56,7 +56,7 @@ def preview(data: dict, url: str, cls: str, *, link_label: str | None = None) ->
 
 
 def publication(paper: dict, prefix: str = '') -> dict:
-    status_class = {'Under Review': 'tag--review', 'Preprint': ''}.get(paper['status'], 'tag--accepted')
+    status_class = {'Under Review': 'tag--review', 'Submitted': 'tag--review', 'Preprint': ''}.get(paper['status'], 'tag--accepted')
     return el('li', preview(paper['preview'], paper['links'][0]['url'], 'pub__thumb'), el('div',
         el('h2', external(paper['title'], paper['links'][0]['url']), cls='pub__title'),
         authors(paper),
@@ -97,18 +97,18 @@ def research(paper: dict) -> dict:
 def research_project(project: dict) -> dict:
     heading = el('div', el('h2', project['title'], cls='project__title'), cls='project__head')
     summary = el('div', el('p', project['summary']), cls='project__text')
+    project_links = [el('div', links(project), cls='project__foot')] if project.get('links') else []
+    body = el('div', heading, summary, *project_links, cls='project__body')
     figure = project.get('preview')
     if not figure:
-        return el('li', el('div', heading, summary, cls='project__body'),
-            cls='project project--text', id=project['id'])
+        return el('li', body, cls='project project--text', id=project['id'])
 
     classes = 'project project--paper'
     if 'width' in figure and 'height' in figure:
         classes += ' project--wide-figure'
     thumbnail = preview(figure, figure['src'], 'project__figure',
         link_label=f"View {project['title']} image at full size")
-    return el('li', thumbnail, el('div', heading, summary, cls='project__body'),
-        cls=classes, id=project['id'])
+    return el('li', thumbnail, body, cls=classes, id=project['id'])
 
 
 def documents(document_id: str, pages: int) -> dict:

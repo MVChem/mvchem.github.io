@@ -64,16 +64,31 @@
       "id": "medworld-jepa",
       "title": "MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations",
       "summary": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval.",
-      "preview": {"src": "/figures/medworld-jepa-fig1.webp", "width": 1500, "height": 468}
+      "preview": {"src": "/figures/medworld-jepa-fig2.webp", "width": 1651, "height": 560},
+      "links": [{"label": "PDF on GitHub", "url": "https://github.com/MVChem/cvpr_project/blob/1068731f0f09e8349af31d2bf5401b551f09e456/main.pdf"}]
     },
     {
       "id": "videoaudience",
       "title": "VideoAudience: Learning to Understand Videos from Their Audiences",
       "summary": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments.",
-      "preview": {"src": "/figures/videoaudience-fig1.webp"}
+      "preview": {"src": "/figures/videoaudience-fig1.webp"},
+      "links": [{"label": "PDF on GitHub", "url": "https://github.com/MVChem/27cvpr/blob/3f27fba831fcc27732f12b6600d937f0e6ca6bc8/main_video.pdf"}]
     }
   ],
   "papers": [
+    {
+      "id": "acquisition-matched-dmi-mrm",
+      "title": "Acquisition-matched deep learning reconstruction for weighted-average deuterium metabolic imaging",
+      "authors": ["Hongkang Chu", "Xinjie Liu", "Gang Chen", "Jinrui Zhao", "Hong Shi", "Elton T. Montrazi", "Xin Zhou", "Maili Liu", "Chaoyang Liu", "Lucio Frydman", "Qingjia Bao"],
+      "venue": "Magnetic Resonance in Medicine",
+      "citation": "Magnetic Resonance in Medicine submission, 2026",
+      "status": "Submitted",
+      "role": "Co-first Author",
+      "year": "2026",
+      "summary": "DL-WA-CSI trains a reconstruction network on the weighted-average acquisition model. It uses anatomical MRI and spectral priors to improve the spatial fidelity of deuterium metabolic imaging within a fixed scan time.",
+      "links": [{"label": "PDF on GitHub", "url": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf"}],
+      "preview": {"src": "/papers/acquisition-matched-dmi-mrm-fig2.webp"}
+    },
     {
       "id": "medcaseagent",
       "title": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports",
