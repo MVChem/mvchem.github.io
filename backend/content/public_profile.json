@@ -59,6 +59,18 @@
       "paper_ids": ["ijms-druggable-proteins"]
     }
   ],
+  "research_projects": [
+    {
+      "id": "medworld-jepa",
+      "title": "MedWorld-JEPA",
+      "summary": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+    },
+    {
+      "id": "videoaudience",
+      "title": "VideoAudience",
+      "summary": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+    }
+  ],
   "papers": [
     {
       "id": "medcaseagent",

@@ -82,6 +82,13 @@ def research(paper: dict) -> dict:
         cls='project project--text', id=paper['id'])
 
 
+def research_project(project: dict) -> dict:
+    return el('li', el('div',
+        el('div', el('h2', project['title'], cls='project__title'), cls='project__head'),
+        el('div', el('p', project['summary']), cls='project__text'), cls='project__body'),
+        cls='project project--text', id=project['id'])
+
+
 def documents(document_id: str, pages: int) -> dict:
     url = '/CV.pdf' if document_id == 'cv' else '/resume.pdf'
     label = 'Curriculum Vitae' if document_id == 'cv' else 'Resume'
@@ -141,7 +148,8 @@ def site(data: dict) -> dict:
             el('ol', *(research(p) for p in data['papers']), cls='projects'), kind='research'),
         '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs')),
         '/projects': page('Projects', el('p', 'Selected research projects and interactive studies.', cls='page-intro'),
-            el('ol', el('li', el('div',
+            el('ol', *(research_project(project) for project in data.get('research_projects', [])),
+                el('li', el('div',
                 el('div', el('h2', el('a', 'Vertebrae Study', href='/projects/vertebrae/'), cls='project__title'),
                     el('span', 'Independent study', cls='role'), cls='project__head'),
                 el('div', el('p', 'SuPreM vertebrae segmentation and postprocessing: explore authentic CT predictions, before/after changes, 3D anatomy and a per-vertebra audit.'), cls='project__text'),
