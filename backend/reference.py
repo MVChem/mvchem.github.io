@@ -28,7 +28,7 @@ class ElementNode(ContentModel):
     def safe_tag(cls, value: str) -> str:
         if value not in {'main', 'article', 'aside', 'section', 'header', 'div', 'span', 'p', 'a',
                          'h1', 'h2', 'h3', 'h4', 'ul', 'ol', 'li', 'img', 'time', 'strong', 'em',
-                         'cite', 'br', 'button', 'figure', 'figcaption', 'svg', 'path', 'line',
+                         'cite', 'br', 'button', 'figure', 'figcaption', 'details', 'summary', 'svg', 'path', 'line',
                          'polyline', 'polygon', 'rect', 'circle', 'g', 'defs', 'clippath', 'i', 'dl', 'dt', 'dd'}:
             raise ValueError('Unsupported content element')
         return value

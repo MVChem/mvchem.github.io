@@ -30,8 +30,88 @@ def external(label: str, url: str, cls: str = '') -> dict:
     return el('a', label, href=url, target='_blank', rel='noopener noreferrer', **({'cls': cls} if cls else {}))
 
 
-def links(paper: dict) -> dict:
-    return el('div', *(external(x['label'], x['url'], 'link-chip') for x in paper['links']), cls='link-row')
+# Lucide icon paths (ISC license), drawn inline so the content stays plain data.
+ICONS = {
+    'mail': [('rect', {'width': '20', 'height': '16', 'x': '2', 'y': '4', 'rx': '2'}),
+             ('path', {'d': 'm22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'})],
+    'github': [('path', {'d': 'M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4'}),
+               ('path', {'d': 'M9 18c-4.51 2-5-2-7-2'})],
+    'book': [('path', {'d': 'M12 7v14'}),
+             ('path', {'d': 'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z'})],
+    'cap': [('path', {'d': 'M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z'}),
+            ('path', {'d': 'M22 10v6'}), ('path', {'d': 'M6 12.5V16a6 3 0 0 0 12 0v-3.5'})],
+    'arrow': [('path', {'d': 'M5 12h14'}), ('path', {'d': 'm12 5 7 7-7 7'})],
+}
+
+
+def icon(name: str) -> dict:
+    return el('svg', *(el(tag, **attrs) for tag, attrs in ICONS[name]), viewBox='0 0 24 24', width='16', height='16',
+              fill='none', stroke='currentColor', stroke_width='2', stroke_linecap='round', stroke_linejoin='round',
+              aria_hidden='true', cls='icon')
+
+
+# Research areas group papers and projects; colours follow the paper figure palette.
+AREAS = {
+    'mr': {'label': 'MR imaging & spectroscopy', 'tone': 'green',
+           'text': 'Deep learning reconstruction for deuterium metabolic imaging, MRSI and NMR spectroscopy, '
+                   'guided by anatomical and spectral priors and physics-based signal models.'},
+    'forensics': {'label': 'Synthetic media forensics', 'tone': 'pink',
+                  'text': 'Detecting AI-generated images and videos through generative-model trajectories, '
+                          'temporal consistency and evidence-based reasoning.'},
+    'agents': {'label': 'Multimodal & medical AI', 'tone': 'blue',
+               'text': 'Agents and world models that reason over clinical evidence, longitudinal medical images and video.'},
+    'protein': {'label': 'Protein language models', 'tone': 'violet',
+                'text': 'Protein language models and PSSM features for druggable protein classification, '
+                        'from undergraduate research.'},
+}
+AREA_OF = {
+    'acquisition-matched-dmi-mrm': 'mr', 'ismrm-2026': 'mr', 'mrl-cyclegan': 'mr', 'jpcl-phase-correction': 'mr',
+    'trace': 'forensics', 'clueaegis': 'forensics',
+    'medcaseagent': 'agents', 'medworld-jepa': 'agents', 'videoaudience': 'agents', 'vertebrae-study': 'agents',
+    'ijms-druggable-proteins': 'protein',
+}
+STATUS_TONE = {'Published': 'done', 'Published Online': 'done', 'Accepted': 'done', 'Under Review': 'review',
+               'Submitted': 'review', 'Preprint': 'preprint', 'Power Pitch Oral': 'highlight'}
+TOPIC_TONES = ['blue', 'violet', 'pink', 'green']
+VERTEBRAE = {
+    'id': 'vertebrae-study', 'title': 'Vertebrae Study',
+    'summary': 'SuPreM vertebrae segmentation and postprocessing: explore authentic CT predictions, before/after changes, '
+               '3D anatomy and a per-vertebra audit.',
+    'meta': 'Research warmup from Zongwei Zhou’s lab at Johns Hopkins University',
+    'preview': {'src': '/figures/vertebrae-study.webp', 'fit': 'cover'},
+    'links': [{'label': 'Open interactive study', 'url': '/projects/vertebrae/'},
+              {'label': 'Original task', 'url': 'https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md'}],
+}
+
+
+SHORT_NAMES = {
+    'acquisition-matched-dmi-mrm': 'DL-WA-CSI (MRM)', 'ismrm-2026': 'ISMRM 2026', 'mrl-cyclegan': 'Physics-embedded CycleGAN (MRL)',
+    'jpcl-phase-correction': 'NMR phase correction (JPCL)', 'ijms-druggable-proteins': 'Druggable proteins (IJMS)',
+}
+
+
+def short(item: dict) -> str:
+    """Compact label: the name before the colon, or a venue-based name for untitled methods."""
+    head = item['title'].split(':')[0]
+    return SHORT_NAMES.get(item['id'], head if ':' in item['title'] else item['title'])
+
+
+def image_size(src: str) -> tuple[int, int]:
+    try:
+        from PIL import Image
+        with Image.open(ROOT / 'frontend/public' / src.lstrip('/')) as image:
+            return image.size
+    except (ImportError, OSError):
+        return 800, 500
+
+
+def link(item: dict, cls: str = 'chip') -> dict:
+    return el('a', item['label'], href=item['url'], cls=cls) if item['url'].startswith('/projects/vertebrae') \
+        else external(item['label'], item['url'], cls)
+
+
+def links(item: dict) -> dict:
+    return el('div', *(link(x) for x in item['links']), cls='chips')
 
 
 def authors(paper: dict) -> dict:
@@ -39,112 +119,149 @@ def authors(paper: dict) -> dict:
     for i, name in enumerate(paper['authors']):
         if i:
             children.append(', ')
-        children.append(el('strong', name, cls='authors__me') if name == 'Hongkang Chu' else name)
-    return el('p', *children, cls='authors')
+        children.append(el('strong', name, cls='me') if name == 'Hongkang Chu' else name)
+    return el('p', *children, cls='pub__authors')
 
 
-def preview(data: dict, url: str, cls: str, *, link_label: str | None = None) -> dict:
-    """Render a linked preview, with keyboard access when it is the primary link."""
-    inner = (el('img', src=data['src'], alt='', width=str(data.get('width', 800)),
-                height=str(data.get('height', 500)), loading='lazy', decoding='async')
-             if 'src' in data else
-             el('span', el('span', data['label'], cls='paper-thumb__label'), el('span', data['caption'], cls='paper-thumb__caption'),
-                cls='paper-thumb__text'))
-    accessibility = {'aria_label': link_label} if link_label else {'tabindex': '-1', 'aria_hidden': 'true'}
-    return el('a', inner, href=url, target='_blank', rel='noopener noreferrer',
-              cls=cls + ' paper-thumb', **accessibility)
+def area_tag(item_id: str) -> dict:
+    area = AREAS[AREA_OF[item_id]]
+    return el('span', area['label'], cls='tag tag--' + area['tone'])
 
 
-def publication(paper: dict, prefix: str = '') -> dict:
-    status_class = {'Under Review': 'tag--review', 'Submitted': 'tag--review', 'Preprint': ''}.get(paper['status'], 'tag--accepted')
-    return el('li', preview(paper['preview'], paper['links'][0]['url'], 'pub__thumb'), el('div',
-        el('h2', external(paper['title'], paper['links'][0]['url']), cls='pub__title'),
-        authors(paper),
-        el('ul', el('li', el('span', paper['citation'], cls='venue__name'),
-                    el('span', paper['status'], cls=('tag ' + status_class).strip()), cls='venue'), cls='venues'),
-        links(paper), cls='pub__body'), cls='pub', id=prefix + paper['id'])
+def status(paper: dict) -> dict:
+    return el('span', paper['status'], cls='status status--' + STATUS_TONE.get(paper['status'], 'done'))
 
 
-def page(title: str, *children: dict, kind: str = '') -> dict:
-    return el('main', el('article',
-        el('header', el('h1', title, cls='page-title'), cls='page-head'),
-        *children, cls='page page--' + (kind or title.lower())), id='main', cls='content')
+def figure(data: dict, title: str, cls: str, *, url: str = '', zoom_link: str = '') -> dict:
+    """A figure in a fixed 2:1 frame. It opens full size unless `url` points elsewhere."""
+    width, height = image_size(data['src'])
+    image = el('img', src=data['src'], alt='Figure from ' + title, width=str(width), height=str(height),
+               loading='lazy', decoding='async')
+    fit = ' frame--cover' if data.get('fit') == 'cover' else ''
+    if url:
+        return el('a', image, href=url, cls=f'frame{fit} {cls}', tabindex='-1', aria_hidden='true')
+    extra = {'data_link': zoom_link} if zoom_link else {}
+    return el('a', image, href=data['src'], cls=f'frame frame--zoom{fit} {cls}', data_zoom='', data_caption=title,
+              aria_label='Enlarge figure: ' + title, **extra)
 
 
-def section(title: str, id: str, *children: dict) -> dict:
-    return el('section', el('h2', title, cls='section__title', id=id + '-title'),
-              el('div', *children, cls='section__body'), cls='section', id=id, aria_labelledby=id + '-title')
+def publication(paper: dict, prefix: str = '', summary: bool = False) -> dict:
+    url = paper['links'][0]['url']
+    venue = [el('span', paper['citation'], cls='pub__venue-name'), status(paper)]
+    if paper['role'] in ('First Author', 'Co-first Author'):
+        venue.append(el('span', paper['role'].replace(' Author', ' author'), cls='role'))
+    body = [el('h3', external(paper['title'], url), cls='pub__title'), authors(paper),
+            el('p', *venue, cls='pub__venue'), links(paper)]
+    if summary:
+        body.append(el('details', el('summary', 'Summary'), el('p', paper['summary']), cls='pub__summary'))
+    return el('li', figure(paper['preview'], paper['title'], 'pub__figure', zoom_link=url),
+              el('div', *body, cls='pub__body'), cls='pub', id=prefix + paper['id'])
 
 
-def experience(item: dict, papers: dict) -> dict:
-    return el('li', el('div', el('h3', item['institution'], cls='row__title'),
-                el('p', item['role'] + ' · ' + item['dates'], cls='row__meta'), cls='row__head'),
-              el('p', item['description'], cls='row__text'),
-              *( [el('ul', *(el('li', x) for x in item['bullets']), cls='build__list')] if item['bullets'] else []),
-              *( [el('div', *(el('a', papers[id]['title'].split(':')[0], href='/researches#' + id, cls='link-chip') for id in item['paper_ids']), cls='link-row')] if item['paper_ids'] else []),
-              cls='row', id=item['id'])
+def card(item: dict, meta: str = '', badge: dict | None = None) -> dict:
+    url = item['links'][0]['url'] if item.get('links') else ''
+    internal = url.startswith('/projects/vertebrae')
+    title_link = el('a', item['title'], href=url) if internal else external(item['title'], url) if url else item['title']
+    head = [area_tag(item['id'])] + ([badge] if badge else [])
+    return el('article',
+        figure(item['preview'], item['title'], 'card__figure', url=url if internal else '', zoom_link='' if internal else url),
+        el('div',
+            el('div', *head, cls='card__tags'),
+            el('h3', title_link, cls='card__title'),
+            el('p', item['summary'], cls='card__text'),
+            *([el('p', meta, cls='card__meta')] if meta else []),
+            links(item), cls='card__body'),
+        cls='card', id=item['id'])
 
 
-def research(paper: dict) -> dict:
-    return el('li', preview(paper['preview'], paper['links'][0]['url'], 'project__figure'), el('div',
-        el('div', el('h2', external(paper['title'], paper['links'][0]['url']), cls='project__title'), el('span', paper['role'], cls='role'), cls='project__head'),
-        el('div', el('p', paper['summary']), cls='project__text'),
-        el('p', paper['venue'] + ' · ' + paper['status'], cls='row__meta'),
-        el('div', links(paper), cls='project__foot'), cls='project__body'),
-        cls='project project--paper', id=paper['id'])
+def paper_card(paper: dict) -> dict:
+    return card(paper, paper['venue'] + ' · ' + paper['role'], status(paper))
 
 
-def research_project(project: dict) -> dict:
-    heading = el('div', el('h2', project['title'], cls='project__title'), cls='project__head')
-    summary = el('div', el('p', project['summary']), cls='project__text')
-    project_links = [el('div', links(project), cls='project__foot')] if project.get('links') else []
-    body = el('div', heading, summary, *project_links, cls='project__body')
-    figure = project.get('preview')
-    if not figure:
-        return el('li', body, cls='project project--text', id=project['id'])
-
-    classes = 'project project--paper'
-    if 'width' in figure and 'height' in figure:
-        classes += ' project--wide-figure'
-    thumbnail = preview(figure, figure['src'], 'project__figure',
-        link_label=f"View {project['title']} image at full size")
-    return el('li', thumbnail, body, cls=classes, id=project['id'])
+def section(title: str, id: str, *children: dict, more: tuple[str, str] | None = None) -> dict:
+    head = [el('h2', title, cls='section__title', id=id + '-title')]
+    if more:
+        head.append(el('a', more[0], icon('arrow'), href=more[1], cls='section__more'))
+    return el('section', el('div', *head, cls='section__head'), *children,
+              cls='section', id=id, aria_labelledby=id + '-title')
 
 
-def documents(document_id: str, pages: int) -> dict:
-    url = '/CV.pdf' if document_id == 'cv' else '/resume.pdf'
-    label = 'Curriculum Vitae' if document_id == 'cv' else 'Resume'
-    tabs = el('div', *(el('button', name, cls='doc-tab' + (' is-active' if id == document_id else ''),
-        role='tab', type='button', id='doc-tab-' + id, aria_selected=str(id == document_id).lower(),
-        aria_controls='doc-panel', tabindex='0' if id == document_id else '-1')
-        for id, name in [('cv', 'Curriculum Vitae'), ('resume', 'Resume')]), cls='doc-tabs', role='tablist', aria_label='Document')
-    previews = [el('a', el('img', src=f'/previews/{document_id}-{i}.png', alt=f'{label}, page {i} of {pages}',
-        loading='lazy' if i > 1 else 'eager', decoding='async'), cls='doc-page', href=url + f'#page={i}',
-        target='_blank', rel='noopener noreferrer', aria_label=f'{label}, page {i} of {pages} (opens the PDF)') for i in range(1, pages + 1)]
-    return page('CV & Resume', el('div', tabs, el('div', external('Open PDF', url, 'doc-action'),
-        el('a', 'Download', href=url, download='Hongkang_Chu_CV.pdf' if document_id == 'cv' else 'Hongkang_Chu_Resume.pdf', cls='doc-action'),
-        cls='doc-actions'), cls='doc-bar'),
-        el('div', *previews, id='doc-panel', role='tabpanel', aria_labelledby='doc-tab-' + document_id, cls='doc-pages'), kind='cv')
+def page(title: str, intro: str, *children: dict, kind: str) -> dict:
+    return el('main', el('header', el('h1', title, cls='page-head__title'), el('p', intro, cls='page-head__intro'),
+                         cls='page-head'), *children, id='main', cls='page page--' + kind)
+
+
+def experience(item: dict, papers: dict, compact: bool = False) -> dict:
+    body = [el('div', el('h3', item['institution'], cls='timeline__title'),
+               el('p', item['role'], el('span', item['dates'], cls='timeline__dates'), cls='timeline__meta'),
+               cls='timeline__head'),
+            el('p', item['description'], cls='timeline__text')]
+    if not compact and item['bullets']:
+        body.append(el('ul', *(el('li', x) for x in item['bullets']), cls='timeline__list'))
+    if item['paper_ids']:
+        body.append(el('div', *(el('a', short(papers[id]), href='/publications#' + id, cls='chip chip--quiet')
+                                for id in item['paper_ids']), cls='chips'))
+    return el('li', *body, cls='timeline__item', id=item['id'] if not compact else 'home-' + item['id'])
+
+
+def education(item: dict) -> dict:
+    return el('li', el('div', el('h3', item['institution'], cls='timeline__title'),
+                       el('p', item['degree'], el('span', item['dates'], cls='timeline__dates'), cls='timeline__meta'),
+                       cls='timeline__head'),
+              el('p', item['details'], cls='timeline__text'), cls='timeline__item')
+
+
+def area(key: str, items: list[dict]) -> dict:
+    info = AREAS[key]
+    members = [x for x in items if AREA_OF.get(x['id']) == key]
+    return el('article',
+        el('h3', info['label'], cls='area__title'),
+        el('p', info['text'], cls='area__text'),
+        el('ul', *(el('li', el('a', short(x), href=('/publications#' if 'authors' in x else '/projects#') + x['id']),
+                         el('span', x.get('year', 'Project'), cls='area__year')) for x in members), cls='area__items'),
+        cls='area area--' + info['tone'])
+
+
+def profile_card(data: dict) -> dict:
+    """Identity block at the foot of every page."""
+    return el('aside',
+        el('div', el('img', src=data['portrait'], alt='', width='1448', height='1086', loading='lazy', decoding='async'),
+           cls='avatar avatar--small'),
+        el('div', el('p', data['name'], el('span', data['chinese_name'], lang='zh-CN', cls='cjk'), cls='profile-card__name'),
+           el('p', 'Master’s student in Computer Science · UCAS', cls='profile-card__role'), cls='profile-card__text'),
+        contact_links(data, 'profile-card__links'),
+        cls='profile-card', aria_label='Contact')
+
+
+def button(icon_name: str, label: str, url: str) -> dict:
+    attrs = {} if url.startswith('mailto:') else {'target': '_blank', 'rel': 'noopener noreferrer'}
+    return el('a', icon(icon_name), el('span', label), href=url, cls='button', **attrs)
+
+
+def contact_links(data: dict, cls: str) -> dict:
+    return el('div', button('mail', 'Email', 'mailto:' + data['email']), button('github', 'GitHub', data['github']),
+              button('book', 'OpenReview', data['openreview']), button('cap', 'UCAS', 'https://english.ucas.ac.cn/'),
+              cls='buttons ' + cls)
 
 
 def site(data: dict) -> dict:
     papers = {p['id']: p for p in data['papers']}
-    profile = el('aside',
+    projects = data.get('research_projects', [])
+    topics = [t.strip() for t in data['interests'].split(';')]
+    hero = el('section',
         el('div', el('img', src=data['portrait'], alt=data['name'], width='1448', height='1086',
-            fetchpriority='high', decoding='async', cls='profile__portrait-image'),
-            cls='profile__avatar profile__portrait'),
-        el('div', el('p', el('span', 'Master’s Student @ UCAS'), el('span', 'Computer Science'), cls='profile__roles'), cls='profile__id'),
-        el('ul',
-            el('li', external('UCAS', 'https://english.ucas.ac.cn/')),
-            el('li', el('a', 'Email', href='mailto:' + data['email'])),
-            el('li', external('OpenReview', data['openreview'])),
-            el('li', external('GitHub', data['github'])), cls='profile__links'), cls='profile', aria_label='Profile')
-    hero = el('header', el('div',
-        el('h1', 'Hi, I’m ', el('span', data['name'], cls='hp', data_p='name'), '.', cls='hero__title'),
-        el('p', 'I study ', el('span', 'multimodal learning', cls='hp', data_p='people'), ', ',
-            el('span', 'synthetic media detection', cls='hp', data_p='eyes'), ', and ',
-            el('span', 'AI for magnetic resonance imaging/medical', cls='hp', data_p='health'), '.', cls='hero__lede'),
-        cls='hero'), cls='page-head page-head--hero')
+                     fetchpriority='high', decoding='async'), cls='avatar avatar--hero'),
+        el('div',
+            el('h1', data['name'], el('span', data['chinese_name'], lang='zh-CN', cls='cjk'), cls='hero__name'),
+            el('p', 'Master’s student in Computer Science, University of the Chinese Academy of Sciences', cls='hero__role'),
+            el('p', data['intro'], cls='hero__bio'),
+            el('p', 'I collaborate with researchers at Zhejiang University on synthetic image and video detection and have '
+                    'worked remotely with UIUC on medical AI. Previously, I studied Computer Science and Technology at '
+                    'Shanghai Ocean University.', cls='hero__bio'),
+            el('ul', *(el('li', t[0].upper() + t[1:], cls='tag tag--' + TOPIC_TONES[i % 4]) for i, t in enumerate(topics)),
+               cls='tags hero__topics', aria_label='Research interests'),
+            contact_links(data, 'hero__links'), cls='hero__text'),
+        cls='hero', aria_label='Introduction')
     news_records = [
         ('2026-10-23', 'Oct 2026', 'My first-author paper MedCaseAgent is now available on arXiv.', papers['medcaseagent']['links'][0]['url']),
         ('2026-09-22', 'Sep 2026', 'TRACE is available on arXiv and submitted to ICLR 2027.', papers['trace']['links'][1]['url']),
@@ -154,44 +271,46 @@ def site(data: dict) -> dict:
         ('2026-01-29', 'Jan 2026', 'Our NMR phase correction study is published in The Journal of Physical Chemistry Letters.', papers['jpcl-phase-correction']['links'][0]['url']),
         ('2024-04-19', 'Apr 2024', 'My first-author work on druggable proteins was published in IJMS.', papers['ijms-druggable-proteins']['links'][0]['url']),
     ]
-    news = el('div', el('div', el('ul', *(el('li', el('time', label, datetime=date, cls='news__date'),
-        el('p', external(text, url), cls='news__text'), cls='news__item') for date, label, text, url in news_records), cls='news'),
-        cls='news-scroll', tabindex='0', aria_label='Research news'), cls='news-box')
-    project_cards = [research_project(project) for project in data.get('research_projects', [])]
-    selected_projects = (
-        [section('Selected Projects', 'selected-projects', el('ol', *project_cards, cls='projects'))]
-        if project_cards else []
-    )
-    about = el('main', el('article', hero,
-        section('About', 'about', el('p', data['intro']),
-            el('p', 'I collaborate with researchers at Zhejiang University on synthetic image and video detection and have worked remotely with UIUC on medical AI. Previously, I studied Computer Science and Technology at Shanghai Ocean University.')),
+    news = el('ol', *(el('li', el('time', label, datetime=date, cls='news__date'),
+                             el('p', external(text, url), cls='news__text'), cls='news__item')
+                      for date, label, text, url in news_records), cls='news')
+    home = el('main', hero,
         section('News', 'news', news),
-        section('Research Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
-        *selected_projects,
-        section('Selected Publications', 'selected-publications', el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs pubs--thumbs')),
-        cls='page page--about'), id='main', cls='content')
-    pages = {'/': about, '/about': copy.deepcopy(about),
-        '/researches': page('Research', el('p', 'My research connects multimodal learning and media forensics with deep learning for magnetic resonance imaging and spectroscopy.', cls='page-intro'),
-            section('Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
-            el('ol', *(research(p) for p in data['papers']), cls='projects'), kind='research'),
-        '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs pubs--thumbs')),
-        '/projects': page('Projects', el('p', 'Selected research projects and interactive studies.', cls='page-intro'),
-            el('ol', *project_cards,
-                el('li', el('a', el('img', src='/figures/vertebrae-study.webp', alt='', width='800', height='500', loading='lazy', decoding='async'),
-                    href='/projects/vertebrae/', tabindex='-1', aria_hidden='true', cls='project__figure paper-thumb'), el('div',
-                el('div', el('h2', el('a', 'Vertebrae Study', href='/projects/vertebrae/'), cls='project__title'),
-                    el('span', 'Independent study', cls='role'), cls='project__head'),
-                el('div', el('p', 'SuPreM vertebrae segmentation and postprocessing: explore authentic CT predictions, before/after changes, 3D anatomy and a per-vertebra audit.'), cls='project__text'),
-                el('p', 'Medical imaging · Research warmup from Zongwei Zhou’s lab at Johns Hopkins University', cls='row__meta'),
-                el('div', el('div', el('a', 'Open interactive study', href='/projects/vertebrae/', cls='link-chip'),
-                    external('Original task', 'https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md', cls='link-chip'), cls='link-row'), cls='project__foot'),
-                cls='project__body'), cls='project project--paper', id='vertebrae-study'),
-                *(research(papers[id]) for id in ('medcaseagent', 'trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
-        '/projects/vertebrae': page('Vertebrae Study', el('p', 'SuPreM vertebrae segmentation and postprocessing.', cls='page-intro'), kind='vertebrae'),
-        '/teaching': page('Teaching', el('p', 'Teaching information will be added here.', cls='page-intro')),
-        '/talks': page('Personal', el('p', 'More about me soon.', cls='page-intro'), kind='personal')}
-    return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-10-26', 'name': data['name'],
-        'institution': data['institution'], 'profile': profile,
+        section('Selected Projects', 'selected-projects', el('div', *(card(x) for x in projects), cls='cards'),
+                more=('All projects', '/projects')),
+        section('Publications', 'selected-publications',
+                el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs'),
+                more=('Summaries', '/publications')),
+        section('Experience', 'experience', el('ol', *(experience(x, papers, compact=True) for x in data['experiences']),
+                                                   cls='timeline timeline--compact'), more=('Details', '/researches')),
+        id='main', cls='page page--home')
+    years = sorted({p['year'] for p in data['papers']}, reverse=True)
+    everything = data['papers'] + projects + [VERTEBRAE]
+    pages = {
+        '/': home, '/about': copy.deepcopy(home),
+        '/researches': page('Research',
+            'My research connects multimodal learning and media forensics with deep learning for magnetic resonance '
+            'imaging and spectroscopy.',
+            section('Research Areas', 'areas', el('div', *(area(k, everything) for k in AREAS), cls='areas')),
+            section('Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='timeline')),
+            section('Education', 'education', el('ol', *(education(x) for x in data['education']), cls='timeline')),
+            kind='research'),
+        '/publications': page('Publications', 'Click a figure to view it full size. My name is shown in bold.',
+            *(section(year, 'year-' + year, el('ol', *(publication(p, summary=True) for p in data['papers'] if p['year'] == year),
+                                              cls='pubs')) for year in years),
+            kind='publications'),
+        '/projects': page('Projects', 'Selected research projects and interactive studies.',
+            el('div', *(card(x) for x in projects),
+               card(VERTEBRAE, VERTEBRAE['meta'], el('span', 'Interactive', cls='status status--preprint')),
+               *(paper_card(papers[id]) for id in ('medcaseagent', 'trace', 'clueaegis', 'ismrm-2026')),
+               cls='cards cards--page'),
+            kind='projects'),
+        '/projects/vertebrae': page('Vertebrae Study', 'SuPreM vertebrae segmentation and postprocessing.', kind='vertebrae'),
+        '/teaching': page('Teaching', 'Teaching information will be added here.', kind='teaching'),
+        '/talks': page('Personal', 'More about me soon.', kind='personal'),
+    }
+    return {'source': 'https://chuhongkang.com/', 'captured_at': '2026-11-23', 'name': data['name'],
+        'institution': data['institution'], 'profile': profile_card(data),
         'navigation': [{'label': label, 'path': path} for label, path in [('About', '/about'), ('Research', '/researches'),
             ('Publications', '/publications'), ('Projects', '/projects')]],
         'pages': pages, 'documents': {}}

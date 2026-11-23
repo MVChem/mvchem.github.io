@@ -37,7 +37,7 @@ export default function VisitorMap() {
   }, [retry])
 
   return <section className="section site-visitors" aria-labelledby="visitor-heading">
-    <h2 id="visitor-heading" className="section-title">Website Visitors</h2>
+    <div className="section__head"><h2 id="visitor-heading" className="section__title">Website Visitors</h2></div>
     <a className="site-visitors__map" href={VISITOR_STATS_URL} target="_blank" rel="noopener noreferrer" aria-label="View homepage visitor statistics on MapMyVisitors">
       <img src={snapshotUrl} width={snapshot.width} height={snapshot.height} alt={`Saved world map of homepage visits and total pageviews, ${snapshotDate}`} hidden={status === 'ready'} loading="eager" decoding="async" />
       <img key={attempt} src={`${config.imageUrl}${attempt ? `&retry=${attempt}` : ''}`} width={snapshot.width} height={snapshot.height} alt="World map of homepage visits and total pageviews" hidden={status !== 'ready'} loading="eager" decoding="async" onLoad={() => setStatus('ready')} onError={() => setStatus('error')} />

@@ -1,5 +1,6 @@
-"""Exercise public pages, media, responsive navigation, and removed CV links."""
+"""Exercise public pages, media, figure lightbox, responsive navigation, and removed CV links."""
 import json
+import os
 from pathlib import Path
 import sys
 from playwright.sync_api import expect, sync_playwright
@@ -12,7 +13,7 @@ routes = ['/', '/researches', '/publications', '/teaching', '/projects', '/talks
 
 
 def assert_link_chips_fit(page) -> None:
-    overflow = page.locator('.link-chip').evaluate_all('''links => links.flatMap(link => {
+    overflow = page.locator('.chip, .button').evaluate_all('''links => links.flatMap(link => {
         const box = link.getBoundingClientRect();
         const range = document.createRange();
         range.selectNodeContents(link);
@@ -25,7 +26,7 @@ def assert_link_chips_fit(page) -> None:
 
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(executable_path='/usr/bin/google-chrome', headless=True, args=['--no-sandbox'])
+    browser = p.chromium.launch(executable_path=os.environ.get('CHROME_BIN', '/usr/bin/google-chrome'), headless=True, args=['--no-sandbox'])
     page = browser.new_page(viewport={'width':1440,'height':1000}, reduced_motion='reduce')
     page.on('pageerror', lambda error: errors.append(str(error)))
     page.on('console', lambda msg: errors.append(msg.text) if msg.type == 'error' else None)
@@ -36,7 +37,7 @@ with sync_playwright() as p:
         assert response.status == 200
         page.evaluate('() => document.fonts.ready')
         expect(page.locator('main')).to_be_visible()
-        for image in page.locator('main img').all():
+        for image in page.locator('main img:not([hidden])').all():
             image.scroll_into_view_if_needed()
         page.wait_for_timeout(200)
         page.evaluate('scrollTo(0,0)')
@@ -52,11 +53,13 @@ with sync_playwright() as p:
     for path in ['/cv','/CV.pdf','/resume.pdf','/previews/cv-1.png']:
         assert page.request.get(BASE + path).status == 404, path
     page.goto(BASE + '/', wait_until='networkidle')
-    feed = page.locator('.news-scroll')
-    feed.evaluate('(el)=>el.scrollTop=el.scrollHeight')
-    expect(page.locator('.news-box')).to_have_class('news-box has-above')
-    feed.evaluate('(el)=>el.scrollTop=0')
-    expect(page.locator('.news-box')).to_have_class('news-box has-below')
+    figure = page.locator('#selected-trace .frame')
+    figure.click()
+    expect(page.locator('.lightbox img')).to_have_attribute('src', '/papers/trace-fig2.webp')
+    expect(page.locator('.lightbox__close')).to_be_focused()
+    page.keyboard.press('Escape')
+    expect(page.locator('.lightbox')).to_have_count(0)
+    expect(figure).to_be_focused()
     page.locator('.nav__link[href="/researches"]').click()
     expect(page).to_have_url(BASE + '/researches')
     page.go_back()
@@ -66,18 +69,18 @@ with sync_playwright() as p:
         assert not page.evaluate('document.documentElement.scrollWidth > innerWidth'), width
         assert_link_chips_fit(page)
     page.set_viewport_size({'width':390,'height':844})
-    page.locator('.nav__toggle').click()
-    expect(page.locator('.nav__toggle')).to_have_attribute('aria-expanded','true')
+    page.locator('.nav-toggle').click()
+    expect(page.locator('.nav-toggle')).to_have_attribute('aria-expanded','true')
     page.keyboard.press('Escape')
-    expect(page.locator('.nav__toggle')).to_have_attribute('aria-expanded','false')
-    page.locator('.nav__toggle').click()
+    expect(page.locator('.nav-toggle')).to_have_attribute('aria-expanded','false')
+    page.locator('.nav-toggle').click()
     page.locator('.nav__link[href="/projects"]').click()
     expect(page).to_have_url(BASE + '/projects')
-    expect(page.locator('.nav__toggle')).to_have_attribute('aria-expanded','false')
-    expect(page.locator('.profile')).to_be_hidden()
+    expect(page.locator('.nav-toggle')).to_have_attribute('aria-expanded','false')
+    expect(page.locator('.nav')).not_to_have_class('nav is-open')
     for route in routes:
         page.goto(BASE + route, wait_until='networkidle')
-        for image in page.locator('main img').all():
+        for image in page.locator('main img:not([hidden])').all():
             image.scroll_into_view_if_needed()
         page.wait_for_timeout(200)
         page.evaluate('scrollTo(0,0)')

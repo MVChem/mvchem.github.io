@@ -1,26 +1,26 @@
 # 储红康个人主页 · chuhongkang.com
 
-沿用用户选定的 [chenfangcs.com](https://www.chenfangcs.com/) 布局、字体和交互，个人资料已替换为储红康（Hongkang Chu）。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，在桌面 224px、手机 112px 的圆形区域中采用突出脸部的大头照裁切，原图保持不变。
+储红康（Hongkang Chu）的学术主页。2026-11-23 起使用本站自己的版式（`frontend/src/site.css`），不再沿用 chenfangcs.com 的参考样式：首页顶部为头像、简介、研究方向标签和联系方式，各页为单栏正文，页脚显示联系卡片；支持浅色和深色模式。头像使用本人提供的 `frontend/public/photos/chuhongkang-centered.png`，在首页 200px（手机 112px）的圆形区域中采用突出脸部的大头照裁切，原图保持不变。
 
 项目保存位置：`/home/data2/chk/workspace/2026/10/01/chenfang-homepage`。
 
 ## 页面和交互
 
-- About：本人介绍、研究经历、可滚动的真实研究新闻、精选项目和精选论文。
-- Research：中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历，以及本人研究概要。
-- Publications：MRM 投稿、MedCaseAgent、TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态。
-- Projects：MedWorld-JEPA、VideoAudience、Vertebrae Study 和四个已有公开成果的研究项目。
+- About：本人介绍、研究方向、新闻、精选项目、全部论文和简要研究经历。
+- Research：四个研究方向卡片（MR 成像与波谱、合成媒体检测、多模态与医学 AI、蛋白质语言模型，各列出相关论文和项目），以及中科院 / 国科大、浙大合作、UIUC 远程研究实习和本科研究经历的时间线和教育经历。
+- Publications：按年份分组，含 MRM 投稿、MedCaseAgent、TRACE、ClueAegis、MRL、赵传文一作的 JPCL、本人一作的 ISMRM 2026 Power Pitch Oral 和本科 IJMS 论文；保留完整作者顺序和明确状态，每篇可展开 Summary。
+- Projects：MedWorld-JEPA、VideoAudience、Vertebrae Study 和四个已有公开成果的研究项目，以等大卡片双栏排列。
 - Vertebrae Study：`/projects/vertebrae/` 的椎骨分割研究展示，副标题为 SuPreM vertebrae segmentation and postprocessing。包含两例官方CT的前后对比、改动定位、窗宽窗位、标签筛选、真实3D曲面和逐椎骨统计。任务来源注明 JHU 的 Zongwei Zhou 实验室和 SuPreM / AbdomenAtlasDemo；明确区分后处理改动与准确率评价。旧 `/demo/` 链接自动跳转到新地址，保留查询参数和锚点。
-- CV / Resume：按本人要求从导航、侧栏、页面、下载和公开 API 数据中移除。原本站 PDF 与预览仅保留在本地 `artifacts/documents/`，不会发布。
+- CV / Resume：按本人要求从导航、页面、下载和公开 API 数据中移除。原本站 PDF 与预览仅保留在本地 `artifacts/documents/`，不会发布。
 - Teaching / Personal：暂无本人确认的内容，不出现在导航；旧网址保留空状态。
 
-桌面保留固定资料栏，手机首页显示紧凑资料区，其他手机页面聚焦正文。导航支持手机菜单、Escape 关闭、历史返回和研究段落锚点。页面使用 React + TypeScript + Vite；FastAPI 的 `/api/reference.json` 提供经过 Pydantic 验证的内容数据。前端使用根据内容生成的版本号读取 API，防止更新后继续显示旧的缓存标签。兼容入口 `/api/site.json` 返回同一份本人内容，旧的演示数据不再发布。
+顶栏导航固定在页面上方，手机上收为菜单。导航支持手机菜单、Escape 关闭、历史返回和论文锚点（研究经历中的论文标签跳到 Publications 对应条目）。页面使用 React + TypeScript + Vite；FastAPI 的 `/api/reference.json` 提供经过 Pydantic 验证的内容数据。前端使用根据内容生成的版本号读取 API，防止更新后继续显示旧的缓存标签。兼容入口 `/api/site.json` 返回同一份本人内容，旧的演示数据不再发布。
 
 按本人 2026-10-26 的要求公开 MedCaseAgent 预印本（arXiv:2610.32258），在首页新闻、精选论文、Research、Publications 和 Projects 中展示，保留完整作者顺序并标为 Preprint。论文和 PDF 使用 arXiv 原链接。旧 MDLE 演示附件仍不进入网站发布目录。
 
 ## 论文预览图（2026-11-23）
 
-Publications、首页 Selected Publications、Research 和 Projects 中的每篇论文左侧显示 16:10 预览图，点击预览图或标题打开论文首个链接。预览图取自论文本身的公开图：
+所有论文和项目图片使用同一个 2:1 图框，整图按原比例居中显示（`object-fit: contain`），不裁切、不拉伸。点击图片在本页打开大图（Escape 或点击背景关闭，附论文链接），点击标题打开论文首个链接。预览图取自论文本身的公开图：
 
 | 论文 | 来源 | 图 |
 | --- | --- | --- |
@@ -41,11 +41,11 @@ Publications、首页 Selected Publications、Research 和 Projects 中的每篇
 .venv/bin/python scripts/build_paper_previews.py trace      # 单篇
 ```
 
-脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），将 WebP 输出到 `frontend/public/papers/`。TRACE Figure 2、IJMS Figure 5 和 JPCL Figure S3 保留完整图和原始比例，其他图片补白至 800×500。若要换成本人提供的图，直接放入 `frontend/public/papers/<id>.webp`（800×500）并把 `preview` 改成 `src` 形式即可。
+脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），将 WebP 输出到 `frontend/public/papers/`。所有预览图保留完整图和原始比例（长边最多 1800px），不再补白至 800×500。若要换成本人提供的图，直接放入 `frontend/public/papers/<id>.webp`（任意比例）并把 `preview` 改成 `src` 形式即可。
 
-首页的 Selected Projects 和 Projects 页展示项目完整论文标题，以及 VideoAudience Figure 1 和 MedWorld-JEPA Figure 2。MedWorld-JEPA 的图片占满可用宽度，高度按原图比例调整。点击图片可查看大图。PDF 链接指向 GitHub 上的对应文件，需要仓库访问权限。
+首页的 Selected Projects 和 Projects 页展示项目完整论文标题，以及 VideoAudience Figure 1 和 MedWorld-JEPA Figure 2。两张图与论文预览使用同样的 2:1 图框，点击可查看大图。PDF 链接指向 GitHub 上的对应文件，需要仓库访问权限。
 
-Projects 中 Vertebrae Study 的预览图 `frontend/public/figures/vertebrae-study.webp` 截自线上 `/projects/vertebrae/` 的 Before/After 矢状面视图（2× 截图，裁成 16:10）。
+Projects 中 Vertebrae Study 的预览图 `frontend/public/figures/vertebrae-study.webp` 截自线上 `/projects/vertebrae/` 的 Before/After 矢状面视图（2× 截图，裁成 16:10）；该图在图框中铺满显示（`fit: cover`）。
 
 ## 本地运行
 
@@ -104,8 +104,9 @@ npm --prefix frontend run build
 ## 内容和文件
 
 - `frontend/src/App.tsx`：导航、路由、手机菜单、带版本号的内容读取。
-- `frontend/src/components/ReferenceDocument.tsx`：正文、新闻滚动、首页扫描动画。
-- `frontend/src/styles.css`：参考网站样式。
+- `frontend/src/components/ReferenceDocument.tsx`：把经过验证的页面数据渲染为 React 元素。
+- `frontend/src/components/Lightbox.tsx`：论文和项目图片的大图查看。
+- `frontend/src/site.css`：全站样式（颜色取自论文配图色板：蓝 #4B91C6、粉 #B94C71、绿 #40854C、紫 #7A5BA6），含深色模式。
 - `backend/content/public_profile.json`：唯一公开内容编辑源，含本人资料、经历及允许公开的论文。
 - `scripts/build_personal_content.py`：从公开内容生成网页；可用 `--documents` 生成本地 PDF 和预览，不会写入发布目录。
 - `backend/content/reference.json`：生成的语义页面数据；不要单独编辑。
@@ -113,7 +114,7 @@ npm --prefix frontend run build
 - `frontend/public/`：本人照片、字体、图标和域名配置。
 - `SOURCE_NOTICE.md`：参考内容和素材来源。
 
-源代码位于 `feat/chenfang-homepage` 分支，静态构建发布到 `gh-pages`。原主页和参考作者版本保留在 Git 历史中。
+源代码位于 `main` 分支（2026-11-23 起；此前在 `feat/chenfang-homepage`），静态构建发布到 `gh-pages`。原主页和参考作者版本保留在 Git 历史中。
 
 ## 主页访问统计（2026-10-09）
 
@@ -142,4 +143,4 @@ npm --prefix frontend run build
 .venv/bin/python scripts/verify_replica.py http://127.0.0.1:5178
 ```
 
-浏览器检查使用已安装的 `/usr/bin/google-chrome`，覆盖四个导航栏目和两个旧链接、360/390/768/960/1440 像素宽度、新闻滚动、手机菜单与历史返回，并确认 CV 栏目和下载已移除。截图和结果输出到 `artifacts/`。后端检查另核对公开数据、本人头像及移除的文档地址。
+浏览器检查默认使用 `/usr/bin/google-chrome`，可用环境变量 `CHROME_BIN` 指定其他 Chrome / Chromium，覆盖四个导航栏目和两个旧链接、320–1440 像素的八种宽度、图片大图查看、手机菜单与历史返回，并确认 CV 栏目和下载已移除。截图和结果输出到 `artifacts/`。后端检查另核对公开数据、本人头像及移除的文档地址。

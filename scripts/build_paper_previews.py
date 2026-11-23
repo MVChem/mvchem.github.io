@@ -25,12 +25,11 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / '.runtime' / 'paper-previews'
 OUTPUT = ROOT / 'frontend' / 'public' / 'papers'
-SIZE = (800, 500)  # 16:10, sharp at 2x for the 264 px project column
-MARGIN = 0.03  # white border around the figure, as a fraction of the preview width
+MAX_SIDE = 1800  # longest side; the site shows every figure whole in a 2:1 frame
 USER_AGENT = 'Mozilla/5.0 (compatible; chuhongkang.com preview builder)'
 
-# crop: (left, top, right, bottom) as fractions of the source figure. The crop is
-# then padded with white to 16:10, so no part of the figure is stretched.
+# crop: (left, top, right, bottom) as fractions of the source figure. Previews keep
+# the figure's own aspect ratio; the page frames them, so nothing is padded or stretched.
 PREVIEWS = {
     'medcaseagent': {'arxiv': '2610.32258', 'member': 'figures/medcaseagent_teaser.pdf',
                      'crop': (0.232, 0.0, 1.0, 1.0)},
@@ -113,13 +112,8 @@ def from_ismrm(spec: dict) -> Image.Image:
 def to_preview(image: Image.Image, crop: tuple[float, float, float, float]) -> Image.Image:
     w, h = image.size
     image = image.crop((round(crop[0] * w), round(crop[1] * h), round(crop[2] * w), round(crop[3] * h)))
-    target = SIZE[0] / SIZE[1]
-    w, h = image.size
-    margin = round(MARGIN * max(w, h / target))
-    canvas_size = (w + 2 * margin, round((w + 2 * margin) / target)) if w / h > target else (round((h + 2 * margin) * target), h + 2 * margin)
-    canvas = Image.new('RGB', canvas_size, 'white')
-    canvas.paste(image, ((canvas_size[0] - w) // 2, (canvas_size[1] - h) // 2))
-    return canvas.resize(SIZE, Image.Resampling.LANCZOS)
+    image.thumbnail((MAX_SIDE, MAX_SIDE), Image.Resampling.LANCZOS)
+    return image
 
 
 def main() -> None:
@@ -134,7 +128,7 @@ def main() -> None:
         output = OUTPUT / spec.get('output', f'{paper_id}.webp')
         if 'figure_url' in spec:
             figure = full_figure(spec, output.stem)
-            figure.thumbnail((1800, figure.height), Image.Resampling.LANCZOS)
+            figure.thumbnail((MAX_SIDE, figure.height), Image.Resampling.LANCZOS)
             figure.save(output, 'WEBP', lossless=True, method=6)
         else:
             source = from_arxiv(spec) if 'arxiv' in spec else from_pmc(spec) if 'pmc' in spec else from_ismrm(spec)
