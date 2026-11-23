@@ -1297,7 +1297,7 @@
                               "kind": "element",
                               "tag": "a",
                               "attrs": {
-                                "href": "/figures/medworld-jepa-fig1.webp",
+                                "href": "/figures/medworld-jepa-fig2.webp",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
                                 "class": "project__figure paper-thumb",
@@ -1308,10 +1308,10 @@
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/figures/medworld-jepa-fig1.webp",
+                                    "src": "/figures/medworld-jepa-fig2.webp",
                                     "alt": "",
-                                    "width": "1500",
-                                    "height": "468",
+                                    "width": "1651",
+                                    "height": "560",
                                     "loading": "lazy",
                                     "decoding": "async"
                                   },
@@ -1363,6 +1363,40 @@
                                         {
                                           "kind": "text",
                                           "text": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "https://github.com/MVChem/cvpr_project/blob/1068731f0f09e8349af31d2bf5401b551f09e456/main.pdf",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "PDF on GitHub"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -1454,6 +1488,40 @@
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "https://github.com/MVChem/27cvpr/blob/3f27fba831fcc27732f12b6600d937f0e6ca6bc8/main_video.pdf",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "PDF on GitHub"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1502,6 +1570,247 @@
                         "class": "pubs pubs--thumbs"
                       },
                       "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "pub",
+                            "id": "selected-acquisition-matched-dmi-mrm"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
+                                "tabindex": "-1",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/acquisition-matched-dmi-mrm-fig2.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "pub__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "h2",
+                                  "attrs": {
+                                    "class": "pub__title"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Acquisition-matched deep learning reconstruction for weighted-average deuterium metabolic imaging"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "p",
+                                  "attrs": {
+                                    "class": "authors"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "strong",
+                                      "attrs": {
+                                        "class": "authors__me"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Hongkang Chu"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Xinjie Liu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Gang Chen"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Jinrui Zhao"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Hong Shi"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Elton T. Montrazi"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Xin Zhou"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Maili Liu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Chaoyang Liu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Lucio Frydman"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Qingjia Bao"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "ul",
+                                  "attrs": {
+                                    "class": "venues"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "li",
+                                      "attrs": {
+                                        "class": "venue"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "venue__name"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Magnetic Resonance in Medicine submission, 2026"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "tag tag--review"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Submitted"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "link-row"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "PDF on GitHub"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "kind": "element",
                           "tag": "li",
@@ -4314,7 +4623,7 @@
                               "kind": "element",
                               "tag": "a",
                               "attrs": {
-                                "href": "/figures/medworld-jepa-fig1.webp",
+                                "href": "/figures/medworld-jepa-fig2.webp",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
                                 "class": "project__figure paper-thumb",
@@ -4325,10 +4634,10 @@
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/figures/medworld-jepa-fig1.webp",
+                                    "src": "/figures/medworld-jepa-fig2.webp",
                                     "alt": "",
-                                    "width": "1500",
-                                    "height": "468",
+                                    "width": "1651",
+                                    "height": "560",
                                     "loading": "lazy",
                                     "decoding": "async"
                                   },
@@ -4380,6 +4689,40 @@
                                         {
                                           "kind": "text",
                                           "text": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "https://github.com/MVChem/cvpr_project/blob/1068731f0f09e8349af31d2bf5401b551f09e456/main.pdf",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "PDF on GitHub"
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
@@ -4471,6 +4814,40 @@
                                       ]
                                     }
                                   ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "project__foot"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "div",
+                                      "attrs": {
+                                        "class": "link-row"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "a",
+                                          "attrs": {
+                                            "href": "https://github.com/MVChem/27cvpr/blob/3f27fba831fcc27732f12b6600d937f0e6ca6bc8/main_video.pdf",
+                                            "target": "_blank",
+                                            "rel": "noopener noreferrer",
+                                            "class": "link-chip"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "PDF on GitHub"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4519,6 +4896,247 @@
                         "class": "pubs pubs--thumbs"
                       },
                       "children": [
+                        {
+                          "kind": "element",
+                          "tag": "li",
+                          "attrs": {
+                            "class": "pub",
+                            "id": "selected-acquisition-matched-dmi-mrm"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
+                                "tabindex": "-1",
+                                "aria-hidden": "true"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/acquisition-matched-dmi-mrm-fig2.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "pub__body"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "h2",
+                                  "attrs": {
+                                    "class": "pub__title"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Acquisition-matched deep learning reconstruction for weighted-average deuterium metabolic imaging"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "p",
+                                  "attrs": {
+                                    "class": "authors"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "strong",
+                                      "attrs": {
+                                        "class": "authors__me"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Hongkang Chu"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Xinjie Liu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Gang Chen"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Jinrui Zhao"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Hong Shi"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Elton T. Montrazi"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Xin Zhou"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Maili Liu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Chaoyang Liu"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Lucio Frydman"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": ", "
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Qingjia Bao"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "ul",
+                                  "attrs": {
+                                    "class": "venues"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "li",
+                                      "attrs": {
+                                        "class": "venue"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "venue__name"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Magnetic Resonance in Medicine submission, 2026"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "element",
+                                          "tag": "span",
+                                          "attrs": {
+                                            "class": "tag tag--review"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Submitted"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "div",
+                                  "attrs": {
+                                    "class": "link-row"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "PDF on GitHub"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
                         {
                           "kind": "element",
                           "tag": "li",
@@ -6765,6 +7383,165 @@
                   "tag": "li",
                   "attrs": {
                     "class": "project project--paper",
+                    "id": "acquisition-matched-dmi-mrm"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
+                        "tabindex": "-1",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/acquisition-matched-dmi-mrm-fig2.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "project__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__head"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "h2",
+                              "attrs": {
+                                "class": "project__title"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Acquisition-matched deep learning reconstruction for weighted-average deuterium metabolic imaging"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "role"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Co-first Author"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "p",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "DL-WA-CSI trains a reconstruction network on the weighted-average acquisition model. It uses anatomical MRI and spectral priors to improve the spatial fidelity of deuterium metabolic imaging within a fixed scan time."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "row__meta"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Magnetic Resonance in Medicine · Submitted"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "PDF on GitHub"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "project project--paper",
                     "id": "medcaseagent"
                   },
                   "children": [
@@ -8099,6 +8876,247 @@
                 "class": "pubs pubs--thumbs"
               },
               "children": [
+                {
+                  "kind": "element",
+                  "tag": "li",
+                  "attrs": {
+                    "class": "pub",
+                    "id": "acquisition-matched-dmi-mrm"
+                  },
+                  "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
+                        "tabindex": "-1",
+                        "aria-hidden": "true"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/acquisition-matched-dmi-mrm-fig2.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "element",
+                      "tag": "div",
+                      "attrs": {
+                        "class": "pub__body"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "h2",
+                          "attrs": {
+                            "class": "pub__title"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Acquisition-matched deep learning reconstruction for weighted-average deuterium metabolic imaging"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "p",
+                          "attrs": {
+                            "class": "authors"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "strong",
+                              "attrs": {
+                                "class": "authors__me"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Hongkang Chu"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Xinjie Liu"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Gang Chen"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Jinrui Zhao"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Hong Shi"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Elton T. Montrazi"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Xin Zhou"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Maili Liu"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Chaoyang Liu"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Lucio Frydman"
+                            },
+                            {
+                              "kind": "text",
+                              "text": ", "
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Qingjia Bao"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "ul",
+                          "attrs": {
+                            "class": "venues"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "li",
+                              "attrs": {
+                                "class": "venue"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "venue__name"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Magnetic Resonance in Medicine submission, 2026"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "tag tag--review"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Submitted"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "link-row"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://github.com/MVChem/mvchem.github.io/blob/gh-pages/manuscripts/acquisition-matched-dmi-mrm.pdf",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "PDF on GitHub"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "kind": "element",
                   "tag": "li",
@@ -9869,7 +10887,7 @@
                       "kind": "element",
                       "tag": "a",
                       "attrs": {
-                        "href": "/figures/medworld-jepa-fig1.webp",
+                        "href": "/figures/medworld-jepa-fig2.webp",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
                         "class": "project__figure paper-thumb",
@@ -9880,10 +10898,10 @@
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/figures/medworld-jepa-fig1.webp",
+                            "src": "/figures/medworld-jepa-fig2.webp",
                             "alt": "",
-                            "width": "1500",
-                            "height": "468",
+                            "width": "1651",
+                            "height": "560",
                             "loading": "lazy",
                             "decoding": "async"
                           },
@@ -9935,6 +10953,40 @@
                                 {
                                   "kind": "text",
                                   "text": "Learns how a patient's condition changes over time from medical images taken at different visits. Given one examination, the model interprets current findings and forecasts changes over a specified interval."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://github.com/MVChem/cvpr_project/blob/1068731f0f09e8349af31d2bf5401b551f09e456/main.pdf",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "PDF on GitHub"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -10022,6 +11074,40 @@
                                 {
                                   "kind": "text",
                                   "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "element",
+                          "tag": "div",
+                          "attrs": {
+                            "class": "project__foot"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "div",
+                              "attrs": {
+                                "class": "link-row"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://github.com/MVChem/27cvpr/blob/3f27fba831fcc27732f12b6600d937f0e6ca6bc8/main_video.pdf",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "PDF on GitHub"
+                                    }
+                                  ]
                                 }
                               ]
                             }
