@@ -1289,7 +1289,7 @@
                           "kind": "element",
                           "tag": "li",
                           "attrs": {
-                            "class": "project project--paper",
+                            "class": "project project--paper project--wide-figure",
                             "id": "medworld-jepa"
                           },
                           "children": [
@@ -1297,22 +1297,21 @@
                               "kind": "element",
                               "tag": "a",
                               "attrs": {
-                                "href": "/figures/medworld-jepa-fig2.webp",
+                                "href": "/figures/medworld-jepa-fig1.webp",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
-                                "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "project__figure paper-thumb"
+                                "class": "project__figure paper-thumb",
+                                "aria-label": "View MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations image at full size"
                               },
                               "children": [
                                 {
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/figures/medworld-jepa-fig2.webp",
+                                    "src": "/figures/medworld-jepa-fig1.webp",
                                     "alt": "",
-                                    "width": "800",
-                                    "height": "500",
+                                    "width": "1500",
+                                    "height": "468",
                                     "loading": "lazy",
                                     "decoding": "async"
                                   },
@@ -1343,7 +1342,7 @@
                                       "children": [
                                         {
                                           "kind": "text",
-                                          "text": "MedWorld-JEPA"
+                                          "text": "MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations"
                                         }
                                       ]
                                     }
@@ -1368,40 +1367,6 @@
                                       ]
                                     }
                                   ]
-                                },
-                                {
-                                  "kind": "element",
-                                  "tag": "div",
-                                  "attrs": {
-                                    "class": "project__foot"
-                                  },
-                                  "children": [
-                                    {
-                                      "kind": "element",
-                                      "tag": "div",
-                                      "attrs": {
-                                        "class": "link-row"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "element",
-                                          "tag": "a",
-                                          "attrs": {
-                                            "href": "/figures/medworld-jepa-fig2.webp",
-                                            "target": "_blank",
-                                            "rel": "noopener noreferrer",
-                                            "class": "link-chip"
-                                          },
-                                          "children": [
-                                            {
-                                              "kind": "text",
-                                              "text": "Figure 2"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
                                 }
                               ]
                             }
@@ -1422,9 +1387,8 @@
                                 "href": "/figures/videoaudience-fig1.webp",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
-                                "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "project__figure paper-thumb"
+                                "class": "project__figure paper-thumb",
+                                "aria-label": "View VideoAudience: Learning to Understand Videos from Their Audiences image at full size"
                               },
                               "children": [
                                 {
@@ -1465,7 +1429,7 @@
                                       "children": [
                                         {
                                           "kind": "text",
-                                          "text": "VideoAudience"
+                                          "text": "VideoAudience: Learning to Understand Videos from Their Audiences"
                                         }
                                       ]
                                     }
@@ -1486,40 +1450,6 @@
                                         {
                                           "kind": "text",
                                           "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "kind": "element",
-                                  "tag": "div",
-                                  "attrs": {
-                                    "class": "project__foot"
-                                  },
-                                  "children": [
-                                    {
-                                      "kind": "element",
-                                      "tag": "div",
-                                      "attrs": {
-                                        "class": "link-row"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "element",
-                                          "tag": "a",
-                                          "attrs": {
-                                            "href": "/figures/videoaudience-fig1.webp",
-                                            "target": "_blank",
-                                            "rel": "noopener noreferrer",
-                                            "class": "link-chip"
-                                          },
-                                          "children": [
-                                            {
-                                              "kind": "text",
-                                              "text": "Figure 1"
-                                            }
-                                          ]
                                         }
                                       ]
                                     }
@@ -1587,9 +1517,9 @@
                                 "href": "https://arxiv.org/abs/2610.32258",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -1812,9 +1742,9 @@
                                 "href": "https://openreview.net/forum?id=erYE1VciKv",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -2045,9 +1975,9 @@
                                 "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -2286,9 +2216,9 @@
                                 "href": "https://doi.org/10.1016/j.mrl.2026.200272",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -2535,45 +2465,23 @@
                                 "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
                                   "kind": "element",
-                                  "tag": "span",
+                                  "tag": "img",
                                   "attrs": {
-                                    "class": "paper-thumb__text"
+                                    "src": "/papers/jpcl-phase-correction-fig-s3.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
                                   },
-                                  "children": [
-                                    {
-                                      "kind": "element",
-                                      "tag": "span",
-                                      "attrs": {
-                                        "class": "paper-thumb__label"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "text",
-                                          "text": "JPCL"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "kind": "element",
-                                      "tag": "span",
-                                      "attrs": {
-                                        "class": "paper-thumb__caption"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "text",
-                                          "text": "NMR phase correction"
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "children": []
                                 }
                               ]
                             },
@@ -2800,6 +2708,38 @@
                                           "text": "PubMed"
                                         }
                                       ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://doi.org/10.1021/acs.jpclett.5c03529.s001",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Supporting Information"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "/papers/jpcl-phase-correction-fig-s3.webp",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Figure S3"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -2822,9 +2762,9 @@
                                 "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -3071,9 +3011,9 @@
                                 "href": "https://doi.org/10.3390/ijms25084507",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -4366,7 +4306,7 @@
                           "kind": "element",
                           "tag": "li",
                           "attrs": {
-                            "class": "project project--paper",
+                            "class": "project project--paper project--wide-figure",
                             "id": "medworld-jepa"
                           },
                           "children": [
@@ -4374,22 +4314,21 @@
                               "kind": "element",
                               "tag": "a",
                               "attrs": {
-                                "href": "/figures/medworld-jepa-fig2.webp",
+                                "href": "/figures/medworld-jepa-fig1.webp",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
-                                "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "project__figure paper-thumb"
+                                "class": "project__figure paper-thumb",
+                                "aria-label": "View MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations image at full size"
                               },
                               "children": [
                                 {
                                   "kind": "element",
                                   "tag": "img",
                                   "attrs": {
-                                    "src": "/figures/medworld-jepa-fig2.webp",
+                                    "src": "/figures/medworld-jepa-fig1.webp",
                                     "alt": "",
-                                    "width": "800",
-                                    "height": "500",
+                                    "width": "1500",
+                                    "height": "468",
                                     "loading": "lazy",
                                     "decoding": "async"
                                   },
@@ -4420,7 +4359,7 @@
                                       "children": [
                                         {
                                           "kind": "text",
-                                          "text": "MedWorld-JEPA"
+                                          "text": "MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations"
                                         }
                                       ]
                                     }
@@ -4445,40 +4384,6 @@
                                       ]
                                     }
                                   ]
-                                },
-                                {
-                                  "kind": "element",
-                                  "tag": "div",
-                                  "attrs": {
-                                    "class": "project__foot"
-                                  },
-                                  "children": [
-                                    {
-                                      "kind": "element",
-                                      "tag": "div",
-                                      "attrs": {
-                                        "class": "link-row"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "element",
-                                          "tag": "a",
-                                          "attrs": {
-                                            "href": "/figures/medworld-jepa-fig2.webp",
-                                            "target": "_blank",
-                                            "rel": "noopener noreferrer",
-                                            "class": "link-chip"
-                                          },
-                                          "children": [
-                                            {
-                                              "kind": "text",
-                                              "text": "Figure 2"
-                                            }
-                                          ]
-                                        }
-                                      ]
-                                    }
-                                  ]
                                 }
                               ]
                             }
@@ -4499,9 +4404,8 @@
                                 "href": "/figures/videoaudience-fig1.webp",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
-                                "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "project__figure paper-thumb"
+                                "class": "project__figure paper-thumb",
+                                "aria-label": "View VideoAudience: Learning to Understand Videos from Their Audiences image at full size"
                               },
                               "children": [
                                 {
@@ -4542,7 +4446,7 @@
                                       "children": [
                                         {
                                           "kind": "text",
-                                          "text": "VideoAudience"
+                                          "text": "VideoAudience: Learning to Understand Videos from Their Audiences"
                                         }
                                       ]
                                     }
@@ -4563,40 +4467,6 @@
                                         {
                                           "kind": "text",
                                           "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "kind": "element",
-                                  "tag": "div",
-                                  "attrs": {
-                                    "class": "project__foot"
-                                  },
-                                  "children": [
-                                    {
-                                      "kind": "element",
-                                      "tag": "div",
-                                      "attrs": {
-                                        "class": "link-row"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "element",
-                                          "tag": "a",
-                                          "attrs": {
-                                            "href": "/figures/videoaudience-fig1.webp",
-                                            "target": "_blank",
-                                            "rel": "noopener noreferrer",
-                                            "class": "link-chip"
-                                          },
-                                          "children": [
-                                            {
-                                              "kind": "text",
-                                              "text": "Figure 1"
-                                            }
-                                          ]
                                         }
                                       ]
                                     }
@@ -4664,9 +4534,9 @@
                                 "href": "https://arxiv.org/abs/2610.32258",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -4889,9 +4759,9 @@
                                 "href": "https://openreview.net/forum?id=erYE1VciKv",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -5122,9 +4992,9 @@
                                 "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -5363,9 +5233,9 @@
                                 "href": "https://doi.org/10.1016/j.mrl.2026.200272",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -5612,45 +5482,23 @@
                                 "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
                                   "kind": "element",
-                                  "tag": "span",
+                                  "tag": "img",
                                   "attrs": {
-                                    "class": "paper-thumb__text"
+                                    "src": "/papers/jpcl-phase-correction-fig-s3.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
                                   },
-                                  "children": [
-                                    {
-                                      "kind": "element",
-                                      "tag": "span",
-                                      "attrs": {
-                                        "class": "paper-thumb__label"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "text",
-                                          "text": "JPCL"
-                                        }
-                                      ]
-                                    },
-                                    {
-                                      "kind": "element",
-                                      "tag": "span",
-                                      "attrs": {
-                                        "class": "paper-thumb__caption"
-                                      },
-                                      "children": [
-                                        {
-                                          "kind": "text",
-                                          "text": "NMR phase correction"
-                                        }
-                                      ]
-                                    }
-                                  ]
+                                  "children": []
                                 }
                               ]
                             },
@@ -5877,6 +5725,38 @@
                                           "text": "PubMed"
                                         }
                                       ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "https://doi.org/10.1021/acs.jpclett.5c03529.s001",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Supporting Information"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
+                                        "href": "/papers/jpcl-phase-correction-fig-s3.webp",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Figure S3"
+                                        }
+                                      ]
                                     }
                                   ]
                                 }
@@ -5899,9 +5779,9 @@
                                 "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -6148,9 +6028,9 @@
                                 "href": "https://doi.org/10.3390/ijms25084507",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
+                                "class": "pub__thumb paper-thumb",
                                 "tabindex": "-1",
-                                "aria-hidden": "true",
-                                "class": "pub__thumb paper-thumb"
+                                "aria-hidden": "true"
                               },
                               "children": [
                                 {
@@ -6895,9 +6775,9 @@
                         "href": "https://arxiv.org/abs/2610.32258",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -7070,9 +6950,9 @@
                         "href": "https://openreview.net/forum?id=erYE1VciKv",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -7261,9 +7141,9 @@
                         "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -7436,9 +7316,9 @@
                         "href": "https://doi.org/10.1016/j.mrl.2026.200272",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -7611,45 +7491,23 @@
                         "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
                           "kind": "element",
-                          "tag": "span",
+                          "tag": "img",
                           "attrs": {
-                            "class": "paper-thumb__text"
+                            "src": "/papers/jpcl-phase-correction-fig-s3.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
                           },
-                          "children": [
-                            {
-                              "kind": "element",
-                              "tag": "span",
-                              "attrs": {
-                                "class": "paper-thumb__label"
-                              },
-                              "children": [
-                                {
-                                  "kind": "text",
-                                  "text": "JPCL"
-                                }
-                              ]
-                            },
-                            {
-                              "kind": "element",
-                              "tag": "span",
-                              "attrs": {
-                                "class": "paper-thumb__caption"
-                              },
-                              "children": [
-                                {
-                                  "kind": "text",
-                                  "text": "NMR phase correction"
-                                }
-                              ]
-                            }
-                          ]
+                          "children": []
                         }
                       ]
                     },
@@ -7784,6 +7642,38 @@
                                       "text": "PubMed"
                                     }
                                   ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://doi.org/10.1021/acs.jpclett.5c03529.s001",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Supporting Information"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "/papers/jpcl-phase-correction-fig-s3.webp",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Figure S3"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -7808,9 +7698,9 @@
                         "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -7983,9 +7873,9 @@
                         "href": "https://doi.org/10.3390/ijms25084507",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -8224,9 +8114,9 @@
                         "href": "https://arxiv.org/abs/2610.32258",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -8449,9 +8339,9 @@
                         "href": "https://openreview.net/forum?id=erYE1VciKv",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -8682,9 +8572,9 @@
                         "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -8923,9 +8813,9 @@
                         "href": "https://doi.org/10.1016/j.mrl.2026.200272",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -9172,45 +9062,23 @@
                         "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
                           "kind": "element",
-                          "tag": "span",
+                          "tag": "img",
                           "attrs": {
-                            "class": "paper-thumb__text"
+                            "src": "/papers/jpcl-phase-correction-fig-s3.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
                           },
-                          "children": [
-                            {
-                              "kind": "element",
-                              "tag": "span",
-                              "attrs": {
-                                "class": "paper-thumb__label"
-                              },
-                              "children": [
-                                {
-                                  "kind": "text",
-                                  "text": "JPCL"
-                                }
-                              ]
-                            },
-                            {
-                              "kind": "element",
-                              "tag": "span",
-                              "attrs": {
-                                "class": "paper-thumb__caption"
-                              },
-                              "children": [
-                                {
-                                  "kind": "text",
-                                  "text": "NMR phase correction"
-                                }
-                              ]
-                            }
-                          ]
+                          "children": []
                         }
                       ]
                     },
@@ -9437,6 +9305,38 @@
                                   "text": "PubMed"
                                 }
                               ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.1021/acs.jpclett.5c03529.s001",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Supporting Information"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "/papers/jpcl-phase-correction-fig-s3.webp",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Figure S3"
+                                }
+                              ]
                             }
                           ]
                         }
@@ -9459,9 +9359,9 @@
                         "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -9708,9 +9608,9 @@
                         "href": "https://doi.org/10.3390/ijms25084507",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "pub__thumb paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "pub__thumb paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -9961,7 +9861,7 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--paper",
+                    "class": "project project--paper project--wide-figure",
                     "id": "medworld-jepa"
                   },
                   "children": [
@@ -9969,22 +9869,21 @@
                       "kind": "element",
                       "tag": "a",
                       "attrs": {
-                        "href": "/figures/medworld-jepa-fig2.webp",
+                        "href": "/figures/medworld-jepa-fig1.webp",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
-                        "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "class": "project__figure paper-thumb",
+                        "aria-label": "View MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations image at full size"
                       },
                       "children": [
                         {
                           "kind": "element",
                           "tag": "img",
                           "attrs": {
-                            "src": "/figures/medworld-jepa-fig2.webp",
+                            "src": "/figures/medworld-jepa-fig1.webp",
                             "alt": "",
-                            "width": "800",
-                            "height": "500",
+                            "width": "1500",
+                            "height": "468",
                             "loading": "lazy",
                             "decoding": "async"
                           },
@@ -10015,7 +9914,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "MedWorld-JEPA"
+                                  "text": "MedWorld-JEPA: Learning a Medical World Model from Longitudinal Observations"
                                 }
                               ]
                             }
@@ -10040,40 +9939,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "kind": "element",
-                          "tag": "div",
-                          "attrs": {
-                            "class": "project__foot"
-                          },
-                          "children": [
-                            {
-                              "kind": "element",
-                              "tag": "div",
-                              "attrs": {
-                                "class": "link-row"
-                              },
-                              "children": [
-                                {
-                                  "kind": "element",
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "/figures/medworld-jepa-fig2.webp",
-                                    "target": "_blank",
-                                    "rel": "noopener noreferrer",
-                                    "class": "link-chip"
-                                  },
-                                  "children": [
-                                    {
-                                      "kind": "text",
-                                      "text": "Figure 2"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
                         }
                       ]
                     }
@@ -10094,9 +9959,8 @@
                         "href": "/figures/videoaudience-fig1.webp",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
-                        "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "class": "project__figure paper-thumb",
+                        "aria-label": "View VideoAudience: Learning to Understand Videos from Their Audiences image at full size"
                       },
                       "children": [
                         {
@@ -10137,7 +10001,7 @@
                               "children": [
                                 {
                                   "kind": "text",
-                                  "text": "VideoAudience"
+                                  "text": "VideoAudience: Learning to Understand Videos from Their Audiences"
                                 }
                               ]
                             }
@@ -10158,40 +10022,6 @@
                                 {
                                   "kind": "text",
                                   "text": "Uses viewer comments during training to teach a video agent how to gather evidence and interpret events in context. The trained agent can analyze new videos without access to viewer comments."
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "kind": "element",
-                          "tag": "div",
-                          "attrs": {
-                            "class": "project__foot"
-                          },
-                          "children": [
-                            {
-                              "kind": "element",
-                              "tag": "div",
-                              "attrs": {
-                                "class": "link-row"
-                              },
-                              "children": [
-                                {
-                                  "kind": "element",
-                                  "tag": "a",
-                                  "attrs": {
-                                    "href": "/figures/videoaudience-fig1.webp",
-                                    "target": "_blank",
-                                    "rel": "noopener noreferrer",
-                                    "class": "link-chip"
-                                  },
-                                  "children": [
-                                    {
-                                      "kind": "text",
-                                      "text": "Figure 1"
-                                    }
-                                  ]
                                 }
                               ]
                             }
@@ -10385,9 +10215,9 @@
                         "href": "https://arxiv.org/abs/2610.32258",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -10560,9 +10390,9 @@
                         "href": "https://openreview.net/forum?id=erYE1VciKv",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -10751,9 +10581,9 @@
                         "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
@@ -10926,9 +10756,9 @@
                         "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                         "target": "_blank",
                         "rel": "noopener noreferrer",
+                        "class": "project__figure paper-thumb",
                         "tabindex": "-1",
-                        "aria-hidden": "true",
-                        "class": "project__figure paper-thumb"
+                        "aria-hidden": "true"
                       },
                       "children": [
                         {
