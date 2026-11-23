@@ -43,9 +43,20 @@ def authors(paper: dict) -> dict:
     return el('p', *children, cls='authors')
 
 
+def preview(paper: dict, cls: str) -> dict:
+    """Clickable 16:10 preview; duplicates the title link, so it is hidden from keyboard and screen readers."""
+    data = paper['preview']
+    inner = (el('img', src=data['src'], alt='', width='800', height='500', loading='lazy', decoding='async')
+             if 'src' in data else
+             el('span', el('span', data['label'], cls='paper-thumb__label'), el('span', data['caption'], cls='paper-thumb__caption'),
+                cls='paper-thumb__text'))
+    return el('a', inner, href=paper['links'][0]['url'], target='_blank', rel='noopener noreferrer',
+              tabindex='-1', aria_hidden='true', cls=cls + ' paper-thumb')
+
+
 def publication(paper: dict, prefix: str = '') -> dict:
     status_class = {'Under Review': 'tag--review', 'Preprint': ''}.get(paper['status'], 'tag--accepted')
-    return el('li', el('div',
+    return el('li', preview(paper, 'pub__thumb'), el('div',
         el('h2', external(paper['title'], paper['links'][0]['url']), cls='pub__title'),
         authors(paper),
         el('ul', el('li', el('span', paper['citation'], cls='venue__name'),
@@ -74,12 +85,12 @@ def experience(item: dict, papers: dict) -> dict:
 
 
 def research(paper: dict) -> dict:
-    return el('li', el('div',
-        el('div', el('h2', paper['title'], cls='project__title'), el('span', paper['role'], cls='role'), cls='project__head'),
+    return el('li', preview(paper, 'project__figure'), el('div',
+        el('div', el('h2', external(paper['title'], paper['links'][0]['url']), cls='project__title'), el('span', paper['role'], cls='role'), cls='project__head'),
         el('div', el('p', paper['summary']), cls='project__text'),
         el('p', paper['venue'] + ' · ' + paper['status'], cls='row__meta'),
         el('div', links(paper), cls='project__foot'), cls='project__body'),
-        cls='project project--text', id=paper['id'])
+        cls='project project--paper', id=paper['id'])
 
 
 def research_project(project: dict) -> dict:
@@ -140,23 +151,24 @@ def site(data: dict) -> dict:
             el('p', 'I collaborate with researchers at Zhejiang University on synthetic image and video detection and have worked remotely with UIUC on medical AI. Previously, I studied Computer Science and Technology at Shanghai Ocean University.')),
         section('News', 'news', news),
         section('Research Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
-        section('Selected Publications', 'selected-publications', el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs')),
+        section('Selected Publications', 'selected-publications', el('ol', *(publication(p, 'selected-') for p in data['papers']), cls='pubs pubs--thumbs')),
         cls='page page--about'), id='main', cls='content')
     pages = {'/': about, '/about': copy.deepcopy(about),
         '/researches': page('Research', el('p', 'My research connects multimodal learning and media forensics with deep learning for magnetic resonance imaging and spectroscopy.', cls='page-intro'),
             section('Experience', 'experience', el('ol', *(experience(x, papers) for x in data['experiences']), cls='rows')),
             el('ol', *(research(p) for p in data['papers']), cls='projects'), kind='research'),
-        '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs')),
+        '/publications': page('Publications', el('ol', *(publication(p) for p in data['papers']), cls='pubs pubs--thumbs')),
         '/projects': page('Projects', el('p', 'Selected research projects and interactive studies.', cls='page-intro'),
             el('ol', *(research_project(project) for project in data.get('research_projects', [])),
-                el('li', el('div',
+                el('li', el('a', el('img', src='/figures/vertebrae-study.webp', alt='', width='800', height='500', loading='lazy', decoding='async'),
+                    href='/projects/vertebrae/', tabindex='-1', aria_hidden='true', cls='project__figure paper-thumb'), el('div',
                 el('div', el('h2', el('a', 'Vertebrae Study', href='/projects/vertebrae/'), cls='project__title'),
                     el('span', 'Independent study', cls='role'), cls='project__head'),
                 el('div', el('p', 'SuPreM vertebrae segmentation and postprocessing: explore authentic CT predictions, before/after changes, 3D anatomy and a per-vertebra audit.'), cls='project__text'),
                 el('p', 'Medical imaging · Research warmup from Zongwei Zhou’s lab at Johns Hopkins University', cls='row__meta'),
                 el('div', el('div', el('a', 'Open interactive study', href='/projects/vertebrae/', cls='link-chip'),
                     external('Original task', 'https://github.com/MrGiovanni/SuPreM/blob/main/direct_inference/vertebrae.md', cls='link-chip'), cls='link-row'), cls='project__foot'),
-                cls='project__body'), cls='project project--text', id='vertebrae-study'),
+                cls='project__body'), cls='project project--paper', id='vertebrae-study'),
                 *(research(papers[id]) for id in ('medcaseagent', 'trace', 'clueaegis', 'ismrm-2026')), cls='projects')),
         '/projects/vertebrae': page('Vertebrae Study', el('p', 'SuPreM vertebrae segmentation and postprocessing.', cls='page-intro'), kind='vertebrae'),
         '/teaching': page('Teaching', el('p', 'Teaching information will be added here.', cls='page-intro')),

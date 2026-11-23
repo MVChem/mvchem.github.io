@@ -1,0 +1,116 @@
+"""Build the 16:10 preview images shown next to each paper.
+
+Every preview comes from the paper's own public figure: the arXiv source for
+preprints, the open-access PMC copy for journal papers and the official ISMRM
+abstract preview. Downloads are cached in .runtime/paper-previews/ (not in Git);
+the finished WebP files go to frontend/public/papers/.
+
+Needs PyMuPDF and Pillow (backend/requirements-dev.txt).
+
+    .venv/bin/python scripts/build_paper_previews.py            # all papers
+    .venv/bin/python scripts/build_paper_previews.py trace      # one paper
+"""
+from __future__ import annotations
+
+import argparse
+import html
+import io
+import re
+import tarfile
+import urllib.request
+from pathlib import Path
+
+import pymupdf
+from PIL import Image
+
+ROOT = Path(__file__).resolve().parents[1]
+CACHE = ROOT / '.runtime' / 'paper-previews'
+OUTPUT = ROOT / 'frontend' / 'public' / 'papers'
+SIZE = (800, 500)  # 16:10, sharp at 2x for the 264 px project column
+MARGIN = 0.03  # white border around the figure, as a fraction of the preview width
+USER_AGENT = 'Mozilla/5.0 (compatible; chuhongkang.com preview builder)'
+
+# crop: (left, top, right, bottom) as fractions of the source figure. The crop is
+# then padded with white to 16:10, so no part of the figure is stretched.
+PREVIEWS = {
+    'medcaseagent': {'arxiv': '2610.32258', 'member': 'figures/medcaseagent_teaser.pdf',
+                     'crop': (0.232, 0.0, 1.0, 1.0)},
+    'trace': {'arxiv': '2609.25775', 'member': 'fig1_rebuilt.pdf', 'crop': (0.0, 0.0, 1.0, 1.0)},
+    'clueaegis': {'arxiv': '2605.25009', 'member': 'pipline.pdf', 'crop': (0.0, 0.0, 1.0, 1.0)},
+    # Graphical abstract, CC BY-NC-ND 4.0: shown whole, only resized.
+    'mrl-cyclegan': {'pmc': 'PMC13352062', 'image': 'ga1.jpg', 'crop': (0.0, 0.0, 1.0, 1.0)},
+    'ismrm-2026': {'ismrm': 'https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1',
+                   'crop': (0.0, 0.0, 1.0, 1.0)},
+    # Figure 1 (study overview), CC BY 4.0.
+    'ijms-druggable-proteins': {'pmc': 'PMC11049818', 'image': 'ijms-25-04507-g001.jpg', 'crop': (0.0, 0.0, 1.0, 1.0)},
+}
+
+
+def fetch(url: str, path: Path) -> Path:
+    if not path.exists():
+        path.parent.mkdir(parents=True, exist_ok=True)
+        request = urllib.request.Request(url, headers={'User-Agent': USER_AGENT})
+        with urllib.request.urlopen(request, timeout=120) as response:
+            path.write_bytes(response.read())
+    return path
+
+
+def from_arxiv(spec: dict) -> Image.Image:
+    archive = fetch(f"https://arxiv.org/e-print/{spec['arxiv']}", CACHE / f"arxiv-{spec['arxiv']}.tar.gz")
+    with tarfile.open(archive) as tar:
+        data = tar.extractfile(tar.getmember(spec['member'])).read()
+    page = pymupdf.open(stream=data, filetype='pdf')[0]
+    zoom = 2600 / page.rect.width
+    pixmap = page.get_pixmap(matrix=pymupdf.Matrix(zoom, zoom), alpha=False)
+    return Image.frombytes('RGB', (pixmap.width, pixmap.height), pixmap.samples)
+
+
+def from_pmc(spec: dict) -> Image.Image:
+    article = fetch(f"https://pmc.ncbi.nlm.nih.gov/articles/{spec['pmc']}/", CACHE / f"{spec['pmc']}.html").read_text()
+    url = re.search(r'https://cdn\.ncbi\.nlm\.nih\.gov/pmc/blobs/[^"\s]+/' + re.escape(spec['image']), article).group(0)
+    return Image.open(fetch(url, CACHE / f"{spec['pmc']}-{spec['image']}")).convert('RGB')
+
+
+def from_ismrm(spec: dict) -> Image.Image:
+    target = CACHE / 'ismrm-preview.png'
+    if not target.exists():
+        request = urllib.request.Request(spec['ismrm'], headers={'User-Agent': USER_AGENT})
+        page = urllib.request.urlopen(request, timeout=120).read().decode()
+        url = html.unescape(re.search(r'https://ismrmmeetings\.blob\.core\.windows\.net/[^"]+/preview\.png[^"]*', page).group(0))
+        fetch(url, target)  # signed URL, valid for about an hour
+    image = Image.open(target)
+    canvas = Image.new('RGB', image.size, 'white')
+    canvas.paste(image, mask=image.getchannel('A') if image.mode == 'RGBA' else None)
+    return canvas
+
+
+def to_preview(image: Image.Image, crop: tuple[float, float, float, float]) -> Image.Image:
+    w, h = image.size
+    image = image.crop((round(crop[0] * w), round(crop[1] * h), round(crop[2] * w), round(crop[3] * h)))
+    target = SIZE[0] / SIZE[1]
+    w, h = image.size
+    margin = round(MARGIN * max(w, h / target))
+    canvas_size = (w + 2 * margin, round((w + 2 * margin) / target)) if w / h > target else (round((h + 2 * margin) * target), h + 2 * margin)
+    canvas = Image.new('RGB', canvas_size, 'white')
+    canvas.paste(image, ((canvas_size[0] - w) // 2, (canvas_size[1] - h) // 2))
+    return canvas.resize(SIZE, Image.Resampling.LANCZOS)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument('ids', nargs='*', help='paper ids (default: all): ' + ', '.join(PREVIEWS))
+    args = parser.parse_args()
+    if unknown := set(args.ids) - set(PREVIEWS):
+        parser.error('unknown paper id: ' + ', '.join(sorted(unknown)))
+    OUTPUT.mkdir(parents=True, exist_ok=True)
+    for paper_id in args.ids or PREVIEWS:
+        spec = PREVIEWS[paper_id]
+        source = from_arxiv(spec) if 'arxiv' in spec else from_pmc(spec) if 'pmc' in spec else from_ismrm(spec)
+        buffer = io.BytesIO()
+        to_preview(source, spec['crop']).save(buffer, 'WEBP', quality=86, method=6)
+        (OUTPUT / f'{paper_id}.webp').write_bytes(buffer.getvalue())
+        print(f'{paper_id}.webp  {len(buffer.getvalue()) // 1024} KiB')
+
+
+if __name__ == '__main__':
+    main()

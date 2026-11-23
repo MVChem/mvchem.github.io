@@ -82,7 +82,8 @@
       "role": "First Author",
       "year": "2026",
       "summary": "MedCaseAgent turns multimodal clinical evidence and unstructured notes into rare disease case reports through patient-level data mining, literature retrieval, and iterative tool-assisted reasoning. The work introduces MedCase-150K and MedCase-Bench, alongside a Qwen3.5-9B model post-trained for case-report generation.",
-      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.32258"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32258"}]
+      "links": [{"label": "arXiv", "url": "https://arxiv.org/abs/2610.32258"}, {"label": "PDF", "url": "https://arxiv.org/pdf/2610.32258"}],
+      "preview": {"src": "/papers/medcaseagent.webp"}
     },
     {
       "id": "trace",
@@ -94,7 +95,8 @@
       "role": "Second Author",
       "year": "2026",
       "summary": "TRACE uses a pretrained Flow Matching video model to probe velocity responses in real and generated videos. It combines trajectory representations with cross-frame consistency to study detection across different video generators.",
-      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=erYE1VciKv"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25775"}]
+      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=erYE1VciKv"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2609.25775"}],
+      "preview": {"src": "/papers/trace.webp"}
     },
     {
       "id": "clueaegis",
@@ -106,7 +108,8 @@
       "role": "Second Author",
       "year": "2026",
       "summary": "ClueAegis connects perceptual clues with forensic skill selection and tool-assisted reasoning. The framework produces structured evidence for synthetic image detection, with a benchmark organized around forensic cognitive skills.",
-      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=Hxm5eSFUT9"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2605.25009"}]
+      "links": [{"label": "OpenReview", "url": "https://openreview.net/forum?id=Hxm5eSFUT9"}, {"label": "arXiv", "url": "https://arxiv.org/abs/2605.25009"}],
+      "preview": {"src": "/papers/clueaegis.webp"}
     },
     {
       "id": "mrl-cyclegan",
@@ -118,7 +121,8 @@
       "role": "Co-author",
       "year": "2026",
       "summary": "This work embeds a bSSFP-DMI forward model in a CycleGAN to estimate metabolite and off-resonance maps from short-readout measurements. Unpaired training enforces signal consistency and reduces metabolite leakage in simulations and mouse experiments.",
-      "links": [{"label": "DOI", "url": "https://doi.org/10.1016/j.mrl.2026.200272"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13352062/"}]
+      "links": [{"label": "DOI", "url": "https://doi.org/10.1016/j.mrl.2026.200272"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13352062/"}],
+      "preview": {"src": "/papers/mrl-cyclegan.webp"}
     },
     {
       "id": "jpcl-phase-correction",
@@ -130,7 +134,8 @@
       "role": "Co-author",
       "year": "2026",
       "summary": "A physically informed phase model guides a residual attention network for automated NMR phase correction. The study evaluates the method on metabolomics spectra, including brain extracts, plasma, and urine. Chuanwen Zhao is the first author.",
-      "links": [{"label": "DOI", "url": "https://doi.org/10.1021/acs.jpclett.5c03529"}, {"label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/41508827/"}]
+      "links": [{"label": "DOI", "url": "https://doi.org/10.1021/acs.jpclett.5c03529"}, {"label": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/41508827/"}],
+      "preview": {"label": "JPCL", "caption": "NMR phase correction"}
     },
     {
       "id": "ismrm-2026",
@@ -142,7 +147,8 @@
       "role": "First Author",
       "year": "2026",
       "summary": "Weighted-average CSI acquisition is combined with deep learning that uses anatomical and spectral priors to reconstruct deuterium metabolite maps. This first-author work was selected for the ISMRM 2026 Power Pitch Oral session on AI Methods.",
-      "links": [{"label": "Conference Program", "url": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616"}]
+      "links": [{"label": "Abstract", "url": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1"}, {"label": "Conference Program", "url": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616"}],
+      "preview": {"src": "/papers/ismrm-2026.webp"}
     },
     {
       "id": "ijms-druggable-proteins",
@@ -154,7 +160,8 @@
       "role": "First Author",
       "year": "2024",
       "summary": "This study compares PSSM features and pretrained protein language models for druggable protein classification. It evaluates ESM-2 embeddings and an adapted GPT-2 classifier, with additional validation using Pharos.",
-      "links": [{"label": "DOI", "url": "https://doi.org/10.3390/ijms25084507"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/"}]
+      "links": [{"label": "DOI", "url": "https://doi.org/10.3390/ijms25084507"}, {"label": "Full Text", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/"}],
+      "preview": {"src": "/papers/ijms-druggable-proteins.webp"}
     }
   ],
   "skills": ["Python and PyTorch", "Multimodal learning and transformer fine-tuning", "Tool-using agents and model evaluation", "Diffusion and flow-matching representations", "MRI / MRSI reconstruction"]

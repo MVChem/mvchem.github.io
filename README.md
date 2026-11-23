@@ -18,6 +18,32 @@
 
 按本人 2026-10-26 的要求公开 MedCaseAgent 预印本（arXiv:2610.32258），在首页新闻、精选论文、Research、Publications 和 Projects 中展示，保留完整作者顺序并标为 Preprint。论文和 PDF 使用 arXiv 原链接。旧 MDLE 演示附件仍不进入网站发布目录。
 
+## 论文预览图（2026-11-23）
+
+Publications、首页 Selected Publications、Research 和 Projects 中的每篇论文左侧显示 16:10 预览图，点击预览图或标题打开论文首个链接。预览图取自论文本身的公开图：
+
+| 论文 | 来源 | 图 |
+| --- | --- | --- |
+| MedCaseAgent | arXiv 2610.32258 源文件 | `medcaseagent_teaser.pdf`（裁去左侧输入栏） |
+| TRACE | arXiv 2609.25775 源文件 | `fig1_rebuilt.pdf`（速度轨迹图） |
+| ClueAegis | arXiv 2605.25009 源文件 | `pipline.pdf`（完整流程图） |
+| MRL CycleGAN | PMC13352062，CC BY-NC-ND 4.0 | 官方 graphical abstract，只缩放不改动 |
+| ISMRM 2026 | ISMRM 官方摘要页的 preview 图 | 原图 |
+| IJMS | PMC11049818，CC BY 4.0 | Figure 1 研究概览 |
+| JPCL | ACS 付费内容，无法自动获取 | 暂用文字卡片 `JPCL · NMR phase correction` |
+
+`backend/content/public_profile.json` 中每篇论文的 `preview` 字段二选一：`{"src": "/papers/<id>.webp"}` 显示图片，`{"label": ..., "caption": ...}` 显示文字卡片。新增论文时加入 `preview` 字段；需要新图时在 `scripts/build_paper_previews.py` 的 `PREVIEWS` 里登记来源和裁切范围，再运行：
+
+```bash
+.venv/bin/python -m pip install -r backend/requirements-dev.txt
+.venv/bin/python scripts/build_paper_previews.py            # 全部
+.venv/bin/python scripts/build_paper_previews.py trace      # 单篇
+```
+
+脚本把下载缓存到 `.runtime/paper-previews/`（不进 Git），输出 800×500 WebP 到 `frontend/public/papers/`，四周留 3% 白边并补白到 16:10，不拉伸原图。若要换成本人提供的图（例如 JPCL 的 TOC 图），直接放入 `frontend/public/papers/<id>.webp`（800×500）并把 `preview` 改成 `src` 形式即可。
+
+Projects 中 Vertebrae Study 的预览图 `frontend/public/figures/vertebrae-study.webp` 截自线上 `/projects/vertebrae/` 的 Before/After 矢状面视图（2× 截图，裁成 16:10）。
+
 ## 本地运行
 
 首次安装依赖：

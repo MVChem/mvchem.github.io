@@ -45,6 +45,8 @@ def validate_build() -> None:
     for required in ("index.html", ".nojekyll", "api/site.json", "api/reference.json", "CNAME"):
         if not (DIST / required).is_file():
             raise PublishError(f"Build is missing {required}. Build the frontend and run export_static.py first.")
+    if not any((DIST / 'demo-data').rglob('*.png')):
+        raise PublishError('Build is missing demo-data; extract it from gh-pages into frontend/public first (see README).')
     if (DIST / 'CNAME').read_text().strip() != 'chuhongkang.com':
         raise PublishError('Build must retain the chuhongkang.com custom domain.')
     version = hashlib.sha256((ROOT / 'backend/content/reference.json').read_bytes()).hexdigest()[:16]

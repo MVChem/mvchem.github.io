@@ -1,2 +1,4 @@
 -r requirements.txt
 playwright==1.63.0
+pymupdf==1.26.5
+pillow==11.3.0

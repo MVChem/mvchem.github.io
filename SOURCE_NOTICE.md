@@ -17,4 +17,6 @@
 - ISMRM：[2026 官方 Power Pitch Oral 日程](https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616)。储红康为第一作者；页面表述入选报告形式，不推定本人到场。
 - IJMS：[PubMed](https://pubmed.ncbi.nlm.nih.gov/38674091/) 和 [全文](https://pmc.ncbi.nlm.nih.gov/articles/PMC11049818/)。储红康为第一作者。
 
+论文预览图（`frontend/public/papers/`）取自各论文的公开版本，仅缩放、补白或裁切：MedCaseAgent、TRACE、ClueAegis 来自 arXiv 源文件中的作者原图；Magnetic Resonance Letters 论文使用 PMC13352062 的 graphical abstract（CC BY-NC-ND 4.0，未裁切）；IJMS 论文使用 PMC11049818 的 Figure 1（CC BY 4.0）；ISMRM 2026 使用官方摘要页提供的 preview 图。JPCL 论文暂无公开图，使用文字卡片。来源和裁切参数记录在 `scripts/build_paper_previews.py`。
+
 Source Serif 4 字体采用 SIL Open Font License，许可证保留在 `frontend/public/licenses/Source-Serif-4-OFL.txt`。参考样式及其他保留素材的权利归其权利人；本项目未授予额外许可证。
