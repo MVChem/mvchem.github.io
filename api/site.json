@@ -603,7 +603,7 @@
                                           "kind": "element",
                                           "tag": "a",
                                           "attrs": {
-                                            "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
+                                            "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                             "target": "_blank",
                                             "rel": "noopener noreferrer"
                                           },
@@ -1282,7 +1282,7 @@
                       "kind": "element",
                       "tag": "ol",
                       "attrs": {
-                        "class": "pubs"
+                        "class": "pubs pubs--thumbs"
                       },
                       "children": [
                         {
@@ -1293,6 +1293,33 @@
                             "id": "selected-medcaseagent"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://arxiv.org/abs/2610.32258",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/medcaseagent.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -1493,6 +1520,33 @@
                           "children": [
                             {
                               "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://openreview.net/forum?id=erYE1VciKv",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/trace.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
                               "tag": "div",
                               "attrs": {
                                 "class": "pub__body"
@@ -1681,6 +1735,33 @@
                             "id": "selected-clueaegis"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/clueaegis.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -1895,6 +1976,33 @@
                             "id": "selected-mrl-cyclegan"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.1016/j.mrl.2026.200272",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/mrl-cyclegan.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -2117,6 +2225,55 @@
                             "id": "selected-jpcl-phase-correction"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "paper-thumb__text"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "span",
+                                      "attrs": {
+                                        "class": "paper-thumb__label"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "JPCL"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "span",
+                                      "attrs": {
+                                        "class": "paper-thumb__caption"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "NMR phase correction"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -2357,6 +2514,33 @@
                           "children": [
                             {
                               "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/ismrm-2026.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
                               "tag": "div",
                               "attrs": {
                                 "class": "pub__body"
@@ -2373,7 +2557,7 @@
                                       "kind": "element",
                                       "tag": "a",
                                       "attrs": {
-                                        "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
+                                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                         "target": "_blank",
                                         "rel": "noopener noreferrer"
                                       },
@@ -2535,6 +2719,22 @@
                                       "kind": "element",
                                       "tag": "a",
                                       "attrs": {
+                                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Abstract"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
                                         "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
                                         "target": "_blank",
                                         "rel": "noopener noreferrer",
@@ -2561,6 +2761,33 @@
                             "id": "selected-ijms-druggable-proteins"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.3390/ijms25084507",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/ijms-druggable-proteins.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -3134,7 +3361,7 @@
                                           "kind": "element",
                                           "tag": "a",
                                           "attrs": {
-                                            "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
+                                            "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                             "target": "_blank",
                                             "rel": "noopener noreferrer"
                                           },
@@ -3813,7 +4040,7 @@
                       "kind": "element",
                       "tag": "ol",
                       "attrs": {
-                        "class": "pubs"
+                        "class": "pubs pubs--thumbs"
                       },
                       "children": [
                         {
@@ -3824,6 +4051,33 @@
                             "id": "selected-medcaseagent"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://arxiv.org/abs/2610.32258",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/medcaseagent.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -4024,6 +4278,33 @@
                           "children": [
                             {
                               "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://openreview.net/forum?id=erYE1VciKv",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/trace.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
                               "tag": "div",
                               "attrs": {
                                 "class": "pub__body"
@@ -4212,6 +4493,33 @@
                             "id": "selected-clueaegis"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/clueaegis.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -4426,6 +4734,33 @@
                             "id": "selected-mrl-cyclegan"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.1016/j.mrl.2026.200272",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/mrl-cyclegan.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -4648,6 +4983,55 @@
                             "id": "selected-jpcl-phase-correction"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "span",
+                                  "attrs": {
+                                    "class": "paper-thumb__text"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "element",
+                                      "tag": "span",
+                                      "attrs": {
+                                        "class": "paper-thumb__label"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "JPCL"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "span",
+                                      "attrs": {
+                                        "class": "paper-thumb__caption"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "NMR phase correction"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -4888,6 +5272,33 @@
                           "children": [
                             {
                               "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/ismrm-2026.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
                               "tag": "div",
                               "attrs": {
                                 "class": "pub__body"
@@ -4904,7 +5315,7 @@
                                       "kind": "element",
                                       "tag": "a",
                                       "attrs": {
-                                        "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
+                                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                         "target": "_blank",
                                         "rel": "noopener noreferrer"
                                       },
@@ -5066,6 +5477,22 @@
                                       "kind": "element",
                                       "tag": "a",
                                       "attrs": {
+                                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                        "target": "_blank",
+                                        "rel": "noopener noreferrer",
+                                        "class": "link-chip"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Abstract"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "element",
+                                      "tag": "a",
+                                      "attrs": {
                                         "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
                                         "target": "_blank",
                                         "rel": "noopener noreferrer",
@@ -5092,6 +5519,33 @@
                             "id": "selected-ijms-druggable-proteins"
                           },
                           "children": [
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
+                                "href": "https://doi.org/10.3390/ijms25084507",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "tabindex": "-1",
+                                "aria-hidden": "true",
+                                "class": "pub__thumb paper-thumb"
+                              },
+                              "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "img",
+                                  "attrs": {
+                                    "src": "/papers/ijms-druggable-proteins.webp",
+                                    "alt": "",
+                                    "width": "800",
+                                    "height": "500",
+                                    "loading": "lazy",
+                                    "decoding": "async"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "kind": "element",
                               "tag": "div",
@@ -5792,10 +6246,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "medcaseagent"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://arxiv.org/abs/2610.32258",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/medcaseagent.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -5818,8 +6299,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/abs/2610.32258",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -5929,10 +6421,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "trace"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://openreview.net/forum?id=erYE1VciKv",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/trace.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -5955,8 +6474,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://openreview.net/forum?id=erYE1VciKv",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6066,10 +6596,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "clueaegis"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/clueaegis.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -6092,8 +6649,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "ClueAegis: Heuristic-to-Reasoning Cognitive-skill Learning for Unified Evidence-based Synthetic Image Detection"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "ClueAegis: Heuristic-to-Reasoning Cognitive-skill Learning for Unified Evidence-based Synthetic Image Detection"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6203,10 +6771,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "mrl-cyclegan"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://doi.org/10.1016/j.mrl.2026.200272",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/mrl-cyclegan.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -6229,8 +6824,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "Physics-embedded CycleGAN for robust metabolite mapping in short-readout deuterium metabolic imaging"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://doi.org/10.1016/j.mrl.2026.200272",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Physics-embedded CycleGAN for robust metabolite mapping in short-readout deuterium metabolic imaging"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6340,10 +6946,59 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "jpcl-phase-correction"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "class": "paper-thumb__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "paper-thumb__label"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "JPCL"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "paper-thumb__caption"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "NMR phase correction"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -6366,8 +7021,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "Phase Model-Driven Deep Learning for Robust Phase Correction in High-Throughput NMR-Based Metabolomics"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Phase Model-Driven Deep Learning for Robust Phase Correction in High-Throughput NMR-Based Metabolomics"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6477,10 +7143,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "ismrm-2026"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/ismrm-2026.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -6503,8 +7196,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "Deep Learning Enhanced Weighted Average CSI for High-Resolution Deuterium Metabolic Imaging"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Deep Learning Enhanced Weighted Average CSI for High-Resolution Deuterium Metabolic Imaging"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6574,6 +7278,22 @@
                                   "kind": "element",
                                   "tag": "a",
                                   "attrs": {
+                                    "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Abstract"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
                                     "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
                                     "target": "_blank",
                                     "rel": "noopener noreferrer",
@@ -6598,10 +7318,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "ijms-druggable-proteins"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://doi.org/10.3390/ijms25084507",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/ijms-druggable-proteins.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -6624,8 +7371,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "Comprehensive Research on Druggable Proteins: From PSSM to Pre-Trained Language Models"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://doi.org/10.3390/ijms25084507",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Comprehensive Research on Druggable Proteins: From PSSM to Pre-Trained Language Models"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -6778,7 +7536,7 @@
               "kind": "element",
               "tag": "ol",
               "attrs": {
-                "class": "pubs"
+                "class": "pubs pubs--thumbs"
               },
               "children": [
                 {
@@ -6789,6 +7547,33 @@
                     "id": "medcaseagent"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://arxiv.org/abs/2610.32258",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/medcaseagent.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -6989,6 +7774,33 @@
                   "children": [
                     {
                       "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://openreview.net/forum?id=erYE1VciKv",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/trace.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "element",
                       "tag": "div",
                       "attrs": {
                         "class": "pub__body"
@@ -7177,6 +7989,33 @@
                     "id": "clueaegis"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/clueaegis.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7391,6 +8230,33 @@
                     "id": "mrl-cyclegan"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://doi.org/10.1016/j.mrl.2026.200272",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/mrl-cyclegan.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7613,6 +8479,55 @@
                     "id": "jpcl-phase-correction"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://doi.org/10.1021/acs.jpclett.5c03529",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "span",
+                          "attrs": {
+                            "class": "paper-thumb__text"
+                          },
+                          "children": [
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "paper-thumb__label"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "JPCL"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "span",
+                              "attrs": {
+                                "class": "paper-thumb__caption"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "NMR phase correction"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -7853,6 +8768,33 @@
                   "children": [
                     {
                       "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/ismrm-2026.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "element",
                       "tag": "div",
                       "attrs": {
                         "class": "pub__body"
@@ -7869,7 +8811,7 @@
                               "kind": "element",
                               "tag": "a",
                               "attrs": {
-                                "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
+                                "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer"
                               },
@@ -8031,6 +8973,22 @@
                               "kind": "element",
                               "tag": "a",
                               "attrs": {
+                                "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                "target": "_blank",
+                                "rel": "noopener noreferrer",
+                                "class": "link-chip"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Abstract"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "element",
+                              "tag": "a",
+                              "attrs": {
                                 "href": "https://echo.ismrm.org/program/ISMRM2026/at-a-glance/session/616",
                                 "target": "_blank",
                                 "rel": "noopener noreferrer",
@@ -8057,6 +9015,33 @@
                     "id": "ijms-druggable-proteins"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://doi.org/10.3390/ijms25084507",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "pub__thumb paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/ijms-druggable-proteins.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8396,10 +9381,35 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "vertebrae-study"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/projects/vertebrae/",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/figures/vertebrae-study.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8540,10 +9550,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "medcaseagent"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://arxiv.org/abs/2610.32258",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/medcaseagent.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8566,8 +9603,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://arxiv.org/abs/2610.32258",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "MedCaseAgent: From Multimodal Clinical Evidence to Rare Disease Case Reports"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -8677,10 +9725,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "trace"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://openreview.net/forum?id=erYE1VciKv",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/trace.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8703,8 +9778,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://openreview.net/forum?id=erYE1VciKv",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "TRACE: Trajectory Representation and Consistency Estimation for AI-Generated Video Detection"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -8814,10 +9900,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "clueaegis"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/clueaegis.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8840,8 +9953,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "ClueAegis: Heuristic-to-Reasoning Cognitive-skill Learning for Unified Evidence-based Synthetic Image Detection"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://openreview.net/forum?id=Hxm5eSFUT9",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "ClueAegis: Heuristic-to-Reasoning Cognitive-skill Learning for Unified Evidence-based Synthetic Image Detection"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -8951,10 +10075,37 @@
                   "kind": "element",
                   "tag": "li",
                   "attrs": {
-                    "class": "project project--text",
+                    "class": "project project--paper",
                     "id": "ismrm-2026"
                   },
                   "children": [
+                    {
+                      "kind": "element",
+                      "tag": "a",
+                      "attrs": {
+                        "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                        "target": "_blank",
+                        "rel": "noopener noreferrer",
+                        "tabindex": "-1",
+                        "aria-hidden": "true",
+                        "class": "project__figure paper-thumb"
+                      },
+                      "children": [
+                        {
+                          "kind": "element",
+                          "tag": "img",
+                          "attrs": {
+                            "src": "/papers/ismrm-2026.webp",
+                            "alt": "",
+                            "width": "800",
+                            "height": "500",
+                            "loading": "lazy",
+                            "decoding": "async"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "kind": "element",
                       "tag": "div",
@@ -8977,8 +10128,19 @@
                               },
                               "children": [
                                 {
-                                  "kind": "text",
-                                  "text": "Deep Learning Enhanced Weighted Average CSI for High-Resolution Deuterium Metabolic Imaging"
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Deep Learning Enhanced Weighted Average CSI for High-Resolution Deuterium Metabolic Imaging"
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -9044,6 +10206,22 @@
                                 "class": "link-row"
                               },
                               "children": [
+                                {
+                                  "kind": "element",
+                                  "tag": "a",
+                                  "attrs": {
+                                    "href": "https://echo.ismrm.org/abstracts/view/10bb0030-3870-418c-9ecf-a19a838645a1",
+                                    "target": "_blank",
+                                    "rel": "noopener noreferrer",
+                                    "class": "link-chip"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Abstract"
+                                    }
+                                  ]
+                                },
                                 {
                                   "kind": "element",
                                   "tag": "a",
